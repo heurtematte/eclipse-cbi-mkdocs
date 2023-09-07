@@ -1,0 +1,91 @@
+{
+    "broadcast": "Eclipse foundation local-federated instance",
+    "default_server_config": {
+        "m.homeserver": {
+            "base_url": "https://matrix-federated.eclipse.org",
+            "server_name": "matrix-federated.eclipse.org"
+        }
+    },
+    "disable_custom_urls": true,
+    "disable_guests": true,
+    "disable_login_language_selector": false,
+    "disable_3pid_login": false,
+    "embeddedPages": {
+        "homeUrl": "https://chat-federated.eclipse.org:8443/home.html"
+    },
+    "brand": "Eclipse Foundation Chat Community",
+    "permalink_prefix": "https://chat-federated.eclipse.org:8443",
+    "default_country_code": "GB",
+    "show_labs_settings": false,
+    "features": { 
+        "feature_exploring_public_spaces": true,
+        "feature_breadcrumbs_v2": true,
+        "feature_html_topic": true,
+        "feature_favourite_messages": true,
+        "feature_roomlist_preview_reactions_all": true,
+        "feature_presence_in_room_list": true,
+        "feature_pinning": true,
+        "feature_report_to_moderators": true,
+        "feature_mjolnir": false
+    },
+    "default_federate": true,
+    "default_theme": "dark",
+    "room_directory": {
+        "servers": [
+            "https://matrix-federated.eclipse.org"
+        ]
+    },
+    "setting_defaults": {
+        "feature_exploring_public_spaces": true,
+        "feature_breadcrumbs_v2": true,
+        "feature_html_topic": true,
+        "feature_favourite_messages": true,
+        "feature_roomlist_preview_reactions_all": true,
+        "feature_presence_in_room_list": true,
+        "feature_pinning": true,
+        "feature_report_to_moderators": true,
+        "feature_mjolnir": false,
+        "UIFeature.registration": true,
+        "UIFeature.urlPreviews": true,
+        "UIFeature.shareQrCode": true,
+        "UIFeature.shareSocial": true,
+        "UIFeature.advancedSettings": true,
+        "UIFeature.roomHistorySettings": true,
+        "UIFeature.timelineEnableRelativeDates": true,
+        "UIFeature.passwordReset": true,
+        "UIFeature.thirdPartyId": true,
+        "UIFeature.deactivate": true,
+        "UIFeature.voip": false,
+        "UIFeature.feedback": false
+    },
+    "map_style_url": "https://api.maptiler.com/maps/streets/style.json?key=fU3vlMsMn4Jb6dnEIFsx",
+    "branding": {
+        "auth_header_logo_url": "https://www.eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-foundation-grey-orange.svg",
+        "welcome_background_url": "https://chat-federated.eclipse.org:8443/banner.jpg",
+        "auth_footer_links": [
+         ]
+    },
+
+    "reportEvent": {
+        "adminMessageMD": "We wanted to remind you of our chat platform's Code of Conduct, which outlines the expectations for appropriate behavior on our platform. Before reporting, please ensure that you are familiar with these guidelines to avoid any confusion or misunderstandings. It is important to note that reporting another user's behavior should only be done in cases where their behavior violates our Code of Conduct. If you are unsure whether or not the behavior in question is a violation, please review the guidelines and/or reach out to an administrator for guidance."
+    },
+
+    "terms_and_conditions_links": [
+        {   
+            "url": "https://www.eclipse.org/org/documents/Community_Code_of_Conduct.php" ,
+            "text": "Code of conduct"
+        },
+        {   
+            "url": "http://www.eclipse.org/legal/termsofuse.php" ,
+            "text": "Terms of use"
+        },
+        {
+            "url": "http://www.eclipse.org/legal/privacy.php",
+            "text": "Privacy Policy"
+        },
+        {
+            "url": "https://www.eclipse.org/org/documents/communication-channel-guidelines/",
+            "text": "Communication channel guidelines"
+        }
+    ]
+}

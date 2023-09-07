@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://eclipse-cbi-mkdocs/Chat%20Service/synapse/readme/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Readme - CBI</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">CBI</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">CBI</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">JIRO <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Core</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/core/" class="dropdown-item">Eclipse CBI - Jiro</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/core/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/core/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/core/documentation/" class="dropdown-item">Documentation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Agent</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/agent/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/agent/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/agent/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Basic</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/agent/basic/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Basic ubuntu</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/agent/basic-ubuntu/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Centos 7</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/agent/centos-7/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Centos 8</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/agent/centos-8/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Controller</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/controller/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/controller/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/controller/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dockerfile</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/dockerfile/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Gitab runner service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../gitab-runner-service/readme/" class="dropdown-item">Gitlab Runner Service</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Chat Service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/_index/" class="dropdown-item">Chat Service</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Faq</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/faq/_index/" class="dropdown-item">Frequently Asked Questions</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/getting-started/_index/" class="dropdown-item">Getting Started!</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Glossary</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/glossary/_index/" class="dropdown-item">Glossary</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Links</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/links/_index/" class="dropdown-item">Links</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Request</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/request/_index/" class="dropdown-item"> index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Rooms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/rooms/_index/" class="dropdown-item">Rooms/Spaces</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/support/_index/" class="dropdown-item">Support</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Provisionner</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../provisionner/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Synapse</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Elementweb</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../elementweb/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sync tools</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../sync-tools/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Macos notarization service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../macos-notarization-service/" class="dropdown-item">macOS Notarization Service</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../../provisionner/readme/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../elementweb/readme/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/synapse.git/main/readme.md" class="nav-link">
+                                        Edit</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#eclipse-foundation-synapse-matrix-server-implementation" class="nav-link">Eclipse Foundation - Synapse Matrix Server Implementation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#architecture" class="nav-link">Architecture</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#getting-started-locally" class="nav-link">Getting started locally</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#prerequisite" class="nav-link">prerequisite</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#local-start" class="nav-link">Local start</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#local-federated-start" class="nav-link">Local federated start</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#installation-and-configuration-in-kubernetes-cluster" class="nav-link">Installation and Configuration in kubernetes cluster</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#kubernetes-architecture" class="nav-link">Kubernetes architecture</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#new-environment" class="nav-link">New Environment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#generate-secrets" class="nav-link">Generate secrets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#manual-configuration" class="nav-link">Manual configuration</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#policy-bot" class="nav-link">Policy bot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#moderation-with-mjolnirpantalaimon" class="nav-link">Moderation with Mjolnir/pantalaimon</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#slack-integration-appservice-slack" class="nav-link">Slack integration (Appservice-Slack)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#link-a-chat-service-room-to-a-slack-channel" class="nav-link">Link a chat service room to a slack channel</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#devops" class="nav-link">Devops</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#generate-secrets_1" class="nav-link">Generate secrets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tanka" class="nav-link">tanka</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#applysh-script" class="nav-link">Apply.sh script</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#kubectl-status" class="nav-link">kubectl status</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#upgrade" class="nav-link">Upgrade</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#synapse" class="nav-link">Synapse</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#matrix-media-repo" class="nav-link">Matrix-media-repo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#synapse-admin" class="nav-link">Synapse-admin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#development" class="nav-link">Development</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#reuse-lint" class="nav-link">Reuse lint</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#docker-compose-render" class="nav-link">Docker-compose render</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#k8s-render" class="nav-link">k8s render</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#usefull-links" class="nav-link">Usefull links</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<!--
+SPDX-FileCopyrightText: 2023 eclipse foundation
+SPDX-License-Identifier: EPL-2.0
+-->
+
+<h1 id="eclipse-foundation-synapse-matrix-server-implementation">Eclipse Foundation - Synapse Matrix Server Implementation</h1>
+<p>[[<em>TOC</em>]]</p>
+<h1 id="architecture">Architecture</h1>
+<p>Architecture diagram is create with <a href="https://structurizr.com">structurizr</a>, dsl is available <a href="../docs/structurizr.dsl">here</a>.</p>
+<pre><code class="language-mermaid">graph LR
+  linkStyle default fill:#ffffff
+
+  subgraph diagram [Chat Service - Containers]
+    style diagram fill:#ffffff,stroke:#ffffff
+
+    1[&quot;&lt;div style='font-weight: bold'&gt;Eclipse Account User&lt;/div&gt;&lt;div style='font-size: 70%; margin-top: 0px'&gt;[Person]&lt;/div&gt;&lt;div style='font-size: 80%; margin-top:10px'&gt;An Eclipse Foundation account&lt;br /&gt;user.&lt;/div&gt;&quot;]
+    style 1 fill:#08427b,stroke:#052e56,color:#ffffff
+    2[&quot;&lt;div style='font-weight: bold'&gt;User Federated&lt;/div&gt;&lt;div style='font-size: 70%; margin-top: 0px'&gt;[Person]&lt;/div&gt;&lt;div style='font-size: 80%; margin-top:10px'&gt;An Matrix federated account&lt;br /&gt;user.&lt;/div&gt;&quot;]
+    style 2 fill:#08427b,stroke:#052e56,color:#ffffff
+
+    subgraph 4 [Chat Service]
+      style 4 fill:#ffffff,stroke:#0b4884,color:#0b4884
+
+      10[&quot;&lt;div style='font-weight: bold'&gt;Synapse Database&lt;/div&gt;&lt;div style='font-size: 70%; margin-top: 0px'&gt;[Container]&lt;/div&gt;&quot;]
+      style 10 fill:#dddddd,stroke:#9a9a9a,color:#000000
+      12[&quot;&lt;div style='font-weight: bold'&gt;Elementweb&lt;/div&gt;&lt;div style='font-size: 70%; margin-top: 0px'&gt;[Container]&lt;/div&gt;&lt;div style='font-size: 80%; margin-top:10px'&gt;chat.eclipse.org&lt;/div&gt;&quot;]
+      style 12 fill:#dddddd,stroke:#9a9a9a,color:#000000
+      14[&quot;&lt;div style='font-weight: bold'&gt;Matrix-Media-Repo&lt;/div&gt;&lt;div style='font-size: 70%; margin-top: 0px'&gt;[Container]&lt;/div&gt;&lt;div style='font-size: 80%; margin-top:10px'&gt;matrix-media-repo.eclipsecontent.org&lt;/div&gt;&quot;]
+      style 14 fill:#dddddd,stroke:#9a9a9a,color:#000000
+      18[&quot;&lt;div style='font-weight: bold'&gt;Matrix-Media-Repo Database&lt;/div&gt;&lt;div style='font-size: 70%; margin-top: 0px'&gt;[Container]&lt;/div&gt;&quot;]
+      style 18 fill:#dddddd,stroke:#9a9a9a,color:#000000
+      20[&quot;&lt;div style='font-weight: bold'&gt;appservice-policies&lt;/div&gt;&lt;div style='font-size: 70%; margin-top: 0px'&gt;[Container]&lt;/div&gt;&lt;div style='font-size: 80%; margin-top:10px'&gt;matrix-media-repo.eclipsecontent.org&lt;/div&gt;&quot;]
+      style 20 fill:#dddddd,stroke:#9a9a9a,color:#000000
+      23[&quot;&lt;div style='font-weight: bold'&gt;bot-mjolnir&lt;/div&gt;&lt;div style='font-size: 70%; margin-top: 0px'&gt;[Container]&lt;/div&gt;&lt;div style='font-size: 80%; margin-top:10px'&gt;Moderation bot&lt;/div&gt;&quot;]
+      style 23 fill:#dddddd,stroke:#9a9a9a,color:#000000
+      25[&quot;&lt;div style='font-weight: bold'&gt;pantalaimon&lt;/div&gt;&lt;div style='font-size: 70%; margin-top: 0px'&gt;[Container]&lt;/div&gt;&lt;div style='font-size: 80%; margin-top:10px'&gt;Proxy for encrypt rooms&lt;/div&gt;&quot;]
+      style 25 fill:#dddddd,stroke:#9a9a9a,color:#000000
+      5[&quot;&lt;div style='font-weight: bold'&gt;Synapse&lt;/div&gt;&lt;div style='font-size: 70%; margin-top: 0px'&gt;[Container]&lt;/div&gt;&lt;div style='font-size: 80%; margin-top:10px'&gt;matrix.eclipse.org&lt;/div&gt;&quot;]
+      style 5 fill:#dddddd,stroke:#9a9a9a,color:#000000
+    end
+
+    5-. &quot;&lt;div&gt;Reads from and writes to&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;10
+    1-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;12
+    5-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;14
+    1-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;14
+    2-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;14
+    14-. &quot;&lt;div&gt;Reads from and writes to&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;18
+    5-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;20
+    20-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;5
+    23-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;5
+    23-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;25
+    25-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;5
+    1-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;5
+    2-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style='font-size: 70%'&gt;&lt;/div&gt;&quot; .-&gt;5
+  end
+
+</code></pre>
+<h1 id="getting-started-locally">Getting started locally</h1>
+<h2 id="prerequisite">prerequisite</h2>
+<p>Set local domain name in <code>/etc/hosts</code>:</p>
+<pre><code class="language-shell">127.0.0.1       matrix-local.eclipse.org chat-local.eclipse.org matrix-media-repo-local.eclipse.org synapse-admin-local.eclipse.org 
+127.0.0.1       matrix-federated.eclipse.org chat-federated.eclipse.org matrix-media-repo-federated.eclipse.org synapse-admin-federated.eclipse.org
+</code></pre>
+<h2 id="local-start">Local start</h2>
+<pre><code class="language-shell">docker-compose build
+docker-compose up -d
+</code></pre>
+<p>Do the same on <code>ef-element-web</code> project and start docker-compose up.</p>
+<p>Browser access: <code>https://chat-local.eclipse.org:8443</code></p>
+<p><img alt="matrix dev architecture" src="../docs/img/docker-compose.png" /></p>
+<h2 id="local-federated-start">Local federated start</h2>
+<pre><code class="language-shell">docker-compose -f docker-compose-federated.yaml build
+docker-compose -f docker-compose-federated.yaml up -d
+</code></pre>
+<p>Matrix access: <code>https://matrix-local.eclipse.org</code>
+Matrix access: <code>https://matrix-federated.eclipse.org</code></p>
+<p>Do the same on <code>ef-element-web</code> project and start docker-compose up.</p>
+<p>Browser access: <code>https://chat-local.eclipse.org:8443</code>
+Browser access: <code>https://chat-federated.eclipse.org:8443</code></p>
+<p><img alt="matrix dev federated architecture" src="../docs/img/docker-compose-federated.png" /></p>
+<h1 id="installation-and-configuration-in-kubernetes-cluster">Installation and Configuration in kubernetes cluster</h1>
+<h2 id="kubernetes-architecture">Kubernetes architecture</h2>
+<p><img alt="k8s matrix synapse architecture" src="../docs/img/k8s-architecture.png" /></p>
+<h2 id="new-environment">New Environment</h2>
+<pre><code class="language-shell">tk env add environments/chat-matrix/{env} --namespace=chat-matrix-{env}
+</code></pre>
+<p>Add this property in <code>spec.json</code>:</p>
+<pre><code class="language-json">{
+  ...
+&quot;apiServer&quot;: &quot;https://my_cluster&quot;,
+&quot;injectLabels&quot;: true
+ ...
+}
+</code></pre>
+<p><code>main.jsonnet</code> template: </p>
+<pre><code class="language-json">(import 'chat-matrix/main.libsonnet') +
+(import '.secrets/secrets.jsonnet') +
+{
+  _config+:: {
+    local config = self,
+    environment: '{env}',
+    synapse+: {
+      replicas: 1,
+      logconfig+: {
+        root+: {
+          level: 'DEBUG',
+        },
+        loggers+: {
+          synapse: {
+            level: 'INFO',
+          },
+        },
+      },
+      homeserver+: {        
+      },
+    },
+    appservicePolicies+:{
+      appservice+: {
+        logLevel: &quot;DEBUG&quot;,
+        skipMessage: &quot;true&quot;
+      },
+    },
+    matrixMediaRepo+: {
+      mediarepo+: {     
+        repo+: {
+          logLevel: &quot;INFO&quot;,  
+        },
+      },
+    },
+    clamav+:{
+    },
+    synapseAdmin+: {
+    },
+    botMjolnir+: {
+      mjolnir+: {
+          logLevel: &quot;INFO&quot;,  
+      },
+    },
+    pantalaimon+: {      
+      &quot;pantalaimon.conf&quot;+: {
+        sections+: {
+          Default+: {
+              LogLevel: &quot;Debug&quot;,
+          }
+        }
+      }
+    }
+  },
+}
+</code></pre>
+<h2 id="generate-secrets">Generate secrets</h2>
+<pre><code>docker run -it  -e SYNAPSE_SERVER_NAME=matrix-dev.eclipse.org -e SYNAPSE_REPORT_STATS=no -v $PWD/config/gen:/data docker.io/eclipsecbi/synapse:latest generate
+</code></pre>
+<p>Get secrets: <code>registration_shared_secret</code>, <code>macaroon_secret_key</code>, <code>form_secret</code> from files <code>./config/gen/homeserver.yaml</code> 
+And store the signing keys from file: <code>./config/gen/matrix-dev.eclipse.org.signing.key</code></p>
+<p>For all other passwords, use your own password generator like <code>pwgen</code>.</p>
+<p>Store passwords in pass with this organization:</p>
+<pre><code class="language-shell">IT/services/chat-service
+├── appservice
+│   ├── {env}
+│   │   ├── asToken
+│   │   └── hsToken
+├── bot-mjolnir
+│   ├── {env}
+│   │   └── password
+├── matrix-appservice-slack
+│   └── {env}
+│   │   ├── database_password
+│   │   ├── asToken
+│   │   └── hsToken
+├── matrix-media-repo
+│   ├── {env}
+│   │   └── database_password
+└── synapse
+    ├── {env}
+    │   ├── database_password
+    │   ├── form_secret
+    │   ├── macaroon_secret_key
+    │   ├── oidc_providers_oauth2_eclipse_secret
+    │   ├── registration_shared_secret
+    │   └── signing
+</code></pre>
+<p>i.e: <code>pass add IT/services/chat-service/matrix-media-repo/staging-community/database_password</code></p>
+<p>Execute:  <code>./gen-secrets.sh</code></p>
+<p>It will store secrets under: <code>/environments/chat-matrix/dev/.secrets</code></p>
+<h1 id="manual-configuration">Manual configuration</h1>
+<h2 id="policy-bot">Policy bot</h2>
+<h3 id="configure-rate-limit">Configure rate limit</h3>
+<p>https://github.com/matrix-org/synapse/issues/6286</p>
+<pre><code class="language-sql">insert into ratelimit_override values ('@EF_policy_bot:matrix.eclipse.org', 0, 0);
+</code></pre>
+<h2 id="moderation-with-mjolnirpantalaimon">Moderation with Mjolnir/pantalaimon</h2>
+<p>NOTE: must be admin!</p>
+<pre><code>UPDATE users SET name = admin='1' where name='@usertest:matrix-local.eclipse.org';
+</code></pre>
+<p>Before starting: Clean mjolnir and pantalaimon local storage (not production) if exist: </p>
+<pre><code class="language-shell">sudo rm -Rf ./config/local/mjolnir/storage
+sudo rm -Rf ./config/local/pantalaimon/local-matrix
+sudo rm -Rf ./config/local/pantalaimon/pan.db
+</code></pre>
+<p>IMPORTANT:
+Activate temporary homeserver password config the time to configure bot for first login. </p>
+<p>file: <code>lib/chat-matrix/synapse/config-homeserver.libsonnet</code></p>
+<pre><code class="language-json">password_config: {
+  enabled: false,
+},
+</code></pre>
+<ol>
+<li>create moderator user: <code>@ef_moderator_bot:matrix-local.eclipse.org</code></li>
+</ol>
+<p>Get password from pass: /IT/services/chat-service/bot-mjolnir/{env}/password</p>
+<pre><code class="language-shell">MATRIX_URL=&quot;https://matrix-local.eclipse.org&quot;
+ACCESS_TOKEN=&quot;YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&quot;
+
+curl -k -s -X PUT \
+    -H &quot;Authorization: Bearer ${ACCESS_TOKEN}&quot; \
+    -d '{&quot;displayname&quot;: &quot;Eclipse Foundation Moderator Bot&quot;, &quot;password&quot;: &quot;XXXXXXXXXXXXXXXX&quot;}' \
+    &quot;${MATRIX_URL}/_synapse/admin/v2/users/@ef_moderator_bot:${MATRIX_URL##*://}&quot;
+</code></pre>
+<p>return:</p>
+<pre><code class="language-json">{&quot;name&quot;:&quot;@ef_moderator_bot:matrix-local.eclipse.org&quot;,&quot;is_guest&quot;:0,&quot;admin&quot;:false,&quot;consent_version&quot;:null,&quot;consent_ts&quot;:null,&quot;consent_server_notice_sent&quot;:null,&quot;appservice_id&quot;:null,&quot;creation_ts&quot;:1681830226,&quot;user_type&quot;:null,&quot;deactivated&quot;:false,&quot;shadow_banned&quot;:false,&quot;displayname&quot;:&quot;Eclipse Foundation moderator&quot;,&quot;avatar_url&quot;:null,&quot;threepids&quot;:[],&quot;external_ids&quot;:[],&quot;erased&quot;:false}% 
+</code></pre>
+<ol>
+<li>Accept consent policy: Need to connect to the web interface with user <code>ef_moderator_bot</code> or calculate consent url.</li>
+</ol>
+<p>Param openssl hmac is <code>form_secret</code>property in <code>homeserver.yaml</code>:</p>
+<pre><code class="language-shell">echo -n 'ef_moderator_bot' | openssl sha256 -hmac '15,CKuwubYD^2m2II.aQhRpf9gu37I9f.2kQv2-b^aHTz,UtMT'
+</code></pre>
+<pre><code>https://matrix-local.eclipse.org/_matrix/consent?u=ef_moderator_bot&amp;h=92cf81f3db94ded5387a0cc4c7b8138409f13f9d4b0ae2ee130923209531d0b9
+</code></pre>
+<p>go and accept!</p>
+<ol>
+<li>Moderation room creation</li>
+</ol>
+<p>via UI:
+Room creation:
+  * Name: <code>Chat Service moderation</code>
+  * Alias: <code>#eclipsefdn.chat-moderation:matrix-local.eclipse.org</code> 
+  * <code>private</code> 
+  * <code>encrypt</code></p>
+<p>Add room to <code>#eclipsefdn:matrix.eclipse.org</code> space. (not mandatory for local tests)</p>
+<p>via script:</p>
+<pre><code class="language-shell">MATRIX_URL=&quot;https://matrix-local.eclipse.org&quot;
+ACCESS_TOKEN=&quot;YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&quot;
+curl -s -X POST --insecure \
+                -H &quot;Content-Type: application/json&quot; \
+                -H &quot;Authorization: Bearer ${ACCESS_TOKEN}&quot; \
+                -d '{&quot;preset&quot;:&quot;trusted_private_chat&quot;, &quot;name&quot;: &quot;Chat Service moderation&quot;, &quot;room_alias_name&quot;: &quot;eclipsefdn.chat-moderation&quot;, &quot;topic&quot;:&quot;Room moderation with mjolnir for chat service&quot;, &quot;invite&quot;: [&quot;@ef_moderator_bot:matrix-local.eclipse.org&quot;]}' \
+                &quot;${MATRIX_URL}/_matrix/client/r0/createRoom&quot;
+</code></pre>
+<p>return: </p>
+<pre><code class="language-json">{&quot;room_id&quot;:&quot;!RkEPsVKweWTdfyMCUH:dev.matrix.eclipsecontent.org&quot;}
+</code></pre>
+<p>Attach to <code>eclipsefdn</code> space:</p>
+<pre><code class="language-shell">MATRIX_URL=&quot;https://matrix-local.eclipse.org&quot;
+ACCESS_TOKEN=&quot;YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&quot;
+SPACE_ALIAS=&quot;%23eclipsefdn%3A${MATRIX_URL##*://}&quot;
+SPACE_ID=$(curl -s --insecure -H &quot;Authorization: Bearer $ACCESS_TOKEN&quot; &quot;${MATRIX_URL}/_matrix/client/v3/directory/room/${SPACE_ALIAS}&quot;|jq -r '.room_id')
+ROOM_ALIAS=&quot;%23eclipsefdn.chat-moderation%3A${MATRIX_URL##*://}&quot;
+ROOM_ID=$(curl -s --insecure -H &quot;Authorization: Bearer $ACCESS_TOKEN&quot; &quot;${MATRIX_URL}/_matrix/client/r0/directory/room/${ROOM_ALIAS}&quot;|jq -r '.room_id')
+curl -s -X PUT --insecure \
+                -H &quot;Content-Type: application/json&quot; \
+                -H &quot;Authorization: Bearer ${ACCESS_TOKEN}&quot; \
+                -d '{&quot;via&quot;:[&quot;matrix-local.eclipse.org&quot;],&quot;suggested&quot;:false}' \
+                &quot;${MATRIX_URL}/_matrix/client/r0/rooms/${SPACE_ID}/state/m.space.child/${ROOM_ID}&quot;
+</code></pre>
+<p>Return: </p>
+<pre><code class="language-json">{&quot;event_id&quot;:&quot;$5lBc6twDKWviKsn3tqKUiAEd-SAnbZiprGklIri1OF4&quot;}
+</code></pre>
+<ol>
+<li>
+<p>Add user <code>ef_moderator_bot</code> as <code>admin</code> if not set.</p>
+</li>
+<li>
+<p>Set rate limit:</p>
+</li>
+</ol>
+<pre><code class="language-sql">insert into ratelimit_override values ('@ef_moderator_bot:matrix-local.eclipse.org', 0, 0);
+</code></pre>
+<p>or via curl: </p>
+<pre><code class="language-shell">MATRIX_URL=&quot;https://matrix-local.eclipse.org&quot;
+ACCESS_TOKEN=&quot;YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&quot;
+
+
+curl -k -s -X POST \
+    -H &quot;Authorization: Bearer ${ACCESS_TOKEN}&quot; \
+    -d '{&quot;messages_per_second&quot;: 0, &quot;burst_count&quot;: 0}' \
+    &quot;${MATRIX_URL}/_synapse/admin/v1/users/@ef_moderator_bot:${MATRIX_URL##*://}/override_ratelimit&quot;
+</code></pre>
+<h3 id="mjolnir-default-acl">Mjolnir default ACL</h3>
+<ol>
+<li>give temporary permission to moderator bot to create room with module <code>UserControlModule</code></li>
+</ol>
+<pre><code class="language-json">modules: [
+          {
+            module: 'synapse.modules.synapse_user_control.UserControlModule',
+            config: {
+              creators: [
+                ...
+                '@ef_moderator_bot:' + mxDomain,                
+              ],
+            },
+          }
+</code></pre>
+<ol>
+<li>Create first banlist: <code>!list create EF eclipsefdn.chat-moderation-bl</code></li>
+<li>Set banlist as default: <code>!default EF</code></li>
+<li>Add Community Moderation Effort: <ul>
+<li>First join these room with your account otherwise you'll get: <code>error: "Can't join remote room because no servers that are in the room have been provided."</code></li>
+<li>!watch #community-moderation-effort-bl:neko.dev (see: https://blog.neko.dev/posts/)matrix-year-in-review-2022.html</li>
+<li>!watch #matrix-org-hs-tos-bl:matrix.org</li>
+</ul>
+</li>
+<li>Sync banlist: <code>!sync</code></li>
+</ol>
+<p>Example of ACL for a specific matrix server: <code>!ban EF server matrix-local.eclipse.fr Known for spam</code> </p>
+<h3 id="room-moderation-configuration">Room moderation configuration</h3>
+<p>At room level:</p>
+<ol>
+<li>Invite bot moderation to all rooms with custom level like <code>60</code></li>
+<li>Change ACL with custom level like <code>60</code></li>
+<li>Verify with <code>!verify</code></li>
+</ol>
+<p>At space level: just add <code>moderator</code> power level to bot.</p>
+<p>NOTE: <code>!verify</code> show an error for space <code>eclipsefdn - Missing power level for server ACLs: 50 &lt; 100</code></p>
+<h3 id="activate-protections">Activate protections</h3>
+<p>Protections list: <code>!protections</code></p>
+<h3 id="localabusereports">LocalAbuseReports</h3>
+<p><code>!enabled LocalAbuseReports</code></p>
+<p>put nginx configuration:</p>
+<pre><code class="language-conf">  location ~ ^/_matrix/client/(r0|v3)/rooms/([^/]*)/report/(.*)$ {
+    set $room_id $2;
+    set $event_id $3;
+    proxy_pass http://127.0.0.1:8082/api/1/report/$room_id/$event_id;
+  }
+</code></pre>
+<h2 id="slack-integration-appservice-slack">Slack integration (Appservice-Slack)</h2>
+<h3 id="configure-slack-app">Configure slack App</h3>
+<p>see: https://matrix-appservice-slack.readthedocs.io/en/stable/link_channels/</p>
+<p>1- Create a Slack App (Classic): https://api.slack.com/apps?new_classic_app=1</p>
+<pre><code>App Name: `matrix-bridge`
+Development Slack Workspace: choose the right slack workspace for the Slack App.
+</code></pre>
+<p>Select the <code>matrix-bridge-app</code>. Under <code>Feature</code>Menu -&gt; <code>App Home</code>-&gt; First, add a legacy bot user </p>
+<pre><code>Display Name (Bot Name): `Eclipse Foundation Matrix Bridge Bot`
+Default username: `ef_matrix_bridge_bot`
+</code></pre>
+<p>2- Create <code>OAuth &amp; Permissions</code></p>
+<p>Get User OAuth Token and Bot User OAuth Token and store in pass.</p>
+<h3 id="create-matrix-admin-room">Create matrix admin room</h3>
+<p>Create a private room: <code>#eclipsefdn.chat-slack:matrix.eclipse.org</code> with Name: <code>Chat Service Slack Admin</code>.
+And attach to space: <code>#eclipsefdn:matrix.eclipse.org</code>.</p>
+<p>IMPORTANT: Must not be encrypt!</p>
+<p>Set the ID in the configuration: </p>
+<p>i.e:</p>
+<pre><code>matrix_admin_room: !abcdefg12345hijk:matrix.eclipse.org
+</code></pre>
+<h3 id="invite-slack-bot-in-room">invite slack bot in room</h3>
+<pre><code>/invite @ef_slack_bridge_bot:matrix.eclipse.org
+</code></pre>
+<p>Even if the bot is not recognized.</p>
+<h3 id="slack-bot-rate-limit">slack bot rate limit</h3>
+<p>https://github.com/matrix-org/synapse/issues/6286</p>
+<pre><code class="language-sql">insert into ratelimit_override values ('@ef_slack_bridge_bot:matrix.eclipse.org', 0, 0);
+</code></pre>
+<h3 id="set-the-right-admin-room">Set the right admin room</h3>
+<p>It might possible that the bridge set another room that the one previously created.
+This can be force by updating database;</p>
+<pre><code class="language-sql">update user_admin_rooms set roomid='!becqmCHUKvDiueefgt:matrix-staging.eclipse.org' where matrixuser='-internal-';
+</code></pre>
+<h2 id="link-a-chat-service-room-to-a-slack-channel">Link a chat service room to a slack channel</h2>
+<p>1- On Chat service room </p>
+<p>Invite bot <code>ef_slack_bridge_bot</code> to room on chat service.</p>
+<pre><code>/invite @ef_slack_bridge_bot:matrix.eclipse.org
+</code></pre>
+<p>2- Add app matrix-bridge on slack channel</p>
+<p>Right click on slack room channel -&gt; <code>View channel details</code>  -&gt; <code>Integration</code> -&gt; <code>Add apps</code> 
+Select <code>matrix-bridge</code></p>
+<p>3- Get room_id</p>
+<p>Get room_id from settings -&gt; Advanced -&gt; Internal room ID
+ex: <code>!xxxxxxxxxxxxxx:matrix.eclipse.org</code></p>
+<p>4- On slack room</p>
+<p>Invite bot <code>ef_matrix_bridge_bot</code> to room on chat service.</p>
+<pre><code>/invite ef_matrix_bridge_bot
+</code></pre>
+<p>5- Get channel ID</p>
+<p>Right-click your channel name in Slack and select “Copy Link”. The channel id is the last argument in the url.</p>
+<p>Get the Id from the URL: <code>https://XXX.Slack.com/messages/&lt;channel id&gt;/</code></p>
+<p>6- Link rooms</p>
+<p>In the chat service admin room: <code>Chat Service Slack Admin</code></p>
+<pre><code>link --channel_id YYYYYYYY --room !xxxxxxxxxxxxxx:matrix.eclipse.org --slack_bot_token xoxb-xxxxxxxxxxxxxxxx
+</code></pre>
+<p>=&gt; <code>Room is now pending-name</code></p>
+<h1 id="devops">Devops</h1>
+<h2 id="generate-secrets_1">Generate secrets</h2>
+<p>Execute:  <code>./gen-secrets.sh</code></p>
+<p>It will store secrets under: <code>/environments/chat-matrix/{env}/.secrets</code></p>
+<h2 id="tanka">tanka</h2>
+<p>see doc installation tanka: <code>https://tanka.dev/install</code></p>
+<pre><code class="language-shell">tk show &quot;environments/chat-matrix/dev&quot;
+tk apply &quot;environments/chat-matrix/dev&quot;
+</code></pre>
+<p>Exporting kubernetes files:</p>
+<pre><code class="language-shell">tk show --dangerous-allow-redirect &quot;environments/chat-matrix/dev&quot; &gt; ./k8s/chat-matrix-dev.yaml
+</code></pre>
+<h2 id="applysh-script">Apply.sh script</h2>
+<p>Allow to run tanka and apply modification with kubectl for an environment.</p>
+<pre><code>./apply.sh {env}
+</code></pre>
+<h2 id="kubectl-status">kubectl status</h2>
+<p>Installation</p>
+<pre><code>kubectl krew install status
+</code></pre>
+<pre><code>kubectl status deployment -n chat-matrix-dev
+</code></pre>
+<h1 id="upgrade">Upgrade</h1>
+<h2 id="synapse">Synapse</h2>
+<h3 id="check-changelog">Check changelog</h3>
+<p>First check changelog, ex: <code>https://github.com/matrix-org/synapse/releases/tag/v1.82.0</code></p>
+<p>Look at :
+* Module signature deprecation: impact <code>modules/synapse_prevent_encrypt_room</code>, <code>modules/synapse_user_control</code>, <code>modules/synapse_user_restrictions</code>) 
+* OIDC changes: impact <code>/synapse/config/oidc.py</code>, <code>/synapse/handlers/oidc.py</code> 
+* Templates: impact <code>/synpase/res/templates</code>
+* Configuration files: Configuration changes should be apply in this configuration file: <code>/lib/chat-matrix/synapse/config-homeserver.libsonnet</code>.
+* New features!</p>
+<h3 id="upgrade-version">Upgrade version</h3>
+<p>Check version and look for dockerhub tags: <code>https://hub.docker.com/r/matrixdotorg/synapse/tags</code></p>
+<p>And apply change in docker image file: <code>/docker/Dockerfile.synapse</code></p>
+<pre><code>ARG SYNAPSE_VERSION=&quot;v1.82.0&quot;
+</code></pre>
+<p>Commit with message: <code>feat: upgrade synapse to v1.82.0</code>
+gitmoji: <code>⬆️  - Upgrade dependencies.</code></p>
+<p>Push/Wait for CI building synapse image and apply changes in kubernetes: <code>./apply.sh {env}</code></p>
+<h2 id="matrix-media-repo">Matrix-media-repo</h2>
+<h3 id="check-changelog_1">Check changelog</h3>
+<p>First check changelog, ex: <code>https://github.com/turt2live/matrix-media-repo/releases/tag/v1.2.13</code></p>
+<p>Look for compatibilities with synapse version.
+Look for changes in API, cors, everything that could impact nginx rewrite rules.</p>
+<h3 id="upgrade-version_1">Upgrade version</h3>
+<p>Note: Media repo version is currently a specific tag for two reasons:
+* tag 1.2.13 missing some features
+* last commit failed CI</p>
+<p>Apply change in docker image file: <code>/docker/Dockerfile.mediarepo</code></p>
+<pre><code>ARG CLONE_BRANCH=&quot;master&quot; 
+ARG CO_SHA=&quot;219e4bc67ab8e354b263774aca0118332ea48c25&quot; 
+</code></pre>
+<p>Commit with message: <code>feat: upgrade mediarepo to branch XXXXXXX and commit XXXXXXXXXXXX</code>
+gitmoji: <code>⬆️  - Upgrade dependencies.</code></p>
+<p>Push/Wait for CI building synapse image and apply changes in kubernetes: <code>./apply.sh {env}</code></p>
+<h2 id="synapse-admin">Synapse-admin</h2>
+<h3 id="check-changelog_2">Check changelog</h3>
+<p>First check changelog, ex: <code>https://github.com/Awesome-Technologies/synapse-admin/releases/tag/0.8.7</code></p>
+<h3 id="upgrade-version_2">Upgrade version</h3>
+<p>Check version and look for github branch tags: <code>https://github.com/Awesome-Technologies/synapse-admin/tree/0.8.7</code></p>
+<p>Apply change in docker image file: <code>/docker/Dockerfile.admin</code></p>
+<pre><code>ARG SYNAPSE_ADMIN_BRANCH=&quot;0.8.7&quot;
+</code></pre>
+<p>Commit with message: <code>feat: upgrade synapse-admin to 0.8.7</code>
+gitmoji: <code>⬆️  - Upgrade dependencies.</code></p>
+<p>Push/Wait for CI building synapse image and apply changes in kubernetes: <code>./apply.sh {env}</code></p>
+<h1 id="development">Development</h1>
+<h2 id="reuse-lint">Reuse lint</h2>
+<pre><code class="language-shell">docker run -v $PWD:/data fsfe/reuse:latest lint
+</code></pre>
+<h2 id="docker-compose-render">Docker-compose render</h2>
+<pre><code class="language-shell">docker run --rm -it --name dcv -v $(pwd):/input pmsipilot/docker-compose-viz render -m image docker-compose.yaml
+</code></pre>
+<h2 id="k8s-render">k8s render</h2>
+<pre><code class="language-shell">./k8sviz.sh -n chat-matrix-prod -t png -o k8s-architecture.png
+</code></pre>
+<h1 id="usefull-links">Usefull links</h1>
+<p>Matrix version and features: </p>
+<pre><code>https://matrix.eclipse.org/_matrix/client/versions
+https://matrix.eclipse.org/_matrix/federation/v1/version
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

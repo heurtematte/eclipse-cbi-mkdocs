@@ -1,0 +1,11 @@
+chat-local.eclipse.org {
+    tls internal
+	reverse_proxy /* elementweb-local:8080
+	reverse_proxy /status/* elementweb-local:8080
+}
+
+chat-federated.eclipse.org {
+    tls internal
+	reverse_proxy /* elementweb-federated:8080
+	reverse_proxy /status/* elementweb-federated:8080
+}

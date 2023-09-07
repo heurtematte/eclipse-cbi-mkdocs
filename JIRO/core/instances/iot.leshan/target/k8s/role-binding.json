@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "iot.leshan",
+         "org.eclipse.cbi.jiro/project.shortname": "leshan"
+      },
+      "name": "leshan",
+      "namespace": "leshan"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "leshan"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "leshan",
+         "namespace": "leshan"
+      }
+   ]
+}

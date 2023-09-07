@@ -1,0 +1,65 @@
+
+{ 
+    # debug
+}
+
+matrix-local.eclipse.org {
+    tls internal
+	reverse_proxy /_matrix/* synapse-local:8008
+    reverse_proxy /_synapse/* synapse-local:8008
+    reverse_proxy /_synapse/media/* matrix-media-repo-local:8000
+    
+    route /_matrix/client/*/rooms/*/report/* {
+        # header {
+        #     Access-Control-Allow-Origin *
+        #     Access-Control-Allow-Credentials true
+        #     Access-Control-Allow-Methods GET, POST, OPTIONS
+        #     Access-Control-Allow-Headers Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken,Keep-Alive,X-Requested-With,If-Modified-Since
+        #     Access-Control-Expose-Headers Content-Length,Content-Range
+        #     Access-Control-Max-Age 1728000 
+        # }
+
+        @room_id {
+            path_regexp room_id ^/_matrix/client/(r0|v3)/rooms/([^/]*)/report/(.*)$
+        }
+        rewrite @room_id /api/1/report/{re.room_id.2}/{re.room_id.3}
+
+        reverse_proxy http://mjolnir:8081
+    }
+    
+    respond /.well-known/matrix/server 200 {
+        body "{ \"m.server\": \"matrix-local.eclipse.org:443\" }"
+        close
+    }
+}
+
+matrix-federated.eclipse.org {
+    tls internal
+	reverse_proxy /_matrix/* synapse-federated:8008
+    reverse_proxy /_synapse/* synapse-federated:8008
+    reverse_proxy /_synapse/media/* matrix-media-repo-federated:8000
+    
+    respond /.well-known/matrix/server 200 {
+        body "{ \"m.server\": \"matrix-federated.eclipse.org:443\" }"
+        close
+    }
+}
+
+matrix-media-repo-local.eclipse.org {
+    tls internal
+    reverse_proxy /* matrix-media-repo-local:8000
+}
+
+matrix-media-repo-federated.eclipse.org {
+    tls internal
+    reverse_proxy /* matrix-media-repo-federated:8000
+}
+
+synapse-admin-local.eclipse.org {
+    tls internal
+    reverse_proxy /* synapse-admin:8080
+}
+
+
+
+

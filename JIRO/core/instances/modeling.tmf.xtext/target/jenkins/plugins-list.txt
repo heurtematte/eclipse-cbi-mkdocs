@@ -1,0 +1,12 @@
+# GENERATED FILE - DO NOT EDIT
+build-user-vars-plugin
+copyartifact
+downstream-buildview
+envinject
+gradle
+groovy
+htmlpublisher
+matrix-communication
+parameterized-scheduler
+show-build-parameters
+slack

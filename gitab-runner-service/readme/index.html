@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://eclipse-cbi-mkdocs/gitab-runner-service/readme/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Gitlab Runner Service - CBI</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">CBI</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">CBI</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">JIRO <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Core</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../JIRO/core/" class="dropdown-item">Eclipse CBI - Jiro</a>
+</li>
+            
+<li>
+    <a href="../../JIRO/core/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../JIRO/core/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../JIRO/core/documentation/" class="dropdown-item">Documentation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Agent</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../JIRO/agent/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../JIRO/agent/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../JIRO/agent/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Basic</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../JIRO/agent/basic/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Basic ubuntu</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../JIRO/agent/basic-ubuntu/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Centos 7</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../JIRO/agent/centos-7/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Centos 8</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../JIRO/agent/centos-8/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Controller</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../JIRO/controller/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../JIRO/controller/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../JIRO/controller/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dockerfile</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../JIRO/dockerfile/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Gitab runner service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Gitlab Runner Service</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Chat Service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/documentation/_index/" class="dropdown-item">Chat Service</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Faq</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/documentation/faq/_index/" class="dropdown-item">Frequently Asked Questions</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/documentation/getting-started/_index/" class="dropdown-item">Getting Started!</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Glossary</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/documentation/glossary/_index/" class="dropdown-item">Glossary</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Links</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/documentation/links/_index/" class="dropdown-item">Links</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Request</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/documentation/request/_index/" class="dropdown-item"> index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Rooms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/documentation/rooms/_index/" class="dropdown-item">Rooms/Spaces</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/documentation/support/_index/" class="dropdown-item">Support</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Provisionner</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/provisionner/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Synapse</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/synapse/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Elementweb</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/elementweb/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sync tools</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../Chat%20Service/sync-tools/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Macos notarization service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../macos-notarization-service/" class="dropdown-item">macOS Notarization Service</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../../JIRO/dockerfile/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../Chat%20Service/documentation/_index/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-service-documentation.git/main/readme.md" class="nav-link">
+                                        Edit</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#gitlab-runner-service" class="nav-link">Gitlab Runner Service</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#what-is-a-gitlab-runner" class="nav-link">What is a GitLab runner?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#leverage-gitlab-runner-configuration-and-maintenance-with-grac" class="nav-link">Leverage gitlab runner configuration and maintenance with Grac!</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#quick-start" class="nav-link">Quick start!</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#request-a-runner" class="nav-link">Request a runner</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#first-integration" class="nav-link">First integration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#provided-services" class="nav-link">Provided Services</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#pipeline-template-basic-features" class="nav-link">Pipeline template: basic features</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pipeline-template-auto-devops" class="nav-link">Pipeline template: Auto Devops</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pipeline-template-full-feature" class="nav-link">Pipeline template: Full feature</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dockerhub-publication" class="nav-link">Dockerhub publication</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#repoeclipseorg" class="nav-link">repo.eclipse.org</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#signing-tool" class="nav-link">Signing tool</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#supply-chain-security-best-practices" class="nav-link">Supply Chain Security Best Practices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#secret-management" class="nav-link">Secret management</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#request-and-allocation-process-for-runners-resource-pack" class="nav-link">Request and Allocation Process for Runners (Resource pack)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#service-level-agreement-sla" class="nav-link">Service Level Agreement (SLA)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#support" class="nav-link">Support</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#faq" class="nav-link">FAQ</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#how-to-target-a-specific-runner" class="nav-link">How to target a specific runner</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gitlab-runner-type" class="nav-link">gitlab runner type</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#shared-runner" class="nav-link">Shared Runner</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="gitlab-runner-service">Gitlab Runner Service</h1>
+<p>As a part of the Common Build Infrastructure (CBI), the GitLab Runner Service aims to assist Eclipse projects in enabling GitLab CI within their projects.</p>
+<p>It allows the execution of GitLab CI pipelines through runners deployed in the secure and scalable Eclipse Foundation's Kubernetes infrastructure by allocating the necessary resources.</p>
+<p>Projects hosted on <code>gitlab.eclipse.org</code> can now take advantage of this new service.</p>
+<p>IMPORTANT: The use of this service is currently not extendable to other GitLab instances like <code>gitlab.com</code>, which, beyond the installation and the use of runners, would require additional work from the Eclipse Foundation for managing Eclipse projects on gitlab.com, similar to what exists with github.</p>
+<p>This service is powered by GRAC! (GitLab Runner As Code), a tool developed by the foundation that enables rapid deployment of this service, simplifying configuration and maintenance.</p>
+<p>[[<em>TOC</em>]]</p>
+<h2 id="what-is-a-gitlab-runner">What is a GitLab runner?</h2>
+<p>A GitLab Runner is an agent that works with GitLab CI pipeline. It executes tasks (jobs) defined in your project <code>.gitlab-ci.yml</code> file, by automating various stages such as building, testing, and even deploying code. </p>
+<p>For more information, start with: https://docs.gitlab.com/ee/topics/build_your_application.html </p>
+<h2 id="leverage-gitlab-runner-configuration-and-maintenance-with-grac">Leverage gitlab runner configuration and maintenance with Grac!</h2>
+<p>The goal of GRAC! is to make the administration of gitlab runner instances on a Kubernetes based infrastructure bearable. It uses automation, templates and a configuration-as-code approach. GRAC! consist of a set of custom shell scripts and a jsonnet generation.</p>
+<p>Following the successfull implementation of jenkins instance as code at Eclipse Foundation with JIRO, and over +250 instances in production, there is a demand from projects to extend this support to GitLab CI.</p>
+<p>So as a natural extension, GRAC! is born. Under the woods: same approach and technologies.</p>
+<p>Grac! helps reduce administration overhead for recurring task like setting up a new gitlab runner for groups/projects, configuration, allowing ressources, handling specific requests, maintaining runners version, etc.</p>
+<h1 id="quick-start">Quick start!</h1>
+<h2 id="request-a-runner">Request a runner</h2>
+<p>Runner can be requested by filling a ticket on the <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new">helpdesk</a>. 
+Please ensure your project lead approved with a +1 the request. </p>
+<h2 id="first-integration">First integration</h2>
+<p>Create your first <code>.gitlab-ci.yml</code> file in your project.</p>
+<pre><code class="language-yaml">default:
+  tags:
+    - origin:eclipse # allow to target eclipse runner
+
+stages:
+  - build  
+
+my_build_job: 
+  stage: build
+  script:
+    - echo &quot;example job 1&quot;
+</code></pre>
+<p>You can find many template <a href="https://docs.gitlab.com/ee/ci/examples/#cicd-templates">here</a></p>
+<h1 id="provided-services">Provided Services</h1>
+<h2 id="pipeline-template-basic-features">Pipeline template: basic features</h2>
+<p>The Eclipse Foundation provides a set of functionnality to address needs related to control, construction, and publication. All of these functionalities are available within the <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates/">gitlab-ci-templates</a> project, and can be imported into project pipelines.</p>
+<p>Here is an overview of the features : 
+* <code>Compliance</code>: use of librairies <a href="https://reuse.software/">REUSE</a>, <a href="https://github.com/christophebedard/dco-check">DCO check tool</a>, and an ECA script validation <a href="https://www.eclipse.org/legal/ECA.php">Eclipse Contributor Agreement</a>
+* <code>Docker image management</code>: docker image build based on the buildkit Eclipse Foundation infrastructure and publish to a registry like dockerhub
+* <code>Quality</code>: Control docker image quality with <a href="https://github.com/hadolint/hadolint">hadolint</a> tool</p>
+<p>NOTE about <a href="https://docs.gitlab.com/ee/topics/autodevops/">Gitlab Auto DevOps</a></p>
+<h2 id="pipeline-template-auto-devops">Pipeline template: Auto Devops</h2>
+<p>GitLab provide what's called <code>Auto DevOps</code> which is a comprehensive set of predefined CI/CD pipelines and setting, that aim to streamline and automate the software development lifecycle, from code creation to deployment and monitoring. Auto DevOps is designed to simplify the process by providing a preconfigured CI/CD setup.</p>
+<p>This feature clearly provides a time-saving advantage in terms of configuration and CI pipeline deployment. However, this mode is not entirely suited to the operational constraints of the Eclipse Foundation's infrastructure. That's why the foundation offers some of these functionalities with an equivalent ready-to-use pipeline for our infrastructure.</p>
+<p>Avalaible features: 
+* <a href="https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/ci/templates/Jobs/Container-Scanning.gitlab-ci.yml">Container Scanning</a>
+* <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/SAST-IaC.gitlab-ci.yml">Sast Analysis</a>
+* <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/SAST-IaC.gitlab-ci.yml">Sast IaC Analysis</a>
+* <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Secret-Detection.gitlab-ci.yml">Secret Detection</a>
+* <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Dependency-Scanning.gitlab-ci.yml">Dependency Scanning</a></p>
+<p>All autodevops available in a specific pipeline <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates/-/blob/main/pipeline-autodevops.gitlab-ci.yml">pipeline-autodevops.gitlab-ci.yml</a></p>
+<p>For more information, please read the documentation [here] (https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates/-/blob/main/README.md)</p>
+<p>IMPORTANT: Known limitations
+When using OpenShift to run a GitLab Runner Fleet, we do not support some GitLab features given OpenShift’s security model. Features requiring Docker-in-Docker might not work.</p>
+<p>For Auto DevOps, the following features are not supported yet:
+* Auto Code Quality
+* Auto License Compliance (License scanning of CycloneDX files is supported on OpenShift)
+* Auto Browser Performance Testing
+* Auto Build
+* Operational Container Scanning (Note: Pipeline Container Scanning is supported)</p>
+<h2 id="pipeline-template-full-feature">Pipeline template: Full feature</h2>
+<p>We recommand using the full pipeline <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates/-/blob/main/pipeline.gitlab-ci.yml">pipeline.gitlab-ci.yml</a>.
+Including all feature from: 
+* Compliance
+* Autodevops 
+* Docker management</p>
+<h2 id="dockerhub-publication">Dockerhub publication</h2>
+<p>The Eclipse Foundation owns the eclipse organization and a couple of other project specific organizations at https://hub.docker.com. You can ask to get a repository being created on one of these organizations. We will set permissions so that committers have write access to this repo (you will need to share your Docker Hub ID with us).</p>
+<p>You can also ask us to create a project specific organization. The organization name needs to follow the pattern eclipse-<projectname>.</p>
+<p>Note that we don't grant admin permissions on any Eclipse Foundation owned organization. We recognize that this means that you will have to go through us for all new repo creation, but we can't grant organizations-wide admin permission assigned to committers for security reasons.</p>
+<p>In all cases, requests should be directed to the GitLab HelpDesk. </p>
+<h2 id="repoeclipseorg">repo.eclipse.org</h2>
+<p>see: <a href="https://wiki.eclipse.org/Services/Nexus">Services/Nexus</a></p>
+<h2 id="signing-tool">Signing tool</h2>
+<p>see: <a href="https://wiki.eclipse.org/CBI#Signing_tool">CBI Signing tool</a></p>
+<h2 id="supply-chain-security-best-practices">Supply Chain Security Best Practices</h2>
+<p>The Eclipse Foundation has authored an Open Source Software Supply Chain Best Practices document. We highly recommend Eclipse OSS projects read, understand and adopt these best practices as part of their role in the Supply Chain.</p>
+<p>https://github.com/eclipse-cbi/best-practices/blob/main/software-supply-chain/osssc-best-practices.md </p>
+<h2 id="secret-management">Secret management</h2>
+<p>Vault integration</p>
+<h2 id="request-and-allocation-process-for-runners-resource-pack">Request and Allocation Process for Runners (Resource pack)</h2>
+<h3 id="whats-provided">What's provided?</h3>
+<h3 id="additional-resource-packs">Additional Resource Packs</h3>
+<h3 id="resource-packs-included-in-membership">Resource Packs Included in Membership</h3>
+<h3 id="assigning-resource-packs-to-a-project">Assigning Resource Packs to a Project</h3>
+<h3 id="sponsored-projects">Sponsored Projects</h3>
+<h3 id="request-for-a-gitlab-runner">Request for a gitlab runner</h3>
+<p>https://gitlab.eclipse.org/eclipsefdn/helpdesk</p>
+<h3 id="dedicated-runner">Dedicated Runner</h3>
+<h1 id="service-level-agreement-sla">Service Level Agreement (SLA)</h1>
+<p>Most CBI services are Tier 2 - Best Effort, which means they are expected to be available at all times, and rapid restoration can be expected in the event of an outage. Eclipse Strategic Members can contact Webmaster in certain cases of off-hours support.</p>
+<p>Please see <a href="https://wiki.eclipse.org/IT_SLA">IT_SLA</a> for more information on the Eclipse Foundation IT Services SLA.</p>
+<h1 id="support">Support</h1>
+<ul>
+<li><a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new">HelpDesk</a></li>
+<li><a href="https://chat.eclipse.org/#/room/#eclipsefdn.releng:matrix.eclipse.org">releng room</a></li>
+<li><a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates">gitlab ci templates</a></li>
+<li><a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code">Grac!</a></li>
+</ul>
+<h1 id="faq">FAQ</h1>
+<h2 id="how-to-target-a-specific-runner">How to target a specific runner</h2>
+<p>Q: <strong>How can I target a specific runner for my GitLab CI/CD job?</strong>
+A: To target a specific runner for your job, you can use runner tags. Runner tags are labels assigned to runners that help you select the right runner for specific jobs.
+Each Eclipse foundation gitlab runner comes with a set of default labels. 
+I.e: 
+* <code>prefix:ef-grac</code> 
+* <code>cluster:okd-c1</code> 
+* <code>type:groups</code> 
+* <code>instance:technologie.cbi.grac</code>
+* <code>ctx:releng-group</code> 
+* <code>executor:kubernetes</code> 
+* <code>kubenamespace:ef-grac-technologie-cbi-grac</code>
+* <code>concurrent:8</code> 
+* <code>outputLimit:100000</code> 
+* <code>image:ubuntu:20.04</code> 
+* <code>cpuLimit:8000</code> 
+* <code>cpuRequest:1000</code> 
+* <code>memoryLimit:16384</code> 
+* <code>memoryRequest:2048</code> 
+* <code>serviceCpuLimit:8000</code> 
+* <code>origin:eclipse</code></p>
+<p>Q: <strong>How do I assign extra tags to runners?</strong></p>
+<p>A: Tags can be assigned to runners during runner registration, i.e my-tag, java, docker, etc., based on the capabilities or characteristics of the runner.
+This can be requested at any time, at runner creation or later by simply filling out a request in the helpdesk support.</p>
+<p>Q: <strong>How do I use runner tags in my CI/CD job configuration?</strong></p>
+<p>A: In your .gitlab-ci.yml file, you can use the <code>tags</code> keyword at the top level description for pipeline definition or in the job configuration to specify the runner tags that the pipeline or the job should target.</p>
+<p>At pipeline level:</p>
+<pre><code class="language-yaml">default:
+  tags:
+    - origin:eclipse
+</code></pre>
+<p>At job level: </p>
+<pre><code class="language-yaml">my_job:
+  tags:
+    - origin:eclipse
+  script:
+    - echo &quot;Running on a Eclipse foundation runner&quot;
+</code></pre>
+<p>Q: <strong>What if no runner matches the specified tags?</strong></p>
+<p>A: If no runner matches the specified tags, the job won't run. Make sure that your runner tags correspond to the capabilities of your runners and the requirements of your jobs.</p>
+<p>Q: <strong>Is there a default runner if no tags are specified?</strong></p>
+<p>A: GitLab CI will automatically select a runner that doesn't have any tags assigned if you don't specify tags for a job. However, for more control and specificity, it's recommended to use runner tags, espacially the <code>origin:eclipse</code> tag.</p>
+<h2 id="gitlab-runner-type">gitlab runner type</h2>
+<ul>
+<li>linux runner: default (ubuntu default image)</li>
+<li>Windows runner: Not planned!</li>
+</ul>
+<p>Runner are only group runner.
+Runner can be created at repository level, depending on quotas.</p>
+<h2 id="shared-runner">Shared Runner</h2></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

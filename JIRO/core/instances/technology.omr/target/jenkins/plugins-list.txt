@@ -1,0 +1,8 @@
+# GENERATED FILE - DO NOT EDIT
+docker-plugin
+docker-workflow
+embeddable-build-status
+envinject
+generic-webhook-trigger
+gerrit-trigger
+gradle

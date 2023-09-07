@@ -1,0 +1,5 @@
+chat-local.eclipse.org {
+    tls internal
+	reverse_proxy /* elementweb:8080
+	reverse_proxy /status/* elementweb:8080
+}

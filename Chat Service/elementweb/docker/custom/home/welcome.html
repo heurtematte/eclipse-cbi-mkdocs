@@ -1,0 +1,294 @@
+<style type="text/css">
+
+/* we deliberately inline style here to avoid flash-of-CSS problems, and to avoid
+ * voodoo where we have to set display: none by default
+ */
+
+h1::after {
+    content: "!";
+}
+
+.mx_ButtonRow {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 12px 0 0;
+}
+
+.mx_ButtonRow > * {
+    margin: 0 10px;
+}
+
+.mx_ButtonRow > *:first-child {
+    margin-left: 0;
+}
+
+.mx_ButtonRow > *:last-child {
+    margin-right: 0;
+}
+
+.mx_ButtonParent {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    text-decoration: none;
+    color: #2e2f32 !important;
+}
+
+.mx_ButtonLabel {
+    margin-left: 20px;
+}
+
+.mx_Header_title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0 0;
+}
+
+.mx_Header_subtitle {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 8px 0 0;
+}
+
+.mx_ButtonSignIn {
+    background-color: #F27509;
+    color: white !important;
+}
+
+.mx_ButtonCreateAccount {
+    background-color: #050505;
+    color: white !important;
+}
+
+.mx_SecondaryButton {
+    background-color: #FFFFFF;
+    color: #2E2F32;
+}
+
+.mx_Button_iconSignIn {
+    background-image: url('welcome/images/icon-sign-in.svg');
+}
+.mx_Button_iconCreateAccount {
+    background-image: url('welcome/images/icon-create-account.svg');
+}
+.mx_Button_iconHelp {
+    background-image: url('welcome/images/icon-help.svg');
+}
+.mx_Button_iconRoomDirectory {
+    background-image: url('welcome/images/icon-room-directory.svg');
+}
+
+/*
+.mx_WelcomePage_loggedIn is applied by EmbeddedPage from the Welcome component
+If it is set on the page, we should show the buttons. Otherwise, we have to assume
+we don't have an account and should hide them. No account == no guest account either.
+ */
+.mx_WelcomePage:not(.mx_WelcomePage_loggedIn) .mx_WelcomePage_guestFunctions {
+    display: none;
+}
+
+.mx_ButtonRow.mx_WelcomePage_guestFunctions {
+    margin-top: 20px;
+}
+.mx_ButtonRow.mx_WelcomePage_guestFunctions > div {
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 480px) {
+    .mx_ButtonRow {
+        flex-direction: column;
+    }
+
+    .mx_ButtonRow > * {
+        margin: 0 0 10px 0;
+    }
+}
+
+
+.cc-revoke, .cc-window {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  font-family: Helvetica,Calibri,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999;
+}
+
+.cc-banner .cc-message {
+  display: block;
+  flex: 1 1 auto;
+  margin-right: 1em;
+  max-width: 100%;
+}
+
+.cc-color-override.cc-window {
+  color: rgb(255, 255, 255);
+  background-color: rgb(53, 52, 52);
+}
+.cc-banner.cc-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.cc-window.cc-banner {
+  align-items: center;
+}
+.cc-window.cc-banner {
+  flex-direction: row;
+  padding: 1em 1.8em;
+  width: 100%;
+}
+.cc-bottom {
+  bottom: 1em;
+}
+.cc-revoke, .cc-window {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  font-family: Helvetica,Calibri,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999;
+}
+.cc-window {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+/* *, ::after, ::before {
+  box-sizing: border-box;
+} */
+.cc-compliance {
+  align-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.cc-btn:hover, .cc-color-override .cc-btn:focus {
+  background-color: rgb(255, 160, 46);
+}
+ .cc-btn {
+  color: rgb(255, 255, 255);
+  border-color: transparent;
+  background-color: rgb(218, 122, 8);
+}
+.cc-btn + .cc-btn {
+  margin-left: .5em;
+}
+a:focus, a:hover {
+  color: #305e72;
+  text-decoration: underline;
+}
+[role="button"] {
+  cursor: pointer;
+}
+.cc-btn {
+  border-style: solid;
+  border-width: 2px;
+  display: block;
+  font-size: .9em;
+  font-weight: 700;
+  padding: .4em .8em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+.cc-color-override .cc-btn {
+  color: rgb(255, 255, 255);
+  border-color: transparent;
+  background-color: rgb(218, 122, 8);
+}
+
+.cc-color-override .cc-highlight .cc-btn:first-child {
+  color: rgb(0, 0, 0);
+  border-color: transparent;
+  background-color: rgb(255, 255, 255);
+}
+
+</style>
+<div class="mx_AuthHeaderLogo">
+  <a href="https://eclipse.org" target="_blank" rel="noopener">
+    <img src="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-foundation-grey-orange.svg" alt=""/>
+</a>
+</div>
+<div class="mx_Parent">
+    
+    <h1>Welcome to the community</br>
+      <span style="color: #F27509">Chat service</span></br>
+      at Eclipse Foundation
+    </h1>
+    
+    <div class="mx_ButtonGroup">
+        <div class="mx_ButtonRow">
+            <a href="#/login" class="mx_ButtonParent mx_ButtonSignIn mx_Button_iconSignIn">
+                <div class="mx_ButtonLabel">_t("Sign In")</div>
+            </a>
+            <a href="#/register" class="mx_ButtonParent mx_ButtonCreateAccount mx_Button_iconCreateAccount">
+                <div class="mx_ButtonLabel">_t("Create Account")</div>
+            </a>
+        </div>
+        <!-- The comments below are meant to be used by Ansible as a quick way
+             to strip out the marked content when desired.
+             See https://github.com/vector-im/element-web/issues/8622.
+             TODO: Strip out these comments and rely on the guest flag -->
+        <!-- BEGIN Ansible: Remove these lines when guest access is disabled -->
+        <div class="mx_ButtonRow mx_WelcomePage_guestFunctions">
+            <div>
+                <a href="#/directory" class="mx_ButtonParent mx_SecondaryButton mx_Button_iconRoomDirectory">
+                    <div class="mx_ButtonLabel">_t("Explore rooms")</div>
+                </a>
+            </div>
+        </div>
+        <!-- END Ansible: Remove these lines when guest access is disabled -->
+    </div>
+
+    <!-- <div class="mx_ModularContainer mx_ModularList">
+      <ul>
+          <li>
+              <a href='/#/room/#eclipsefdn.general:matrix.eclipse.org'>General Eclipse Foundation chat (#eclipsefdn:general)</a>
+          </li>
+          <li>
+              <a href='/#/room/#eclipse:matrix.eclipse.org'>Eclipse projects space (#eclipse)</a>
+          </li>
+          <li>
+              <a href='/#/room/#eclipsefdn.chat-support:matrix-staging.eclipse.org'>Eclipse Foundation chat service support (#eclipsefdn.chat-support)</a>
+          </li>
+      </ul>
+  </div> -->
+<!-- 
+    <div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-opt-in cc-theme-block cc-bottom cc-color-override" style=""><span id="cookieconsent:desc" class="cc-message">Some Eclipse Foundation pages use cookies to better serve you when you return to the site. You can set your browser to notify you before you receive a cookie or turn off cookies. If you do so, however, some areas of some sites may not function properly. To read Eclipse Foundation Privacy Policy <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://www.eclipse.org/legal/privacy.php" rel="noopener noreferrer nofollow" target="_blank">click here.</a></span><div class="cc-compliance cc-highlight"><a aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a><a aria-label="allow cookies" role="button" tabindex="0" class="cc-btn cc-allow">Allow cookies</a></div></div>
+ -->
+</div>

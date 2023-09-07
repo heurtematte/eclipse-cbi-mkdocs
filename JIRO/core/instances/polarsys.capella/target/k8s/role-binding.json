@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "polarsys.capella",
+         "org.eclipse.cbi.jiro/project.shortname": "capella"
+      },
+      "name": "capella",
+      "namespace": "capella"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "capella"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "capella",
+         "namespace": "capella"
+      }
+   ]
+}

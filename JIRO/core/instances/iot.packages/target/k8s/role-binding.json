@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "iot.packages",
+         "org.eclipse.cbi.jiro/project.shortname": "packages"
+      },
+      "name": "packages",
+      "namespace": "packages"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "packages"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "packages",
+         "namespace": "packages"
+      }
+   ]
+}

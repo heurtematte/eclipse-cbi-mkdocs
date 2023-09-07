@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "technology.xwt",
+         "org.eclipse.cbi.jiro/project.shortname": "xwt"
+      },
+      "name": "xwt",
+      "namespace": "xwt"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "xwt"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "xwt",
+         "namespace": "xwt"
+      }
+   ]
+}

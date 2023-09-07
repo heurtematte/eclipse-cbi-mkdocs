@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "technology.nebula",
+         "org.eclipse.cbi.jiro/project.shortname": "nebula"
+      },
+      "name": "nebula",
+      "namespace": "nebula"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "nebula"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "nebula",
+         "namespace": "nebula"
+      }
+   ]
+}

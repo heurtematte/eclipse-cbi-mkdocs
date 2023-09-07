@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "technology.rdf4j",
+         "org.eclipse.cbi.jiro/project.shortname": "rdf4j"
+      },
+      "name": "rdf4j",
+      "namespace": "rdf4j"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "rdf4j"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "rdf4j",
+         "namespace": "rdf4j"
+      }
+   ]
+}

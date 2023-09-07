@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "iot.embed-cdt",
+         "org.eclipse.cbi.jiro/project.shortname": "embed-cdt"
+      },
+      "name": "embed-cdt",
+      "namespace": "embed-cdt"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "embed-cdt"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "embed-cdt",
+         "namespace": "embed-cdt"
+      }
+   ]
+}

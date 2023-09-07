@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "polarsys.kitalpha",
+         "org.eclipse.cbi.jiro/project.shortname": "kitalpha"
+      },
+      "name": "kitalpha",
+      "namespace": "kitalpha"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "kitalpha"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "kitalpha",
+         "namespace": "kitalpha"
+      }
+   ]
+}

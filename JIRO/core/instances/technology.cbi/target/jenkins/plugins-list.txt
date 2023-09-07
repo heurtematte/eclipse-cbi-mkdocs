@@ -1,0 +1,19 @@
+# GENERATED FILE - DO NOT EDIT
+basic-branch-build-strategies
+cloudbees-disk-usage-simple
+cloudbees-jenkins-advisor
+embeddable-build-status
+favorite
+gradle
+handy-uri-templates-2-api
+htmlpublisher
+jenkins-design-language
+mail-watcher-plugin
+mask-passwords
+metrics
+nexus-jenkins-plugin
+prometheus
+pubsub-light
+slack
+sse-gateway
+trilead-api

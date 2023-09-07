@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "rt.gemini",
+         "org.eclipse.cbi.jiro/project.shortname": "gemini"
+      },
+      "name": "gemini",
+      "namespace": "gemini"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "gemini"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "gemini",
+         "namespace": "gemini"
+      }
+   ]
+}

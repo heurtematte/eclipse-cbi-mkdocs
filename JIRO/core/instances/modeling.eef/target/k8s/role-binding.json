@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "modeling.eef",
+         "org.eclipse.cbi.jiro/project.shortname": "eef"
+      },
+      "name": "eef",
+      "namespace": "eef"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "eef"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "eef",
+         "namespace": "eef"
+      }
+   ]
+}

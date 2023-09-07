@@ -1,0 +1,240 @@
+#*******************************************************************************
+# Copyright (c) 2018 Eclipse Foundation and others.
+# This program and the accompanying materials are made available
+# under the terms of the Eclipse Public License 2.0
+# which is available at http://www.eclipse.org/legal/epl-v20.html,
+# or the MIT License which is available at https://opensource.org/licenses/MIT.
+# SPDX-License-Identifier: EPL-2.0 OR MIT
+#*******************************************************************************
+jenkins:
+  numExecutors: 0
+  scmCheckoutRetryCount: 2
+  mode: EXCLUSIVE
+  systemMessage: ""
+
+  disableRememberMe: false
+  agentProtocols:
+    - "JNLP4-connect"
+    - "Ping"
+
+  authorizationStrategy:
+    projectMatrix:
+      entries:
+        {{> permissions }}
+
+  markupFormatter: rawHtml
+  crumbIssuer:
+    standard:
+       excludeClientIPFromCrumb: false
+
+  securityRealm:
+    ldap:
+      configurations:
+        - displayNameAttributeName: cn
+          groupSearchBase: ou=group
+          rootDN: dc=eclipse,dc=org
+          server: ldaps://ldapcluster.eclipse.org
+          userSearch: mail={0}
+          mailAddressAttributeName: mail
+
+  clouds:
+  {{#each clouds}}
+  - {{kind}}:
+      name: "{{@key}}"
+      containerCapStr: "{{../jenkins.maxConcurrency}}"
+      jenkinsUrl: "http://jenkins-ui.{{../kubernetes.master.namespace}}.svc.cluster.local{{../deployment.prefix}}"
+      jenkinsTunnel: "jenkins-discovery.{{../kubernetes.master.namespace}}.svc.cluster.local:{{../deployment.jnlpPort}}"
+      maxRequestsPerHostStr: "32"
+      namespace: "{{this.namespace}}"
+      podRetention: "never"
+      templates:
+      {{#each templates}}
+      - name: "{{@key}}"
+        namespace: "{{../namespace}}"
+        label: "{{#each this.labels}}{{this}}{{#unless @last}} {{/unless}}{{/each}}"
+        containers:
+        - name: "jnlp"
+          image: {{this.docker.registry}}/{{this.docker.repository}}/{{this.docker.image}}:{{this.docker.tag}}
+          alwaysPullImage: true
+          livenessProbe:
+            failureThreshold: 0
+            initialDelaySeconds: 0
+            periodSeconds: 0
+            successThreshold: 0
+            timeoutSeconds: 0
+          resourceLimitCpu: "{{this.kubernetes.resources.cpu.limit}}"
+          resourceRequestCpu: "{{this.kubernetes.resources.cpu.request}}"
+          resourceLimitMemory: "{{this.kubernetes.resources.memory.limit}}"
+          resourceRequestMemory: "{{this.kubernetes.resources.memory.request}}"
+          ttyEnabled: true
+          command: ""
+          args: ""
+        instanceCap: -1
+        nodeUsageMode: {{this.mode}}
+        envVars:
+        {{#each env}}
+        - envVar:
+            key: "{{@key}}"
+            value: "{{#each this}}{{{this}}}{{#unless @last}} {{/unless}}{{/each}}"
+        {{/each}}
+        volumes:
+        - persistentVolumeClaim:
+            claimName: "tools-claim-jiro-{{../../project.shortName}}"
+            mountPath: "/opt/tools"
+            readOnly: true
+        - configMapVolume:
+            configMapName: "known-hosts"
+            mountPath: "/home/jenkins/.ssh/"
+            subPath: "."
+        - emptyDirVolume:
+            memory: false
+            mountPath: "/home/jenkins/"
+        {{#if ../../maven.generate}}
+        - emptyDirVolume:
+            memory: false
+            mountPath: "/home/jenkins/.m2/repository"
+        - emptyDirVolume:
+            memory: false
+            mountPath: "/home/jenkins/.m2/wrapper"
+        {{/if}}
+        {{#if ../../sbt.generate}}
+        - emptyDirVolume:
+            memory: false
+            mountPath: "/home/jenkins/.sbt"
+        {{/if}}
+        {{#if ../../gradle.generate}}
+        - emptyDirVolume:
+            memory: false
+            mountPath: "/home/jenkins/.gradle/caches"
+        - emptyDirVolume:
+            memory: false
+            mountPath: "/home/jenkins/.gradle/daemon"
+        - emptyDirVolume:
+            memory: false
+            mountPath: "/home/jenkins/.gradle/native"
+        - emptyDirVolume:
+            memory: false
+            mountPath: "/home/jenkins/.gradle/workers"
+        - emptyDirVolume:
+            memory: false
+            mountPath: "/home/jenkins/.gradle/wrapper"
+        {{/if}}
+        workspaceVolume:
+          emptyDirWorkspaceVolume:
+            memory: false
+        yaml: |
+          apiVersion: v1
+          kind: Pod
+          spec:
+            containers:
+            - name: jnlp
+              volumeMounts:
+              {{#each kubernetes.volumes}}
+              {{#each mounts}}
+              - name: {{../name}}
+                mountPath: {{mountPath}}
+                subPath: {{subPath}}
+                readOnly: true
+              {{/each}}
+              {{/each}}
+            volumes:
+            {{#each kubernetes.volumes}}
+            - name: {{name}}
+              {{#if configMap}}configMap{{/if}}{{#if secret}}secret{{/if}}:
+                {{#if configMap}}name: {{configMap.name}}{{/if}}{{#if secret}}secretName: {{secret.name}}{{/if}}
+            {{/each}}
+      {{/each}}
+  {{/each}}
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  queueItemAuthenticator:
+    authenticators:
+    - global:
+        strategy: "triggeringUsersAuthorizationStrategy"
+  sSHD:
+    port: -1
+  gitHostKeyVerificationConfiguration:
+    sshHostKeyVerificationStrategy:
+      manuallyProvidedKeyVerificationStrategy:
+        approvedHostKeys: |-
+          gitlab.eclipse.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBsuD5uVWgjZX3jrcvdWu0DwbbarL32mfbNAVABi4wCc
+          gitlab.eclipse.org ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCl6Wwb+m463X7a05TsllEYEmRklkwUWgqHVcvxsW6l6n9tPNcUWrcfTWupMQoONe7PuBsr6SkiYXRcSjHJy9qDXo5Nz/F/IU+EQ+haTU5pGfMRXAsQfdAB0AR5mSPOTkurRHL1sGi6jtp2wpgkbEfykcuEnmg36BCBqsARl08K6OuI2CtrKevXN0x5S5bF6vgzmvUm4aRQnF7WIg7HSOYVZIH5QGHsxsqr045xGLyk0scEIz6ZdslsinGYyvg8J9d6WJJebtjMX+KBHtXYKrFx0xqqnIYSj3WACaP32GDVFqPpxeNmJaVIJuymxsxxQMGYCsJT9diDv3dI+efu5xb
+          gitlab.eclipse.org ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIPik0+gkBsbyVzTLvDq4ESZJMlUSZeb/tjdOHPbTLcSSlHX8R4CdqQwjWdxi4AMQ/76FXUsNH2azvkvgSh/r+E=
+          github.com,192.30.253.*,140.82.112.*,140.82.113.*,140.82.114.* ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCj7ndNxQowgcQnjshcLrqPEiiphnt+VTTvDP6mHBL9j1aNUkY4Ue1gvwnGLVlOhGeYrnZaMgRK6+PKCUXaDbC7qtbW8gIkhL7aGCsOr/C56SJMy/BCZfxd1nWzAOxSDPgVsmerOBYfNqltV9/hWCqBywINIR+5dIg6JTJ72pcEpEjcYgXkE2YEFXV1JHnsKgbLWNlhScqb2UmyRkQyytRLtL+38TGxkxCflmO+5Z8CSSNY7GidjMIZ7Q4zMjA2n1nGrlTDkzwDCsw+wqFPGQA179cnfGWOWRVruj16z6XyvxvjJwbz0wQZ75XK5tKSb7FNyeIEs4TT4jk+S4dhPeAUC5y+bDYirYgM4GC7uEnztnZyaVWQ7B381AK4Qdrwt51ZqExKbQpTUNn+EjqoTwvqNj4kqx5QUCI0ThS/YkOxJCXmPUWZbhjpCg56i+2aB6CmK2JGhn57K5mj0MNdBXA4/WnwH6XoPWJzK5Nyu2zB3nAZp+S5hpQs+p1vN1/wsjk=
+          github.com,192.30.253.*,140.82.112.*,140.82.113.*,140.82.114.* ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg=
+          github.com,192.30.253.*,140.82.112.*,140.82.113.*,140.82.114.* ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl
+          projects-storage.eclipse.org,172.25.25.150 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDKbQI09/IKbvAi3n8a2nluRcaZTB5HgzXwfJv/FUUKwusSwoyMi25jxqCHJbcQco4oAS89i7UeX7YAb2EnrPDd+VebNuTtNfWewxsBjwGI1qKMUsmQc5cLut0p1pe0VRz5ZgnXQeT9FSVA3zha+mJ3OCDtl0svvu3t4jN0zgZZfrmtwz4KQZjlfVv/cPtTKy5+RhBF9Vmto0ZVG+x8DDvxxhi37w90hXjdIb2JpILO4B65A4gEv910DJuwQ6FmrRu6oyqg7+1gnqIPigha7sHKGOX5h+mVrQTYdmPFAvNVawSYpLcEeajh9RI5kKwML6ftnmS/213KkVUUArXCYf4BxBN4h8kpvWqxBOlBNXy6nBLtzuDOdLviOGJ0HbazksuCrcvrT1lV4CfjCOjPlc9zV2r61XpMKBTq/0WPfq/r7LrIkswdszn3yTzvb1/cFCyQfkCGZvkuXJsen5Doi3Ixb0mOO0u+zL17RiS7//PVFs95DszOXqXlOytyB+u9Hmk=
+          projects-storage.eclipse.org,172.25.25.150 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAOUQ8p0E/Ib3uchk+6wEZ8UtBHTBvyI2E+eA/sOXajLQPKP0XIbVyECy8x5OmrrlvOYs+LxxniGJ69UIjiYZqM=
+          projects-storage.eclipse.org,172.25.25.150 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAsn6PO2Uemsr7wIUu5x0RnlRcuK36D2sbmYNe2LSKdb
+
+unclassified:
+  location:
+    adminAddress: ci-admin@eclipse.org
+    url: {{deployment.url}}
+
+  mailer:
+    replyToAddress: ci-admin@eclipse.org
+    smtpHost: mail.eclipse.org
+
+  email-ext:
+    defaultContentType: "text/html"
+    defaultReplyTo: "ci-admin@eclipse.org"
+    mailAccount:
+      address: "ci-admin@eclipse.org"
+      smtpHost: "mail.eclipse.org"
+
+  globalDefaultFlowDurabilityLevel:
+    durabilityHint: PERFORMANCE_OPTIMIZED
+
+  simple-theme-plugin:
+    elements:
+    - cssUrl:
+        url: "{{deployment.prefix}}/userContent/theme/{{jenkins.theme}}.css"
+    - cssUrl:
+        url: "//fonts.googleapis.com/css?family=Libre+Franklin:400,700,300,600,100"
+    - jsUrl:
+        url: "{{deployment.prefix}}/userContent/theme/title.js"
+
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+    - simpleBuildDiscarder:
+        discarder:
+          logRotator:
+            artifactNumToKeepStr: "5"
+            numToKeepStr: "128"
+
+  sonarGlobalConfiguration:
+    buildWrapperEnabled: true
+    installations:
+    - name: "SonarCloud.io"
+      serverUrl: "https://sonarcloud.io"
+      triggers:
+        skipScmCause: false
+        skipUpstreamCause: false
+
+  gitHubPluginConfig:
+    configs:
+      - name: "GitHub"
+        apiUrl: "https://api.github.com"
+        credentialsId: "github-bot-token"
+        manageHooks: false
+    hookSecretConfigs:
+      - credentialsId: "github-webhook-secret"
+    hookUrl: "{{deployment.url}}/github-webhook/"
+
+  scmGit:
+    createAccountBasedOnEmail: true
+    useExistingAccountWithSameEmail: true
+
+tool:
+  {{> tools-jdk }}
+  {{> tools-ant }}
+  {{> tools-maven }}
+  git:
+    installations:
+    - name: "Default"
+      home: "git"

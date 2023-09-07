@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "technology.packaging.mpc",
+         "org.eclipse.cbi.jiro/project.shortname": "mpc"
+      },
+      "name": "mpc",
+      "namespace": "mpc"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "mpc"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "mpc",
+         "namespace": "mpc"
+      }
+   ]
+}

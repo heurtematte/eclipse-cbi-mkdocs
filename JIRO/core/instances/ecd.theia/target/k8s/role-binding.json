@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ecd.theia",
+         "org.eclipse.cbi.jiro/project.shortname": "theia"
+      },
+      "name": "theia",
+      "namespace": "theia"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "theia"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "theia",
+         "namespace": "theia"
+      }
+   ]
+}

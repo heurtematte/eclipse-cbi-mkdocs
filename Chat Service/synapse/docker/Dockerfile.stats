@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2022 eclipse foundation
+# SPDX-License-Identifier: EPL-2.0
+
+FROM node:latest
+
+WORKDIR /app
+
+COPY ./custom/metrics/server.js /app/server.js
+
+EXPOSE 3000
+
+CMD [ "node", "server.js" ]

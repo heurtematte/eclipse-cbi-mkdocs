@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "technology.justj",
+         "org.eclipse.cbi.jiro/project.shortname": "justj"
+      },
+      "name": "justj",
+      "namespace": "justj"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "justj"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "justj",
+         "namespace": "justj"
+      }
+   ]
+}

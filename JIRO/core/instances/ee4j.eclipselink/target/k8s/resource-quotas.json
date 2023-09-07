@@ -1,0 +1,21 @@
+{
+   "apiVersion": "v1",
+   "kind": "ResourceQuota",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ee4j.eclipselink",
+         "org.eclipse.cbi.jiro/project.shortname": "eclipselink"
+      },
+      "name": "jenkins-instance-quota",
+      "namespace": "eclipselink"
+   },
+   "spec": {
+      "hard": {
+         "limits.cpu": "25900m",
+         "limits.memory": "47104Mi",
+         "pods": 11,
+         "requests.cpu": "13450m",
+         "requests.memory": "47104Mi"
+      }
+   }
+}

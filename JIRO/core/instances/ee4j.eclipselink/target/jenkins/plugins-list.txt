@@ -1,0 +1,6 @@
+# GENERATED FILE - DO NOT EDIT
+copyartifact
+docker-workflow
+embeddable-build-status
+envinject
+jacoco

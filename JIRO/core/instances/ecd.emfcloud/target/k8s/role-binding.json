@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ecd.emfcloud",
+         "org.eclipse.cbi.jiro/project.shortname": "emfcloud"
+      },
+      "name": "emfcloud",
+      "namespace": "emfcloud"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "emfcloud"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "emfcloud",
+         "namespace": "emfcloud"
+      }
+   ]
+}

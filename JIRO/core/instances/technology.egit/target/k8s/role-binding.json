@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "technology.egit",
+         "org.eclipse.cbi.jiro/project.shortname": "egit"
+      },
+      "name": "egit",
+      "namespace": "egit"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "egit"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "egit",
+         "namespace": "egit"
+      }
+   ]
+}

@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "modeling.xsemantics",
+         "org.eclipse.cbi.jiro/project.shortname": "xsemantics"
+      },
+      "name": "xsemantics",
+      "namespace": "xsemantics"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "xsemantics"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "xsemantics",
+         "namespace": "xsemantics"
+      }
+   ]
+}

@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "science.statet",
+         "org.eclipse.cbi.jiro/project.shortname": "statet"
+      },
+      "name": "statet",
+      "namespace": "statet"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "statet"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "statet",
+         "namespace": "statet"
+      }
+   ]
+}

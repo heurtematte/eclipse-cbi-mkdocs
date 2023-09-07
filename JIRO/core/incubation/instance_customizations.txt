@@ -1,0 +1,58 @@
+This file should list all customized configurations of instances that are not yet captured in Jiro.
+
+ecd.orion
+  - custom Maven settings file
+    - set up with config file provider plugin
+    - contains credentials for orion test server
+
+eclipse.jdt.ls
+  - GHPRB General config
+  - Build Timestamp
+  - Issue Linker
+  - HipChat
+  - Mattermost
+
+eclipse.platform.releng
+  - /run/secrets/jenkins/ssh/id_rsa.releng => for external agents
+
+iot.californium
+  - centslave1 config + credentials
+
+modeling.amalgam
+  - zentimestamp
+    - "Date pattern for the BUILD_TIMESTAMP (build timestamp) variable" in global config: yyyyMMdd-HHmmss
+
+modeling.sirius
+  - zentimestamp
+    - "Date pattern for the BUILD_TIMESTAMP (build timestamp) variable" in global config: yyyyMMdd-HHmmss
+
+technology.basyx
+  - CMake plugin:
+    - CMake installation in Global Tool Configuration
+
+technology.cbi
+  - Slack plugin:
+    - Slack configuration
+
+technology.collections
+  - ConfigFileProvider
+    - gradle.properties
+
+technology.openj9
+  - GHPRB General config
+  - artifactory settings (artifactory plugin has issues with JCasC)
+  - /run/secrets/jenkins/ssh/id_rsa.openj9 => for external agents
+  - special known_hosts for master (see instances/technology.openj9/k8s)
+
+technology.openk-usermodules
+  - node.js plugin
+    - node.js installation in Global Tool Configuration
+
+tools.cdt
+  - node.js plugin
+    - node.js installation in Global Tool Configuration
+
+
+several instances
+  - the xvnc command in the global configuration needs to be set for instances that run UI tests
+    - JCasC does not yet support that option

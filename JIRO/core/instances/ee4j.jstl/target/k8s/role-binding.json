@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ee4j.jstl",
+         "org.eclipse.cbi.jiro/project.shortname": "jstl"
+      },
+      "name": "jstl",
+      "namespace": "jstl"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "jstl"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "jstl",
+         "namespace": "jstl"
+      }
+   ]
+}

@@ -1,0 +1,14 @@
+{
+  "apiVersion": "tanka.dev/v1alpha1",
+  "kind": "Environment",
+  "metadata": {
+    "name": "environments/chat-elementweb/prod"
+  },
+  "spec": {
+    "namespace": "chat-elementweb-prod",
+    "apiServer": "https://api.okd-c1.eclipse.org:16443",
+    "resourceDefaults": {},
+    "expectVersions": {},
+    "injectLabels": true
+  }
+}

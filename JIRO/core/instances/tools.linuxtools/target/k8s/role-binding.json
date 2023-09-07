@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "tools.linuxtools",
+         "org.eclipse.cbi.jiro/project.shortname": "linuxtools"
+      },
+      "name": "linuxtools",
+      "namespace": "linuxtools"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "linuxtools"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "linuxtools",
+         "namespace": "linuxtools"
+      }
+   ]
+}

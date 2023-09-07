@@ -1,0 +1,71 @@
+{
+  __:: {
+    KubeObject(apiVersion, kind, name, config):: {
+      local this = self,
+      apiVersion: apiVersion,
+      kind: kind,
+      metadata: {
+        name: name,
+        labels: $.JiroLabels(config),
+      },
+    },
+
+    KubeNSObject(apiVersion, kind, name, config):: self.KubeObject(apiVersion, kind, name, config) + {
+      metadata+: {
+        namespace: config.kubernetes.master.namespace,
+      },
+    },
+  },
+
+  List(items): {
+    apiVersion: "v1",
+    kind: "List",
+    items: [] + items,
+  },
+
+  JiroLabels(config):: {
+    "org.eclipse.cbi.jiro/project.shortname": config.project.shortName,
+    "org.eclipse.cbi.jiro/project.fullName": config.project.fullName,
+  },
+
+  Namespace(name, config): $.__.KubeObject("v1", "Namespace", name, config),
+  PersistentVolume(name, config): $.__.KubeObject("v1", "PersistentVolume", name, config),
+  
+  LimitRange(name, config): $.__.KubeNSObject("v1", "LimitRange", name, config),
+  ResourceQuota(name, config): $.__.KubeNSObject("v1", "ResourceQuota", name, config),
+  RoleBinding(name, config): $.__.KubeNSObject("rbac.authorization.k8s.io/v1", "RoleBinding", name, config),
+  Role(name, config): $.__.KubeNSObject("rbac.authorization.k8s.io/v1", "Role", name, config),
+  Route(name, config): $.__.KubeNSObject("route.openshift.io/v1", "Route", name, config),
+  ServiceAccount(name, config): $.__.KubeNSObject("v1", "ServiceAccount", name, config),
+  Service(name, config): $.__.KubeNSObject("v1", "Service", name, config),
+  ConfigMap(name, config): $.__.KubeNSObject("v1", "ConfigMap", name, config),
+  Secret(name, config): $.__.KubeNSObject("v1", "Secret", name, config),
+  PersistentVolumeClaim(name, config): $.__.KubeNSObject("v1", "PersistentVolumeClaim", name, config),
+  StatefulSet(name, config): $.__.KubeNSObject("apps/v1", "StatefulSet", name, config),
+
+  stripSI(n):: (
+    local suffix_len =
+      if std.endsWith(n, "m") then 1
+      else if std.endsWith(n, "K") then 1
+      else if std.endsWith(n, "M") then 1
+      else if std.endsWith(n, "G") then 1
+      else if std.endsWith(n, "T") then 1
+      else if std.endsWith(n, "P") then 1
+      else if std.endsWith(n, "E") then 1
+      else if std.endsWith(n, "Ki") then 2
+      else if std.endsWith(n, "Mi") then 2
+      else if std.endsWith(n, "Gi") then 2
+      else if std.endsWith(n, "Ti") then 2
+      else if std.endsWith(n, "Pi") then 2
+      else if std.endsWith(n, "Ei") then 2
+      else error "Unknown numerical suffix in " + n;
+    local n_len = std.length(n);
+    std.parseInt(std.substr(n, 0, n_len - suffix_len))
+  ),
+
+  pair_list_ex(tab, kfield, vfield)::
+    [{ [kfield]: k, [vfield]: tab[k] } for k in std.objectFields(tab)],
+
+  pair_list(tab)::
+    self.pair_list_ex(tab, "name", "value"),
+}

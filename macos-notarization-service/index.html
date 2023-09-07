@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://eclipse-cbi-mkdocs/macos-notarization-service/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>macOS Notarization Service - CBI</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">CBI</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">CBI</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">JIRO <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Core</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../JIRO/core/" class="dropdown-item">Eclipse CBI - Jiro</a>
+</li>
+            
+<li>
+    <a href="../JIRO/core/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../JIRO/core/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../JIRO/core/documentation/" class="dropdown-item">Documentation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Agent</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../JIRO/agent/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../JIRO/agent/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../JIRO/agent/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Basic</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../JIRO/agent/basic/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Basic ubuntu</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../JIRO/agent/basic-ubuntu/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Centos 7</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../JIRO/agent/centos-7/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Centos 8</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../JIRO/agent/centos-8/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Controller</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../JIRO/controller/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../JIRO/controller/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../JIRO/controller/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dockerfile</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../JIRO/dockerfile/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Gitab runner service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../gitab-runner-service/readme/" class="dropdown-item">Gitlab Runner Service</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Chat Service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/documentation/_index/" class="dropdown-item">Chat Service</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Faq</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/documentation/faq/_index/" class="dropdown-item">Frequently Asked Questions</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/documentation/getting-started/_index/" class="dropdown-item">Getting Started!</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Glossary</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/documentation/glossary/_index/" class="dropdown-item">Glossary</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Links</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/documentation/links/_index/" class="dropdown-item">Links</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Request</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/documentation/request/_index/" class="dropdown-item"> index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Rooms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/documentation/rooms/_index/" class="dropdown-item">Rooms/Spaces</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/documentation/support/_index/" class="dropdown-item">Support</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Provisionner</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/provisionner/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Synapse</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/synapse/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Elementweb</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/elementweb/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sync tools</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../Chat%20Service/sync-tools/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Macos notarization service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">macOS Notarization Service</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../Chat%20Service/sync-tools/readme/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/eclipse-cbi/macos-notarization-service.git/main/README.md" class="nav-link">
+                                        Edit</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#macos-notarization-service" class="nav-link">macOS Notarization Service</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#getting-started" class="nav-link">Getting started</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#documentation" class="nav-link">Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#trademarks" class="nav-link">Trademarks</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#copyright-and-license" class="nav-link">Copyright and license</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="macos-notarization-service">macOS Notarization Service</h1>
+<p><a href="https://ci.eclipse.org/cbi/job/macos-notarization-service/job/main/"><img alt="Build Status" src="https://ci.eclipse.org/cbi/buildStatus/icon?job=macos-notarization-service%2Fmain" /></a> 
+<a href="https://github.com/eclipse-cbi/macos-notarization-service.svg/releases/latest"><img alt="GitHub release" src="https://img.shields.io/github/release/eclipse-cbi/macos-notarization-service.svg?label=release" /></a>
+<a href="https://github.com/eclipse-cbi/macos-notarization-service/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/eclipse-cbi/macos-notarization-service.svg" /></a></p>
+<p>This is a web service that runs on macOS and offers a REST API to notarize signed application bundles or signed DMG. You can read more about notarization on the <a href="https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution">Apple developer website</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Java 8+. We advise you use the <a href="https://adoptopenjdk.net">AdoptOpenJDK</a> binaries via <a href="https://brew.sh">homebrew</a></li>
+</ul>
+<pre><code class="language-bash">    brew tap AdoptOpenJDK/openjdk
+    brew cask install adoptopenjdk8
+</code></pre>
+<h3 id="build">Build</h3>
+<pre><code>./mvnw clean package
+</code></pre>
+<p>It produces 2 jar files in <code>/target</code>:</p>
+<ul>
+<li>
+<p><code>macos-notarization-service-1.0-SNAPSHOT.jar</code> - containing just the classes and resources of the projects, it’s the regular artifact produced by the Maven build;</p>
+</li>
+<li>
+<p><code>macos-notarization-service-1.0-SNAPSHOT-runner.jar</code> - being an executable jar. Be aware that it’s not an über-jar as the dependencies are copied into the target/lib directory.</p>
+</li>
+</ul>
+<p>You can run the application using: <code>java -jar target/macos-notarization-service-1.0-SNAPSHOT-runner.jar</code></p>
+<p>The Class-Path entry of the <code>MANIFEST.MF</code> from the runner jar explicitly lists the jars from the lib directory. So if you want to deploy your application somewhere, you need to copy the runner jar as well as the lib directory.</p>
+<p>See below for advanced startup method.</p>
+<h3 id="run">Run</h3>
+<p>Configure <code>NOTARIZATION_APPLEID_USERNAME</code> and <code>NOTARIZATION_APPLEID_PASSWORD</code> with the proper values for your Apple developer ID account in file <code>start.sh</code>. Then, just run</p>
+<pre><code>./start.sh
+</code></pre>
+<p>On production system, it is advised to run this service as a system daemon with <code>launchd</code>. The service will then be started automatically at boot time or if the program crash. You can find a sample file to edit and put in <code>/Library/LaunchDaemons</code> in <a href="https://github.com/eclipse-cbi/macos-notarization-service/blob/master/src/main/launchd/org.eclipse.cbi.macos-notarization-service.plist">src/main/launchd/org.eclipse.cbi.macos-notarization-service.plist</a>. To load (or unload) the service, just do</p>
+<pre><code>sudo launchctl load -w /Library/LaunchDaemons/org.eclipse.cbi.macos-notarization-service.plist
+</code></pre>
+<p>or</p>
+<pre><code>sudo launchctl unload -w /Library/LaunchDaemons/org.eclipse.cbi.macos-notarization-service.plist
+</code></pre>
+<p>See <a href="https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/Introduction.html#//apple_ref/doc/uid/10000172i-SW1-SW1">Apple documentation</a> about daemons and agents for more options.</p>
+<h2 id="documentation">Documentation</h2>
+<p>The service is <a href="https://quarkus.io">Quarkus</a> application exposing a simple REST API with 3 endpoints. See <a href="https://quarkus.io/guides/all-config">Quarkus documentation</a> for all of its configuration options. </p>
+<p>The following script calls the 3 endpoints successively to notarize a signed DMG file. It assumes that <code>jq</code> is installed on the system running the script. The notarization service is expected to run on IP <code>10.0.0.1</code> on port <code>8383</code>.</p>
+<pre><code class="language-bash">DMG=&quot;/path/to/myApp.dmg&quot;
+
+RESPONSE=\
+$(curl -s -X POST \
+  -F file=@${DMG} \
+  -F 'options={&quot;primaryBundleId&quot;: &quot;my-primary-bundle-id&quot;, &quot;staple&quot;: true};type=application/json' \
+  http://10.0.0.1:8383/macos-notarization-service/notarize)
+
+UUID=$(echo ${RESPONSE} | jq -r '.uuid')
+
+STATUS=$(echo ${RESPONSE} | jq -r '.notarizationStatus.status')
+
+while [[ ${STATUS} == 'IN_PROGRESS' ]]; do
+  sleep 1m
+  RESPONSE=$(curl -s http://10.0.0.1:8383/macos-notarization-service/${UUID}/status)
+  STATUS=$(echo ${RESPONSE} | jq -r '.notarizationStatus.status')
+done
+
+if [[ ${STATUS} != 'COMPLETE' ]]; then
+  echo &quot;Notarization failed: ${RESPONSE}&quot;
+  exit 1
+fi
+
+mv &quot;${DMG}&quot; &quot;unnotarized-${DMG}&quot;
+
+curl -JO http://10.0.0.1:8383/macos-notarization-service/${UUID}/download
+</code></pre>
+<p>We first upload our DMG to the service endpoint <code>macos-notarization-service/notarize</code> in a form part named <code>file</code> along with a set of options in JSON format in a form part named <code>options</code>. Only two options are available for now:</p>
+<ul>
+<li><strong>primaryBundleId</strong> (required): the primary bundle ID that will be sent to the notarization service by <code>xcrun altool</code>. The value you give doesn’t need to match the bundle identifier of the submitted app or have any particular value. It only needs to make sense to you. See <a href="https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow#3087734">Apple documentation</a> for more information.</li>
+<li><strong>staple</strong>: a boolean to specify wether or not the notarization ticket should be stapled to the notarized binary at the end of the process. Default is false. We advise you always set it to <code>true</code>. This ensures that Gatekeeper can find the notarization ticket even when a network connection isn’t available.</li>
+</ul>
+<p>Once the upload to the notarization is complete, you will receive (the <code>$RESPONSE</code> variable in the script above) a JSON file with a content similar to </p>
+<pre><code class="language-json">{ 
+  &quot;uuid&quot;:&quot;e68713e3-2ee7-4ebd-8672-20949a9ecdb9&quot;,
+  &quot;notarizationStatus&quot;: {
+    &quot;status&quot;:&quot;IN_PROGRESS&quot;,
+    &quot;message&quot;:&quot;Uploading' file to Apple notarization 'service&quot;
+  }
+}
+</code></pre>
+<p>The <code>uuid</code> field is very important as it will be the one that will let you poll the service to know the status of the notarization process for your file and to download the results in the end. The <code>notarizationStatus</code> object contains the current status.</p>
+<p>The <code>$STATUS</code> will change from <code>ÌN_PROGRESS</code> to either <code>COMPLETE</code> or <code>ERROR</code> depending on the outcome of the process. Here the script polls the service every minute to check if the process is done via the second endpoint <code>macos-notarization-service/$UUID/status</code>. </p>
+<p>Once the process is done, you can download the notarized DMG with the endpoint <code>macos-notarization-service/${UUID}/download</code>. Note that this is unnecessary if you did not asked for the notarization ticket to be stapled to the binary to be notarized. Indeed, the notarization itself is side effect free for binaries if you don't staple the ticket. </p>
+<h2 id="trademarks">Trademarks</h2>
+<ul>
+<li>Eclipse® is a Trademark of the Eclipse Foundation, Inc.</li>
+<li>Eclipse Foundation is a Trademark of the Eclipse Foundation, Inc.</li>
+</ul>
+<h2 id="copyright-and-license">Copyright and license</h2>
+<p>Copyright 2019 the <a href="https://www.eclipse.org">Eclipse Foundation, Inc.</a> and <a href="https://github.com/eclipse-cbi/macos-notarization-service/graphs/contributors">others</a>. Code released under the <a href="https://github.com/eclipse-cbi/macos-notarization-service/blob/src/LICENSE">Eclipse Public License Version 2.0 (EPL-2.0)</a>. </p>
+<p>SPDX-License-Identifier: EPL-2.0</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

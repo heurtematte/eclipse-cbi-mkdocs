@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ee4j.messaging",
+         "org.eclipse.cbi.jiro/project.shortname": "messaging"
+      },
+      "name": "messaging",
+      "namespace": "messaging"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "messaging"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "messaging",
+         "namespace": "messaging"
+      }
+   ]
+}

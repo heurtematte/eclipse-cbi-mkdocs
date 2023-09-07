@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ee4j.krazo",
+         "org.eclipse.cbi.jiro/project.shortname": "krazo"
+      },
+      "name": "krazo",
+      "namespace": "krazo"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "krazo"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "krazo",
+         "namespace": "krazo"
+      }
+   ]
+}

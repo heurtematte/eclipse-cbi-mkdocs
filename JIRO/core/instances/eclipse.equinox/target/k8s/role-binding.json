@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "eclipse.equinox",
+         "org.eclipse.cbi.jiro/project.shortname": "equinox"
+      },
+      "name": "equinox",
+      "namespace": "equinox"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "equinox"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "equinox",
+         "namespace": "equinox"
+      }
+   ]
+}

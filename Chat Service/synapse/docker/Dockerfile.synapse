@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2022 eclipse foundation
+# SPDX-License-Identifier: EPL-2.0
+
+# see https://github.com/vector-im/element-web/pull/20627
+
+# Builder
+ARG SYNAPSE_VERSION="v1.87.0"
+FROM matrixdotorg/synapse:${SYNAPSE_VERSION}
+
+# custom eclipse
+COPY ./custom/synapse /usr/local/lib/python3.11/site-packages/synapse/
+
+RUN mkdir -p /usr/local/lib/python3.11/site-packages/synapse/modules
+COPY ./custom/modules/ /usr/local/lib/python3.11/site-packages/synapse/modules/
+RUN chmod -R 755 /usr/local/lib/python3.11/site-packages/synapse/modules/
+
+# hadolint ignore=DL3059
+RUN mkdir -p /synapse/privacy_policy_templates
+COPY ./custom/privacy_policy_templates /synapse/privacy_policy_templates

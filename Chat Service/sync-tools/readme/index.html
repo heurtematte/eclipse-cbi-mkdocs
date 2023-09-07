@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://eclipse-cbi-mkdocs/Chat%20Service/sync-tools/readme/">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Readme - CBI</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">CBI</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">CBI</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">JIRO <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Core</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/core/" class="dropdown-item">Eclipse CBI - Jiro</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/core/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/core/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/core/documentation/" class="dropdown-item">Documentation</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Agent</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/agent/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/agent/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/agent/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Basic</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/agent/basic/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Basic ubuntu</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/agent/basic-ubuntu/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Centos 7</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/agent/centos-7/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Centos 8</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/agent/centos-8/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Controller</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/controller/" class="dropdown-item">Index</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/controller/CONTRIBUTING/" class="dropdown-item">Contributing to Eclipse Common Build Infrastructure</a>
+</li>
+            
+<li>
+    <a href="../../../JIRO/controller/NOTICE/" class="dropdown-item">Notices for Eclipse Common Build Infrastructure</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dockerfile</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../JIRO/dockerfile/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Gitab runner service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../gitab-runner-service/readme/" class="dropdown-item">Gitlab Runner Service</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Chat Service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/_index/" class="dropdown-item">Chat Service</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Faq</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/faq/_index/" class="dropdown-item">Frequently Asked Questions</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Getting started</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/getting-started/_index/" class="dropdown-item">Getting Started!</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Glossary</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/glossary/_index/" class="dropdown-item">Glossary</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Links</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/links/_index/" class="dropdown-item">Links</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Request</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/request/_index/" class="dropdown-item"> index</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Rooms</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/rooms/_index/" class="dropdown-item">Rooms/Spaces</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Support</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../documentation/support/_index/" class="dropdown-item">Support</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Provisionner</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../provisionner/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Synapse</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../synapse/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Elementweb</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../elementweb/readme/" class="dropdown-item">Readme</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Sync tools</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active">Readme</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Macos notarization service <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../macos-notarization-service/" class="dropdown-item">macOS Notarization Service</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../../elementweb/readme/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../../macos-notarization-service/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-sync.git/main/readme.md" class="nav-link">
+                                        Edit</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#chat-service-sync" class="nav-link">Chat Service Sync</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#environment-configuration" class="nav-link">Environment configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#project-file-configuration" class="nav-link">Project file configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#create-sync-bot" class="nav-link">Create sync bot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#launch" class="nav-link">launch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#development" class="nav-link">Development</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#dev-file-environment" class="nav-link">Dev file environment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<!--
+SPDX-FileCopyrightText: 2023 eclipse foundation
+SPDX-License-Identifier: EPL-2.0
+-->
+
+<h1 id="chat-service-sync">Chat Service Sync</h1>
+<p>This project allow to configure matrix as code (room/space, permission), and to sync permission with Eclipse Foundation profile like project lead.</p>
+<h2 id="environment-configuration">Environment configuration</h2>
+<p>Configuration file: <code>./config/default.js</code></p>
+<table>
+<thead>
+<tr>
+<th>Configuration Parameter</th>
+<th>Description</th>
+<th>Default Value</th>
+<th>Environment Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>logLevel</code></td>
+<td>The log level for the service.</td>
+<td><code>"DEBUG"</code></td>
+<td><code>SYNC_LOG_LEVEL</code></td>
+</tr>
+<tr>
+<td><code>dry</code></td>
+<td>Dry mode execution</td>
+<td><code>true</code></td>
+<td><code>SYNC_DRY</code></td>
+</tr>
+<tr>
+<td><code>projectConfigFile</code></td>
+<td>Locate configuration file.</td>
+<td><code>__dirname +</code>/project.yaml``</td>
+<td><code>SYNC_PROJECT_CONFIG_FILE</code></td>
+</tr>
+<tr>
+<td><code>matrixAPI</code></td>
+<td>Object configuration for matrix API. (see definition below)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>eclipseAPI</code></td>
+<td>Object configuration for eclipse API. (see definition below)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>matrixAPI</code> object configuration </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Configuration Parameter</th>
+<th>Description</th>
+<th>Default Value</th>
+<th>Environment Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>baseUrl</code></td>
+<td>Base url of the homeserver.</td>
+<td><code>https://matrix-local.eclipse.org</code></td>
+<td><code>SYNC_PERMS_HOMESERVER_URL</code></td>
+</tr>
+<tr>
+<td><code>accessToken</code></td>
+<td>Acces token to homeserver API.</td>
+<td><code>XXXXXXXXXXXXX</code></td>
+<td><code>SYNC_PERMS_HOMESERVER_TOKEN</code></td>
+</tr>
+<tr>
+<td><code>matrixDomain</code></td>
+<td>Matrix domain, can be different from baseUrl.</td>
+<td><code>matrix-local.eclipse.org</code></td>
+<td><code>SYNC_PERMS_HOMESERVER_DOMAIN</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>eclipseAPI</code> object configuration </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Configuration Parameter</th>
+<th>Description</th>
+<th>Default Value</th>
+<th>Environment Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>userAPIBaseUrl</code></td>
+<td>Base url of the homeserver.</td>
+<td><code>https://matrix-local.eclipse.org</code></td>
+<td><code>SYNC_PERMS_HOMESERVER_URL</code></td>
+</tr>
+<tr>
+<td><code>projectAPIBaseUrl</code></td>
+<td>Acces token to homeserver API.</td>
+<td><code>XXXXXXXXXXXXX</code></td>
+<td><code>SYNC_PERMS_HOMESERVER_TOKEN</code></td>
+</tr>
+<tr>
+<td><code>oauth</code></td>
+<td>Matrix domain, can be different from baseUrl.</td>
+<td><code>matrix-local.eclipse.org</code></td>
+<td><code>SYNC_PERMS_HOMESERVER_DOMAIN</code></td>
+</tr>
+<tr>
+<td><code>additionnalOauth</code></td>
+<td>Matrix domain, can be different from baseUrl.</td>
+<td><code>matrix-local.eclipse.org</code></td>
+<td><code>SYNC_PERMS_HOMESERVER_DOMAIN</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>oauth</code> object configuration </li>
+</ul>
+<p>Configuration object from library: <a href="https://github.com/lelylan/simple-oauth2">simple-oauth2</a></p>
+<table>
+<thead>
+<tr>
+<th>Configuration Parameter</th>
+<th>Description</th>
+<th>Default Value</th>
+<th>Environment Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client.id</code></td>
+<td>Client id</td>
+<td><code>XXXXXXXXXXXXXX</code></td>
+<td><code>SYNC_ECLIPSE_API_OAUTH_CLIENT_ID</code></td>
+</tr>
+<tr>
+<td><code>client.secret</code></td>
+<td>Client secret.</td>
+<td><code>XXXXXXXXXXXXXX</code></td>
+<td><code>SYNC_ECLIPSE_API_OAUTH_SECRET</code></td>
+</tr>
+<tr>
+<td><code>auth.tokenHost</code></td>
+<td>Oauth domain</td>
+<td><code>https://accounts.eclipse.org</code></td>
+<td><code>SYNC_ECLIPSE_API_OAUTH_AUTH_TOKEN_HOST</code></td>
+</tr>
+<tr>
+<td><code>auth.tokenPath</code></td>
+<td>Oauth token path.</td>
+<td><code>/oauth2/token</code></td>
+<td><code>SYNC_ECLIPSE_API_OAUTH_AUTH_TOKEN_PATH</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>additionnalOauth</code> object configuration </li>
+</ul>
+<p>Extrat oauth options: </p>
+<table>
+<thead>
+<tr>
+<th>Configuration Parameter</th>
+<th>Description</th>
+<th>Default Value</th>
+<th>Environment Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>timeout</code></td>
+<td>Request timeout</td>
+<td><code>3600</code></td>
+<td><code>SYNC_ECLIPSE_API_ADDITIONNALOAUTH_TIMEOUT</code></td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>Oauth scope for viewing profile.</td>
+<td><code>eclipsefdn_view_all_profiles</code></td>
+<td><code>SYNC_ECLIPSE_API_ADDITIONNALOAUTH_SCOPE</code></td>
+</tr>
+</tbody>
+</table>
+<p>Default configuration file: </p>
+<pre><code class="language-javascript">logLevel: process.env.SYNC_LOG_LEVEL || &quot;INFO&quot;,
+    dry: process.env.SYNC_DRY || true,
+    projectConfigFile: process.env.SYNC_PROJECT_CONFIG_FILE || __dirname + `/project.yaml`,
+    matrixAPI: { 
+        baseUrl: process.env.SYNC_PERMS_HOMESERVER_URL || &quot;https://matrix-local.eclipse.org&quot;, 
+        accessToken: process.env.SYNC_PERMS_HOMESERVER_TOKEN || &quot;XXXXXXXXXXXXX&quot;,
+        matrixDomain: process.env.SYNC_PERMS_HOMESERVER_DOMAIN || &quot;matrix-local.eclipse.org&quot;, 
+    },
+    eclipseAPI: {
+        userAPIBaseUrl: process.env.SYNC_ECLIPSE_USER_API_BASE_URL || 'https://api.eclipse.org',
+        projectAPIBaseUrl: process.env.SYNC_ECLIPSE_PROJECT_API_BASE_URL || 'https://projects.eclipse.org',
+        oauth: {
+            client: {
+                id: process.env.SYNC_ECLIPSE_API_OAUTH_CLIENT_ID || 'XXXXXXXXXXXXX',
+                secret: process.env.SYNC_ECLIPSE_API_OAUTH_SECRET || 'XXXXXXXXXXXXXX',
+            },
+            auth: {
+                tokenHost: process.env.SYNC_ECLIPSE_API_OAUTH_AUTH_TOKEN_HOST || 'https://accounts.eclipse.org',
+                tokenPath: process.env.SYNC_ECLIPSE_API_OAUTH_AUTH_TOKEN_PATH || '/oauth2/token',
+            }
+        },
+        additionnalOauth: {
+            timeout: parseInt(process.env.SYNC_ECLIPSE_API_ADDITIONNALOAUTH_TIMEOUT) || 3600,
+            scope: process.env.SYNC_ECLIPSE_API_ADDITIONNALOAUTH_SCOPE ||  'eclipsefdn_view_all_profiles'
+        },
+    }
+</code></pre>
+<h2 id="project-file-configuration">Project file configuration</h2>
+<h3 id="default">Default</h3>
+<table>
+<thead>
+<tr>
+<th>Configuration Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>users</code></td>
+<td>List of default users with permission (optionnal) apply to all room/space</td>
+</tr>
+<tr>
+<td><code>defaultProjectSpace</code></td>
+<td>Define default project space for all Room. Just de reference for later use in other yaml definition</td>
+</tr>
+<tr>
+<td><code>userPowerLevel</code></td>
+<td>Default powerlevel for user if not define: default format <code>@ef_moderator_bot': 60</code>, but <code>@ef_moderator_bot</code> will result in <code>@ef_moderator_bot': 50</code> with default <code>userPowerLevel</code></td>
+</tr>
+<tr>
+<td><code>roomPowerLevel</code></td>
+<td>Default powerlevel for room/space, call state event <code>/rooms/$roomId/state/m.room.power_levels</code>, see <a href="https://spec.matrix.org/latest/client-server-api/#mroompower_levels">mroompower_levels</a> for specification</td>
+</tr>
+<tr>
+<td><code>roomVisibility</code></td>
+<td><code>public</code>, <code>private</code>. Define at room creation, see <a href="https://spec.matrix.org/latest/client-server-api/#post_matrixclientv3createroom">createRoom API</a></td>
+</tr>
+<tr>
+<td><code>roomPreset</code></td>
+<td><code>private_chat</code>, <code>trusted_private_chat</code>, <code>public_chat</code>. Define at room creation, see <a href="https://spec.matrix.org/latest/client-server-api/#post_matrixclientv3createroom">createRoom API</a></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="language-yaml">default:
+  users: &amp;defaultUsers
+    - '@sebastien.heurtematte': 100
+    - '@ef_sync_bot': 100
+    - '@ef_moderator_bot': 60
+  defaultProjectSpace: '#eclipse-projects'
+  userPowerLevel: 50
+  roomPowerLevel:
+    ban: 50
+    events:
+      m.reaction: 0
+      m.room.avatar: 55
+      m.room.canonical_alias: 55
+      m.room.encryption: 100
+      m.room.history_visibility: 100
+      m.room.name: 55
+      m.room.pinned_events: 50
+      m.room.power_levels: 100
+      m.room.redaction: 0
+      m.room.server_acl: 60
+      m.room.tombstone: 100
+      m.room.topic: 50
+      m.space.child: 55
+      org.matrix.msc3401.call: 50
+      org.matrix.msc3401.call.member: 50
+    events_default: 0
+    historical: 100
+    invite: 50
+    kick: 50
+    redact: 50
+    state_default: 50
+    users_default: 0
+  roomVisibility: &quot;public&quot;
+  roomPreset: &quot;public_chat&quot;
+</code></pre>
+<h3 id="project-roomspace-definition">Project room/space definition</h3>
+<table>
+<thead>
+<tr>
+<th>Configuration Parameter</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{project_id}</code></td>
+<td>Eclipse Project_id as define in eclipse project website: https://projects.eclipse.org</td>
+<td><code>ee4j.rest</code></td>
+</tr>
+<tr>
+<td><code>projectLead</code></td>
+<td>Sync moderator permission with project lead. Only if project_id is valid</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>rooms</code></td>
+<td>Defining a list of room/space.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Room/space options: </p>
+<table>
+<thead>
+<tr>
+<th>Configuration Parameter</th>
+<th>Description</th>
+<th>Optionnal</th>
+<th>default value</th>
+<th> Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alias</code></td>
+<td>Eclipse Project_id as define in eclipse project website: https://projects.eclipse.org</td>
+<td>false</td>
+<td></td>
+<td><code>ee4j.rest</code></td>
+</tr>
+<tr>
+<td><code>extraAlias</code></td>
+<td>string or array that allows to add extra alias for room</td>
+<td>true</td>
+<td></td>
+<td><code>ee4j-general.rest</code></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Set room name</td>
+<td>false</td>
+<td> </td>
+<td><code>Jakarta RESTful Web Services™</code></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Define if it's a space or a room. Room by default.</td>
+<td>true</td>
+<td><code>room</code>, <code>space</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>topic</code></td>
+<td>Define topic for this room</td>
+<td>true</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>visibility</code></td>
+<td>Define visibility for this room/space</td>
+<td>true</td>
+<td><code>public</code></td>
+<td><code>public</code>, <code>private</code></td>
+</tr>
+<tr>
+<td><code>preset</code></td>
+<td>Define preset for this room/space</td>
+<td>true</td>
+<td><code>public_chat</code></td>
+<td><code>private_chat</code>, <code>trusted_private_chat</code>, <code>public_chat</code></td>
+</tr>
+<tr>
+<td><code>powerLevel</code></td>
+<td>Define specific powerLevel for this room/space</td>
+<td>true</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>projectLead</code></td>
+<td>Sync extra project lead permission. Only if project_id is valid</td>
+<td>true</td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>projectId</code></td>
+<td>Sync extra project lead permission with a valid project_id</td>
+<td>true</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>users</code></td>
+<td>Define a list of extra users for moderation</td>
+<td>true</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>parent</code></td>
+<td>Define parent space.</td>
+<td>true</td>
+<td></td>
+<td><code>#eclipse-projects</code></td>
+</tr>
+<tr>
+<td><code>forceUpdate</code></td>
+<td>Allow the script to override any change occuring by the UI. Only fields topic for the moment.</td>
+<td>true</td>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>encryption</code></td>
+<td>Allow to encrypt room.</td>
+<td>true</td>
+<td><code>false</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code class="language-yaml">projects:
+  - eclipsefdn:
+      projectLead: false
+      rooms:
+        - alias: '#eclipsefdn'
+          name: 'Eclipse Foundation'
+          type: space
+        - alias: '#eclipsefdn.it'
+          type: room
+          name: 'IT'
+          parent: '#eclipsefdn'
+</code></pre>
+<h1 id="installation">Installation</h1>
+<h2 id="create-sync-bot">Create sync bot</h2>
+<p>IMPORTANT: Activate for a short period registration in matrix.</p>
+<ol>
+<li>create sync user: <code>@ef_sync_bot:matrix.eclipse.org</code></li>
+</ol>
+<p>Get password from pass: /IT/services/chat-service/chat-service-sync/{env}/password</p>
+<pre><code class="language-shell">MATRIX_URL=&quot;https://matrix.eclipse.org&quot;
+ACCESS_TOKEN=&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;
+
+curl -k -s -X PUT \
+    -H &quot;Authorization: Bearer ${ACCESS_TOKEN}&quot; \
+    -d '{&quot;displayname&quot;: &quot;Eclipse Foundation Sync Bot&quot;, &quot;password&quot;: &quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;, &quot;admin&quot;: true}' \
+    &quot;${MATRIX_URL}/_synapse/admin/v2/users/@ef_sync_bot:${MATRIX_URL##*://}&quot;
+</code></pre>
+<ol>
+<li>Get access_token</li>
+</ol>
+<pre><code class="language-shell">MATRIX_URL=&quot;https://matrix.eclipse.org&quot;
+ACCESS_TOKEN=&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;
+curl -k -s -X POST \
+    -d '{&quot;type&quot;:&quot;m.login.password&quot;, &quot;user&quot;:&quot;ef_sync_bot&quot;, &quot;password&quot;:&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;}' \
+    &quot;${MATRIX_URL}/_matrix/client/r0/login&quot;
+</code></pre>
+<ol>
+<li>Accept consent policy: Need to connect to the web interface with user <code>ef_sync_bot</code> or calculate consent url.</li>
+</ol>
+<p>Param openssl hmac is <code>form_secret</code>property in <code>homeserver.yaml</code>: <code>pass /IT/services/chat-service/synapse/prod/form_secret</code></p>
+<pre><code class="language-shell">echo -n 'ef_sync_bot' | openssl sha256 -hmac 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+</code></pre>
+<pre><code>https://matrix.eclipse.org/_matrix/consent?u=ef_sync_bot&amp;h=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+</code></pre>
+<ol>
+<li>Set rate limit:</li>
+</ol>
+<pre><code class="language-sql">insert into ratelimit_override values ('@ef_sync_bot:matrix.eclipse.org', 0, 0);
+</code></pre>
+<p>or via curl: </p>
+<pre><code class="language-shell">MATRIX_URL=&quot;https://matrix.eclipse.org&quot;
+ACCESS_TOKEN=&quot;YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&quot;
+
+
+curl -k -s -X POST \
+    -H &quot;Authorization: Bearer ${ACCESS_TOKEN}&quot; \
+    -d '{&quot;messages_per_second&quot;: 0, &quot;burst_count&quot;: 0}' \
+    &quot;${MATRIX_URL}/_synapse/admin/v1/users/@ef_sync_bot:${MATRIX_URL##*://}/override_ratelimit&quot;
+</code></pre>
+<ol>
+<li>Add bot to existing room</li>
+</ol>
+<p>If rooms already exist, bot must be add manually first.</p>
+<h2 id="launch">launch</h2>
+<pre><code class="language-shell">npm install 
+npm run build
+npm run start
+</code></pre>
+<h1 id="development">Development</h1>
+<h2 id="dev-file-environment">Dev file environment</h2>
+<p>Create a <code>dev.js</code> file in <code>./config</code>, and overwrite all configuration from <code>default.json</code>.</p>
+<pre><code class="language-shell">npm install 
+npm run build
+npm run start-dev
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

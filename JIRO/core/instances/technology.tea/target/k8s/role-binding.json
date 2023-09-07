@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "technology.tea",
+         "org.eclipse.cbi.jiro/project.shortname": "tea"
+      },
+      "name": "tea",
+      "namespace": "tea"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "tea"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "tea",
+         "namespace": "tea"
+      }
+   ]
+}

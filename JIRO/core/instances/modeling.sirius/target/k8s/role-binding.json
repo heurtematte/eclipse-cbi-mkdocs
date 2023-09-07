@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "modeling.sirius",
+         "org.eclipse.cbi.jiro/project.shortname": "sirius"
+      },
+      "name": "sirius",
+      "namespace": "sirius"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "sirius"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "sirius",
+         "namespace": "sirius"
+      }
+   ]
+}

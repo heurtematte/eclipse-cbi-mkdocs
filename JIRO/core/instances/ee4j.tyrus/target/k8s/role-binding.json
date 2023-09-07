@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ee4j.tyrus",
+         "org.eclipse.cbi.jiro/project.shortname": "tyrus"
+      },
+      "name": "tyrus",
+      "namespace": "tyrus"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "tyrus"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "tyrus",
+         "namespace": "tyrus"
+      }
+   ]
+}

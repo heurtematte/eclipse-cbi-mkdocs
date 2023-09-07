@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "tools.acute",
+         "org.eclipse.cbi.jiro/project.shortname": "acute"
+      },
+      "name": "acute",
+      "namespace": "acute"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "acute"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "acute",
+         "namespace": "acute"
+      }
+   ]
+}

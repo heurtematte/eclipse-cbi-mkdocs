@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ee4j.jakartaee-platform",
+         "org.eclipse.cbi.jiro/project.shortname": "jakartaee-platform"
+      },
+      "name": "jakartaee-platform",
+      "namespace": "jakartaee-platform"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "jakartaee-platform"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "jakartaee-platform",
+         "namespace": "jakartaee-platform"
+      }
+   ]
+}

@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "modeling.ecoretools",
+         "org.eclipse.cbi.jiro/project.shortname": "ecoretools"
+      },
+      "name": "ecoretools",
+      "namespace": "ecoretools"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "ecoretools"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "ecoretools",
+         "namespace": "ecoretools"
+      }
+   ]
+}

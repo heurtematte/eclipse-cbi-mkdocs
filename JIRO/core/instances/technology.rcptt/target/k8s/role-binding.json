@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "technology.rcptt",
+         "org.eclipse.cbi.jiro/project.shortname": "rcptt"
+      },
+      "name": "rcptt",
+      "namespace": "rcptt"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "rcptt"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "rcptt",
+         "namespace": "rcptt"
+      }
+   ]
+}

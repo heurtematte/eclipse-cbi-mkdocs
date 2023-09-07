@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "modeling.epsilon",
+         "org.eclipse.cbi.jiro/project.shortname": "epsilon"
+      },
+      "name": "epsilon",
+      "namespace": "epsilon"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "epsilon"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "epsilon",
+         "namespace": "epsilon"
+      }
+   ]
+}

@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ee4j.jaxws",
+         "org.eclipse.cbi.jiro/project.shortname": "jaxws"
+      },
+      "name": "jaxws",
+      "namespace": "jaxws"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "jaxws"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "jaxws",
+         "namespace": "jaxws"
+      }
+   ]
+}

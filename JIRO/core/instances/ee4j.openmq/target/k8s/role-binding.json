@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ee4j.openmq",
+         "org.eclipse.cbi.jiro/project.shortname": "openmq"
+      },
+      "name": "openmq",
+      "namespace": "openmq"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "openmq"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "openmq",
+         "namespace": "openmq"
+      }
+   ]
+}

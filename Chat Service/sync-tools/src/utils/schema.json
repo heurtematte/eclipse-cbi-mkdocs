@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "default": {
+      "type": "object",
+      "properties": {
+        "users": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "patternProperties": {
+              "^@.*$": {
+                "type": "integer"
+              }
+            }
+          },
+          "minItems": 1
+        },
+        "defaultProjectSpace": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "userPowerLevel": {
+          "type": "integer"
+        },
+        "roomPowerLevel": {
+          "type": "object",
+          "properties": {
+            "ban": {
+              "type": "integer"
+            },
+            "events": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "integer"
+              }
+            },
+            "events_default": {
+              "type": "integer"
+            },
+            "historical": {
+              "type": "integer"
+            },
+            "invite": {
+              "type": "integer"
+            },
+            "kick": {
+              "type": "integer"
+            },
+            "redact": {
+              "type": "integer"
+            },
+            "state_default": {
+              "type": "integer"
+            },
+            "users_default": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ban",
+            "events",
+            "events_default",
+            "historical",
+            "invite",
+            "kick",
+            "redact",
+            "state_default",
+            "users_default"
+          ]
+        },
+        "roomVisibility": {
+          "type": "string"
+        },
+        "roomPreset": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "userPowerLevel",
+        "roomPowerLevel",
+        "roomVisibility",
+        "roomPreset"
+      ]
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "patternProperties": {
+          ".*": {
+            "type": "object",
+            "properties": {
+              "projectLead": {
+                "type": "boolean"
+              },
+              "rooms": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "projectLead": {
+                      "type": "boolean"
+                    },
+                    "alias": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "topic": {
+                      "type": "string"
+                    },
+                    "encryption": {
+                      "type": "boolean"
+                    },
+                    "powerLevel": {
+                      "type": "object",
+                      "properties": {
+                        "ban": {
+                          "type": "integer"
+                        },
+                        "events": {
+                          "type": "object",
+                          "additionalProperties": {
+                            "type": "integer"
+                          }
+                        },
+                        "events_default": {
+                          "type": "integer"
+                        },
+                        "historical": {
+                          "type": "integer"
+                        },
+                        "invite": {
+                          "type": "integer"
+                        },
+                        "kick": {
+                          "type": "integer"
+                        },
+                        "redact": {
+                          "type": "integer"
+                        },
+                        "state_default": {
+                          "type": "integer"
+                        },
+                        "users_default": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "ban",
+                        "events",
+                        "events_default",
+                        "historical",
+                        "invite",
+                        "kick",
+                        "redact",
+                        "state_default",
+                        "users_default"
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "room",
+                        "space"
+                      ]
+                    },
+                    "users": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "patternProperties": {
+                          "^@.*$": {
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "minItems": 1
+                    },
+                    "visibility": {
+                      "type": "string"
+                    },
+                    "preset": {
+                      "type": "string"
+                    },
+                    "parent": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "array"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "alias",
+                    "name"
+                  ]
+                },
+                "minItems": 1
+              }
+            }
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "default",
+    "projects"
+  ]
+}

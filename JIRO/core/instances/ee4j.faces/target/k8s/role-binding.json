@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ee4j.faces",
+         "org.eclipse.cbi.jiro/project.shortname": "faces"
+      },
+      "name": "faces",
+      "namespace": "faces"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "faces"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "faces",
+         "namespace": "faces"
+      }
+   ]
+}

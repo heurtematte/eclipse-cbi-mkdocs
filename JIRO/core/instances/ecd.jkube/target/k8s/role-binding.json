@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ecd.jkube",
+         "org.eclipse.cbi.jiro/project.shortname": "jkube"
+      },
+      "name": "jkube",
+      "namespace": "jkube"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "jkube"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "jkube",
+         "namespace": "jkube"
+      }
+   ]
+}

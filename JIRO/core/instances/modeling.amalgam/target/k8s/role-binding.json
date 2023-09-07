@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "modeling.amalgam",
+         "org.eclipse.cbi.jiro/project.shortname": "amalgam"
+      },
+      "name": "amalgam",
+      "namespace": "amalgam"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "amalgam"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "amalgam",
+         "namespace": "amalgam"
+      }
+   ]
+}

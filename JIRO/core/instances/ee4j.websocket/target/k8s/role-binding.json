@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "ee4j.websocket",
+         "org.eclipse.cbi.jiro/project.shortname": "websocket"
+      },
+      "name": "websocket",
+      "namespace": "websocket"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "websocket"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "websocket",
+         "namespace": "websocket"
+      }
+   ]
+}

@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "tools.datatools",
+         "org.eclipse.cbi.jiro/project.shortname": "datatools"
+      },
+      "name": "datatools",
+      "namespace": "datatools"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "datatools"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "datatools",
+         "namespace": "datatools"
+      }
+   ]
+}

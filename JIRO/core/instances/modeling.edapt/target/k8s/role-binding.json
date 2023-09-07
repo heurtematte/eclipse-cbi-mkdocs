@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "modeling.edapt",
+         "org.eclipse.cbi.jiro/project.shortname": "edapt"
+      },
+      "name": "edapt",
+      "namespace": "edapt"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "edapt"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "edapt",
+         "namespace": "edapt"
+      }
+   ]
+}

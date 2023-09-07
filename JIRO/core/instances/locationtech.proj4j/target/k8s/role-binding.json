@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "locationtech.proj4j",
+         "org.eclipse.cbi.jiro/project.shortname": "proj4j"
+      },
+      "name": "proj4j",
+      "namespace": "proj4j"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "proj4j"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "proj4j",
+         "namespace": "proj4j"
+      }
+   ]
+}

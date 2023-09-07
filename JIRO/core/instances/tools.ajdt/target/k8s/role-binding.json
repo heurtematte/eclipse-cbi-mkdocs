@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "tools.ajdt",
+         "org.eclipse.cbi.jiro/project.shortname": "ajdt"
+      },
+      "name": "ajdt",
+      "namespace": "ajdt"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "ajdt"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "ajdt",
+         "namespace": "ajdt"
+      }
+   ]
+}

@@ -1,0 +1,24 @@
+{
+   "apiVersion": "rbac.authorization.k8s.io/v1",
+   "kind": "RoleBinding",
+   "metadata": {
+      "labels": {
+         "org.eclipse.cbi.jiro/project.fullName": "technology.swtbot",
+         "org.eclipse.cbi.jiro/project.shortname": "swtbot"
+      },
+      "name": "swtbot",
+      "namespace": "swtbot"
+   },
+   "roleRef": {
+      "kind": "Role",
+      "name": "jenkins-master-owner",
+      "namespace": "swtbot"
+   },
+   "subjects": [
+      {
+         "kind": "ServiceAccount",
+         "name": "swtbot",
+         "namespace": "swtbot"
+      }
+   ]
+}
