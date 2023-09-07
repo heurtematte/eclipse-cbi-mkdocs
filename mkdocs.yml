@@ -1,0 +1,86 @@
+site_name: CBI
+site_url: https://eclipse-cbi-mkdocs/
+
+plugins:
+  - multirepo:
+      cleanup: true
+      keep_docs_dir: true
+      repos:
+        - section: Core 
+          section_path: JIRO 
+          import_url: 'https://github.com/eclipse-cbi/jiro.git?branch=master&edit_uri=master&docs_dir=/*'
+        - section: Agent 
+          section_path: JIRO 
+          import_url: 'https://github.com/eclipse-cbi/jiro-agents.git?branch=master&edit_uri=master&docs_dir=/*'
+        - section: Controller 
+          section_path: JIRO 
+          import_url: 'https://github.com/eclipse-cbi/jiro-masters.git?branch=master&edit_uri=master&docs_dir=/*'
+        - section: Dockerfile 
+          section_path: JIRO 
+          import_url: 'https://github.com/eclipse-cbi/dockerfiles.git?branch=master&edit_uri=master&docs_dir=/README.md'
+          
+        - section: Gitab Runner Service 
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-service-documentation.git?branch=main&edit_uri=main&docs_dir=/*'
+
+        - section: Documentation
+          section_path: Chat Service 
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&edit_uri=main&docs_dir=content/*'
+        - section: Provisionner
+          section_path: Chat Service 
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-provisioner.git?branch=main&edit_uri=main&docs_dir=/*'
+        - section: Synapse
+          section_path: Chat Service 
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/synapse.git?branch=main&edit_uri=main&docs_dir=/*'
+        - section: Elementweb
+          section_path: Chat Service 
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/element-web.git?branch=main&edit_uri=main&docs_dir=/*'
+        - section: Sync tools
+          section_path: Chat Service 
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-sync.git?branch=main&edit_uri=main&docs_dir=/*'
+
+        - section: MACOS Notarization Service 
+          import_url: 'https://github.com/eclipse-cbi/macos-notarization-service.git?branch=main&edit_uri=main&docs_dir=/README.md'
+#       nav_repos:
+#         - name: Jiro
+#           import_url: 'https://github.com/eclipse-cbi/jiro?branch=master'
+#           imports: [/README.md]
+#         - name: Gitlab-Runner-Service
+#           import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-service-documentation.git?branch=main&edit_uri=main'
+#           imports: [/readme.md]
+#         # - name: Chat-Service
+#         #   import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&edit_uri=main&docs_dir=content/*'
+
+
+# nav:
+#   - Home: index.md
+#   - JIRO:
+#       - Home: jiro/README.md
+#   - Gitlab Runner Service:
+#       - HOME: gitlab-runner-service/readme.md
+#   - Chat Service:
+
+
+# plugins:
+#   - search
+#   - multirepo:
+#       # (optional) tells multirepo to cleanup the temporary directory after site is built.
+#       cleanup: false
+#       nav_repos:
+#         - name: backstage
+#           import_url: https://github.com/backstage/backstage
+#           # forward slash is needed in '/README.md' so that only the README.md in the root
+#           # directory is imported and not all README.md files.
+#           imports: [
+#             docs/publishing.md, docs/integrations/index.md, /README.md,
+#             # asset files needed
+#             docs/assets/*
+#             ]
+#         - name: fast-api
+#           import_url: https://github.com/tiangolo/fastapi
+#           imports: [docs/en/docs/index.md]
+
+# nav:
+#   - Backstage:
+#       - Home: backstage/README.md
+#       - Integration: backstage/docs/integrations/index.md
+#       - Publishing: backstage/docs/publishing.md
