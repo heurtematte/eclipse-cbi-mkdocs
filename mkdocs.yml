@@ -1,6 +1,8 @@
 site_name: CBI
 site_url: https://eclipse-cbi-mkdocs/
-
+theme:
+  name: material
+  
 plugins:
   - multirepo:
       cleanup: true
