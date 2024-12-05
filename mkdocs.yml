@@ -170,6 +170,7 @@ nav:
       - Open an issue: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new
       - SLO: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/IT-Service-Level-Objectives
   - Sharing secrets: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/Sharing-secrets
+  - Security Handbook: https://eclipse-csi.github.io/security-handbook/index.html
   - Service links: 
       - ci.eclipse.org: 'https://ci.eclipse.org/'
       - develocity-staging: 'https://develocity-staging.eclipse.org'
