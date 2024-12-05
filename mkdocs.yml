@@ -1,7 +1,12 @@
-site_name: CBI
+site_name:  Eclipse Common Build Infrastructure 
 site_url: https://eclipse-cbi-mkdocs/
 theme:
   name: material
+  logo: assets/CBI.png
+  language: en 
+
+extra_css:
+  - assets/extra.css
 
 plugins:
   - search:
