@@ -2,8 +2,16 @@ site_name: CBI
 site_url: https://eclipse-cbi-mkdocs/
 theme:
   name: material
-  
+
 plugins:
+  - search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer
+  - tags
   - multirepo:
       cleanup: true
       keep_docs_dir: true
