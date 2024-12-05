@@ -91,7 +91,7 @@ plugins:
 
         - name: Chat Service Documentation
           import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&edit_uri=main'
-          imports: ['content/*.md']
+          imports: ['*.md']
         - name: Chat Service  Provisionner
           import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-provisioner.git?branch=main&edit_uri=main'
           imports: ['*.md']
@@ -145,7 +145,12 @@ nav:
       - Gitlab Runner Template: gitlab-runner-template/index.html
       - Grac!: gitlab-runner-as-code/index.html
   - Chat Service:
-      - Documentation: chat-service-documentation/content/_index/index.html
+      - Let's chat: https://chat.eclipse.org
+      - Documentation: https://chat.eclipse.org/docs/
+      - Matrix at Eclipse: chat-service-documentation/content/_index/index.html
+      - Getting Started: chat-service-documentation/content/getting-started/_index/index.html
+      - FAQ: chat-service-documentation/content/faq/_index/index.html
+      - Rooms/Spaces: chat-service-documentation/content/rooms/_index/index.html
       - Provisionner: chat-service-provisionner/readme/index.html
       - Synapse: chat-service-synapse/readme/index.html
       - Elementweb: chat-service-elementweb/readme/index.html
@@ -161,6 +166,10 @@ nav:
   - Best Practices: 
       - Common Best Practices: best-practices/index.html
       - Software Supply Chain: best-practices/software-supply-chain/osssc-best-practices/index.html
+  - Helpdesk: 
+      - Open an issue: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new
+      - SLO: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/IT-Service-Level-Objectives
+  - Sharing secrets: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/Sharing-secrets
   - Service links: 
       - ci.eclipse.org: 'https://ci.eclipse.org/'
       - develocity-staging: 'https://develocity-staging.eclipse.org'
