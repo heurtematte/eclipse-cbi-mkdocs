@@ -74,13 +74,20 @@ plugins:
         - name: JIRO Controller 
           import_url: 'https://github.com/eclipse-cbi/jiro-masters.git?branch=master'
           imports: ['*.md']
-        - name: JIRO Dockerfile 
+
+        - name: CBI Dockerfile 
           import_url: 'https://github.com/eclipse-cbi/dockerfiles.git?branch=master'
           imports: ['README.md']
         
         - name: Gitlab Runner Service 
           import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-service-documentation.git?branch=main&edit_uri=main'
           imports: ['readme.md']
+        - name: Gitlab Runner Template 
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates.git?branch=main&edit_uri=main'
+          imports: ['README.md']
+        - name: Gitlab Runner as code 
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code?branch=main&edit_uri=main'
+          imports: ['README.md']
 
         - name: Chat Service Documentation
           import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&edit_uri=main'
@@ -96,6 +103,18 @@ plugins:
           imports: ['*.md']
         - name: Chat Service  Sync tools
           import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-sync.git?branch=main&edit_uri=main'
+          imports: ['*.md']
+
+        - name: Develocity
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/develocity/develocity-documentation?branch=main&edit_uri=main'
+          imports: ['*.md']
+
+        - name: Signing Services
+          import_url: 'https://github.com/eclipse-cbi/org.eclipse.cbi.git?branch=main'
+          imports: ['*.md']
+
+        - name: Best Practices
+          import_url: 'https://github.com/eclipse-cbi/best-practices.git?branch=main'
           imports: ['*.md']
 
         - name: MACOS Notarization Service 
@@ -114,20 +133,42 @@ plugins:
 
 
 nav:
+  - CBI Documentation: https://github.com/eclipse-cbi/cbi/wiki
   - JIRO:
+      - Wiki: https://github.com/eclipse-cbi/jiro/wiki
       - Core: jiro-core/index.html
       - Agent: jiro-agent/index.html
       - Controller: jiro-controller/index.html
-      - Dockerfile: jiro-dockerfile/index.html
-  - Gitlab Runner Service: gitlab-runner-service/readme/index.html
+  - Container management: cbi-dockerfile/index.html
+  - Gitlab Runner Service: 
+      - Documentation: gitlab-runner-service/readme/index.html
+      - Gitlab Runner Template: gitlab-runner-template/index.html
+      - Grac!: gitlab-runner-as-code/index.html
   - Chat Service:
       - Documentation: chat-service-documentation/content/_index/index.html
       - Provisionner: chat-service-provisionner/readme/index.html
       - Synapse: chat-service-synapse/readme/index.html
       - Elementweb: chat-service-elementweb/readme/index.html
       - Sync Tools: chat-service-sync-tools/readme/index.html
+  - Develocity: develocity/readme/index.html
+  - Otterdog: https://otterdog.readthedocs.io/en/latest/
+  - Signing Service: 
+      - CBI Maven plugins: signing-services/index.html
+      - CLI: signing-services/cli-tools/signing/jar/index.html
+      - Maven plugins: signing-services/maven-plugins/index.html
+      - Macosx webservice: signing-services/webservice/signing/macosx/index.html
   - MACOS Notarization Service: macos-notarization-service/index.html
-  - ci.eclipse.org: 'https://ci.eclipse.org/'
+  - Best Practices: 
+      - Common Best Practices: best-practices/index.html
+      - Software Supply Chain: best-practices/software-supply-chain/osssc-best-practices/index.html
+  - Service links: 
+      - ci.eclipse.org: 'https://ci.eclipse.org/'
+      - develocity-staging: 'https://develocity-staging.eclipse.org'
+      - chat.eclipse.org: 'https://chat.eclipse.org'
+      - otterdog: 'https://otterdog.eclipse.org'
+      - repo.eclipse.org: 'https://repo.eclipse.org'
+      - cbi-dev mailing-list: https://accounts.eclipse.org/mailing-list/cbi-dev
+
 
 # nav:
 #   - JIRO: 
