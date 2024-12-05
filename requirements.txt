@@ -1,7 +1,7 @@
 # Documentation static site generator & deployment tool
-mkdocs>=1.5.2
-mkdocs-multirepo-plugin>=0.6.2
-mkdocs-material>=9.*
+mkdocs>=1.6.1
+mkdocs-multirepo-plugin>=0.8.3
+mkdocs-material>=9
 
 # Add your custom theme if not inside a theme_dir
 # (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)

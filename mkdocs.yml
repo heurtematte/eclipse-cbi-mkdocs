@@ -28,41 +28,80 @@ plugins:
   - multirepo:
       cleanup: true
       keep_docs_dir: true
-      repos:
-        - section: Core 
-          section_path: JIRO 
-          import_url: 'https://github.com/eclipse-cbi/jiro.git?branch=master&edit_uri=master&docs_dir=/*'
-        - section: Agent 
-          section_path: JIRO 
-          import_url: 'https://github.com/eclipse-cbi/jiro-agents.git?branch=master&edit_uri=master&docs_dir=/*'
-        - section: Controller 
-          section_path: JIRO 
-          import_url: 'https://github.com/eclipse-cbi/jiro-masters.git?branch=master&edit_uri=master&docs_dir=/*'
-        - section: Dockerfile 
-          section_path: JIRO 
-          import_url: 'https://github.com/eclipse-cbi/dockerfiles.git?branch=master&edit_uri=master&docs_dir=/README.md'
+      # repos:
+      #   - section: Core 
+      #     section_path: JIRO 
+      #     import_url: 'https://github.com/eclipse-cbi/jiro.git?branch=master&edit_uri=master&docs_dir=/*'
+      #   - section: Agent 
+      #     section_path: JIRO 
+      #     import_url: 'https://github.com/eclipse-cbi/jiro-agents.git?branch=master&edit_uri=master&docs_dir=/*'
+      #   - section: Controller 
+      #     section_path: JIRO 
+      #     import_url: 'https://github.com/eclipse-cbi/jiro-masters.git?branch=master&edit_uri=master&docs_dir=/*'
+      #   - section: Dockerfile 
+      #     section_path: JIRO 
+      #     import_url: 'https://github.com/eclipse-cbi/dockerfiles.git?branch=master&edit_uri=master&docs_dir=/README.md'
           
-        - section: Gitab Runner Service 
-          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-service-documentation.git?branch=main&edit_uri=main&docs_dir=/*'
+      #   - section: Gitab Runner Service 
+      #     import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-service-documentation.git?branch=main&edit_uri=main&docs_dir=/*'
 
-        - section: Documentation
-          section_path: Chat Service 
-          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&edit_uri=main&docs_dir=content/*'
-        - section: Provisionner
-          section_path: Chat Service 
-          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-provisioner.git?branch=main&edit_uri=main&docs_dir=/*'
-        - section: Synapse
-          section_path: Chat Service 
-          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/synapse.git?branch=main&edit_uri=main&docs_dir=/*'
-        - section: Elementweb
-          section_path: Chat Service 
-          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/element-web.git?branch=main&edit_uri=main&docs_dir=/*'
-        - section: Sync tools
-          section_path: Chat Service 
-          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-sync.git?branch=main&edit_uri=main&docs_dir=/*'
+      #   - section: Documentation
+      #     section_path: Chat Service 
+      #     import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&edit_uri=main&docs_dir=content/*'
+      #   - section: Provisionner
+      #     section_path: Chat Service 
+      #     import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-provisioner.git?branch=main&edit_uri=main&docs_dir=/*'
+      #   - section: Synapse
+      #     section_path: Chat Service 
+      #     import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/synapse.git?branch=main&edit_uri=main&docs_dir=/*'
+      #   - section: Elementweb
+      #     section_path: Chat Service 
+      #     import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/element-web.git?branch=main&edit_uri=main&docs_dir=/*'
+      #   - section: Sync tools
+      #     section_path: Chat Service 
+      #     import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-sync.git?branch=main&edit_uri=main&docs_dir=/*'
 
-        - section: MACOS Notarization Service 
-          import_url: 'https://github.com/eclipse-cbi/macos-notarization-service.git?branch=main&edit_uri=main&docs_dir=/README.md'
+      #   - section: MACOS Notarization Service 
+      #     import_url: 'https://github.com/eclipse-cbi/macos-notarization-service.git?branch=main&edit_uri=main&docs_dir=/README.md'
+
+      nav_repos:
+        - name: JIRO Core 
+          import_url: 'https://github.com/eclipse-cbi/jiro.git?branch=master'
+          imports: ['*.md']
+        - name: JIRO Agent 
+          import_url: 'https://github.com/eclipse-cbi/jiro-agents.git?branch=master'
+          imports: ['*.md']
+        - name: JIRO Controller 
+          import_url: 'https://github.com/eclipse-cbi/jiro-masters.git?branch=master'
+          imports: ['*.md']
+        - name: JIRO Dockerfile 
+          import_url: 'https://github.com/eclipse-cbi/dockerfiles.git?branch=master'
+          imports: ['README.md']
+        
+        - name: Gitlab Runner Service 
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-service-documentation.git?branch=main&edit_uri=main'
+          imports: ['readme.md']
+
+        - name: Chat Service Documentation
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&edit_uri=main'
+          imports: ['content/*.md']
+        - name: Chat Service  Provisionner
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-provisioner.git?branch=main&edit_uri=main'
+          imports: ['*.md']
+        - name: Chat Service  Synapse
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/synapse.git?branch=main&edit_uri=main'
+          imports: ['*.md']
+        - name: Chat Service  Elementweb
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/element-web.git?branch=main&edit_uri=main'
+          imports: ['*.md']
+        - name: Chat Service  Sync tools
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-sync.git?branch=main&edit_uri=main'
+          imports: ['*.md']
+
+        - name: MACOS Notarization Service 
+          import_url: 'https://github.com/eclipse-cbi/macos-notarization-service.git?branch=main'
+          imports: ['README.md']
+
 #       nav_repos:
 #         - name: Jiro
 #           import_url: 'https://github.com/eclipse-cbi/jiro?branch=master'
@@ -74,6 +113,38 @@ plugins:
 #         #   import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&edit_uri=main&docs_dir=content/*'
 
 
+nav:
+  - JIRO:
+      - Core: jiro-core/index.html
+      - Agent: jiro-agent/index.html
+      - Controller: jiro-controller/index.html
+      - Dockerfile: jiro-dockerfile/index.html
+  - Gitlab Runner Service: gitlab-runner-service/readme/index.html
+  - Chat Service:
+      - Documentation: chat-service-documentation/content/_index/index.html
+      - Provisionner: chat-service-provisionner/readme/index.html
+      - Synapse: chat-service-synapse/readme/index.html
+      - Elementweb: chat-service-elementweb/readme/index.html
+      - Sync Tools: chat-service-sync-tools/readme/index.html
+  - MACOS Notarization Service: macos-notarization-service/index.html
+  - ci.eclipse.org: 'https://ci.eclipse.org/'
+
+# nav:
+#   - JIRO: 
+#     - Core: JIRO/core/index.html
+  #   - Agent: '!import https://github.com/eclipse-cbi/jiro-agents.git?branch=master&docs_dir=/*&multi_docs=False&config=mkdocs.yml&keep_docs_dir=True'
+  #   - Controller: '!import https://github.com/eclipse-cbi/jiro-masters.git?branch=master&docs_dir=/*&multi_docs=False&config=mkdocs.yml&keep_docs_dir=True'
+  #   - Dockerfile: '!import https://github.com/eclipse-cbi/dockerfiles.git?branch=master&docs_dir=/README.md&multi_docs=False&config=mkdocs.yml&keep_docs_dir=True'
+  #   - GitLab Runner Service: '!import https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-service-documentation.git?branch=main&docs_dir=/*&multi_docs=False&config=mkdocs.yml&keep_docs_dir=True'
+  # - Chat Service:
+  #   - Documentation: '!import https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&docs_dir=content/*&multi_docs=False&config=mkdocs.yml&keep_docs_dir=True'
+  #   - Provisioner: '!import https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-provisioner.git?branch=main&docs_dir=/*&multi_docs=False&config=mkdocs.yml&keep_docs_dir=True'
+  #   - Synapse: '!import https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/synapse.git?branch=main&docs_dir=/*&multi_docs=False&config=mkdocs.yml&keep_docs_dir=True'
+  #   - ElementWeb: '!import https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/element-web.git?branch=main&docs_dir=/*&multi_docs=False&config=mkdocs.yml&keep_docs_dir=True'
+  #   - Sync Tools: '!import https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-sync.git?branch=main&docs_dir=/*&multi_docs=False&config=mkdocs.yml&keep_docs_dir=True'
+  # - MacOS Notarization Service: '!import https://github.com/eclipse-cbi/macos-notarization-service.git?branch=main&docs_dir=/README.md&multi_docs=False&config=mkdocs.yml&keep_docs_dir=True'
+
+  # - ci.eclipse.org: 'https://ci.eclipse.org/'
 # nav:
 #   - Home: index.md
 #   - JIRO:
