@@ -1,9 +1,36 @@
-site_name:  Eclipse Common Build Infrastructure 
+site_name:  Eclipse Common Build Infrastructure 🚀
 site_url: https://eclipse-cbi-mkdocs/
 theme:
   name: material
   logo: assets/CBI.png
   language: en 
+  features:
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.indexes
+    - navigation.footer
+    - navigation.tracking
+    - toc.follow
+    # - toc.integrate 
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate 
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
   - assets/extra.css
@@ -17,6 +44,10 @@ extra:
 copyright: Copyright © Eclipse Foundation, Inc. All Rights Reserved.
 
 plugins:
+  - blog:
+      post_url_date_format: yyyy/MM/dd
+      post_url_format: "{date}/{slug}"
+
   - search:
       lang: en
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
@@ -171,13 +202,19 @@ nav:
       - SLO: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/IT-Service-Level-Objectives
   - Sharing secrets: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/Sharing-secrets
   - Security Handbook: https://eclipse-csi.github.io/security-handbook/index.html
+  - Blog:
+    - blog/index.md
   - Service links: 
       - ci.eclipse.org: 'https://ci.eclipse.org/'
       - develocity-staging: 'https://develocity-staging.eclipse.org'
       - chat.eclipse.org: 'https://chat.eclipse.org'
+      - IT room: 'https://chat.eclipse.org/#/room/#eclipsefdn.it:matrix.eclipse.org'
+      - Helpdesk: 'https://gitlab.eclipse.org/eclipsefdn/helpdesk'
       - otterdog: 'https://otterdog.eclipse.org'
       - repo.eclipse.org: 'https://repo.eclipse.org'
       - cbi-dev mailing-list: https://accounts.eclipse.org/mailing-list/cbi-dev
+      - cross-project-issues mailing-list: https://accounts.eclipse.org/mailing-list/cross-project-issues-dev
+      - org-committers mailing-list: https://accounts.eclipse.org/mailing-list/eclipse.org-committers
 
 
 # nav:

@@ -1,4 +1,4 @@
-# CBI - Introduction
+# Welcome to the Common Build Infrastructure at Eclipse Foundation :rocket:
 
 Eclipse CBI (Common Build Infrastructure), is a crucial component within the Eclipse Foundation's ecosystem, dedicated to streamlining and enhancing the software development process. CBI provides a unified and efficient build system for Eclipse projects, ensuring consistency and reliability across the vast array of projects hosted within the Eclipse community.
 
