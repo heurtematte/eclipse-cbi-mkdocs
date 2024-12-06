@@ -89,6 +89,10 @@ plugins:
           import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/jenkins-pipeline-service/jenkins-pipeline-library.git?branch=main&edit_uri=main'
           imports: ['README.md']
 
+        - name: Jenkins Pipeline Library Sample
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/jenkins-pipeline-service/jenkins-pipeline-library-sample?branch=main&edit_uri=main'
+          imports: ['README.md']
+
         - name: CBI Dockerfile 
           import_url: 'https://github.com/eclipse-cbi/dockerfiles.git?branch=master'
           imports: ['README.md']
@@ -147,6 +151,7 @@ nav:
       - Project: https://github.com/eclipse-cbi/dockerfiles.git
   - Jenkins Pipeline Library: 
       - Documentation: jenkins-pipeline-library/index.html
+      - Examples: jenkins-pipeline-library-sample/index.html
       - Project: https://gitlab.eclipse.org/eclipsefdn/it/releng/jenkins-pipeline-service/jenkins-pipeline-library
   - Gitlab Runner Service: 
       - Documentation: gitlab-runner-service/readme/index.html
@@ -188,7 +193,7 @@ nav:
       - SLO: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/IT-Service-Level-Objectives
   - Sharing secrets: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/Sharing-secrets
   - Security Handbook: https://eclipse-csi.github.io/security-handbook/index.html
-  - Blog:
+  - Blog 📝:
     - blog/index.md
   - Service links: 
       - ci.eclipse.org: 'https://ci.eclipse.org/'

@@ -29,3 +29,5 @@ Whether you're an Eclipse committer, contributor, or a member of the open-source
 We invite you to explore the blog, share your feedback, and collaborate with us as we continue to enhance the Eclipse Foundation’s Common Build Infrastructure. Together, we can build better software, faster!
 
 Start exploring today and join the conversation that powers innovation in the Eclipse ecosystem.
+
+---
