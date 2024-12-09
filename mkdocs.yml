@@ -139,6 +139,10 @@ plugins:
           import_url: 'https://github.com/eclipse-cbi/macos-notarization-service.git?branch=main'
           imports: ['README.md']
 
+        - name: Project Website Boilerplate 
+          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate.git?branch=main&edit_uri=main'
+          imports: ['README.md']          
+
 nav:
   - CBI Documentation: https://github.com/eclipse-cbi/cbi/wiki
   - JIRO:
@@ -188,6 +192,9 @@ nav:
   - Best Practices: 
       - Common Best Practices: best-practices/index.html
       - Software Supply Chain: best-practices/software-supply-chain/osssc-best-practices/index.html
+  - Project Website Boilerplate: 
+      - Documentation: project-website-boilerplate/index.html
+      - Project: https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate
   - Helpdesk: 
       - Open an issue: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new
       - SLO: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/IT-Service-Level-Objectives
@@ -206,6 +213,7 @@ nav:
       - cbi-dev mailing-list: https://accounts.eclipse.org/mailing-list/cbi-dev
       - cross-project-issues mailing-list: https://accounts.eclipse.org/mailing-list/cross-project-issues-dev
       - org-committers mailing-list: https://accounts.eclipse.org/mailing-list/eclipse.org-committers
+      - hugo template: 'https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate'
 
 
 # nav:
