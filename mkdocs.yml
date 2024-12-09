@@ -145,22 +145,30 @@ plugins:
 
 nav:
   - CBI Documentation: https://github.com/eclipse-cbi/cbi/wiki
-  - JIRO:
+  - Jenkins Service (JIRO):
       - Wiki: https://github.com/eclipse-cbi/jiro/wiki
-      - Core: jiro-core/index.html
-      - Agent: jiro-agent/index.html
-      - Controller: jiro-controller/index.html
-  - Container management: 
-      - DockerFile Documentation: cbi-dockerfile/index.html
-      - Project: https://github.com/eclipse-cbi/dockerfiles.git
+      - JIRO: jiro-core/index.html
+      - Agents: jiro-agent/index.html
+      - Controllers: jiro-controller/index.html
+      - Projects: 
+        - JIRO Core: https://github.com/eclipse-cbi/jiro
+        - JIRO Agents: https://github.com/eclipse-cbi/jiro-agents
+        - JIRO Controllers: https://github.com/eclipse-cbi/jiro-masters/
   - Jenkins Pipeline Library: 
       - Documentation: jenkins-pipeline-library/index.html
       - Examples: jenkins-pipeline-library-sample/index.html
       - Project: https://gitlab.eclipse.org/eclipsefdn/it/releng/jenkins-pipeline-service/jenkins-pipeline-library
-  - Gitlab Runner Service: 
+  - Container management: 
+      - DockerFile Documentation: cbi-dockerfile/index.html
+      - Project: https://github.com/eclipse-cbi/dockerfiles
+  - Gitlab Runner Service (GRAC!): 
       - Documentation: gitlab-runner-service/readme/index.html
       - Gitlab CI Template: gitlab-runner-template/index.html
       - Grac!: gitlab-runner-as-code/index.html
+      - Projects: 
+        - Gitlab Runner as Code: https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code
+        - Gitlab Runner Instances: https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-instances
+        - Gitlab Runner Template: https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates
   - Chat Service:
       - Let's chat: https://chat.eclipse.org
       - Documentation: https://chat.eclipse.org/docs/
@@ -169,7 +177,6 @@ nav:
       - FAQ: chat-service-documentation/content/faq/_index/index.html
       - Rooms/Spaces: https://chat.eclipse.org/docs/rooms/
       # - Rooms/Spaces: chat-service-documentation/content/rooms/_index/index.html
-
       - Projects: 
         - Provisionner: chat-service-provisionner/readme/index.html
         - Synapse: chat-service-synapse/readme/index.html
