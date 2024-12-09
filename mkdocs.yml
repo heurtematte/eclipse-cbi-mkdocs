@@ -185,15 +185,19 @@ nav:
   - Develocity: 
       - Documentation: develocity/readme/index.html
       - Access Develocity-staging: https://develocity-staging.eclipse.org
-  - Otterdog: 
+  - Github Self-Service (Otterdog): 
       - Documentation: https://otterdog.readthedocs.io/en/latest/
       - Otterdog Dashboard: 'https://otterdog.eclipse.org'
+      - Projects: 
+        - Otterdog: https://github.com/eclipse-csi/otterdog
+        - Eclipse Foundation Otterdog Configurations: https://github.com/EclipseFdn/otterdog-configs
+        - Eclipse Foundation Otterdog Defaults: https://github.com/EclipseFdn/otterdog-defaults
   - Signing Service: 
       - CBI Maven plugins: signing-services/index.html
       - CLI: signing-services/cli-tools/signing/jar/index.html
       - Maven plugins: signing-services/maven-plugins/index.html
       - Macosx webservice: signing-services/webservice/signing/macosx/index.html
-  - macOS Notarization Service: 
+  - MacOS Notarization Service: 
       - Documentation: macos-notarization-service/index.html
       - Project: https://github.com/eclipse-cbi/macos-notarization-service.git      
   - Best Practices: 
