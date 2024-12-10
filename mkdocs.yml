@@ -5,6 +5,7 @@ theme:
   logo: assets/CBI.png
   language: en 
   features:
+    # - navigation.expand 
     - navigation.top
     - navigation.instant
     - navigation.instant.progress
@@ -155,82 +156,87 @@ plugins:
           imports: ['README.md']
 
 nav:
-  - CBI Documentation: https://github.com/eclipse-cbi/cbi/wiki
+  - CBI Documentation: 
+    - Home: cbi/Home.md
+    - FAQ: cbi/FAQ.md
+    - Nexus: cbi/Nexus.md
+    - Signing: cbi/Signing.md
+    - Wiki: https://github.com/eclipse-cbi/cbi/wiki
   - Jenkins Service (JIRO):
-      - Documentation:
-        - Home: jiro/Home.md
-        - CI Best Practices: jiro/CI-Best-Practices.md
-        - Common build errors: jiro/Common-build-errors.md
-        - Dedicated build agents: jiro/Dedicated-build-agents.md
-        - Default Jenkins plugins: jiro/Default-Jenkins-plugins.md
-        - FAQ: jiro/FAQ.md
-        - GitHub integration: jiro/GitHub-integration.md
-        - GitLab integration: jiro/GitLab-integration.md
-        - Resource packs and quotas: jiro/Resource-packs-and-quotas.md
-        - Tools-(JDK,-Maven,-Ant): jiro/Tools.md
-      - JIRO: jiro-core/index.html
-      - Agents: jiro-agent/index.html
-      - Controllers: jiro-controller/index.html
-      - Projects: 
-        - JIRO Wiki: https://github.com/eclipse-cbi/jiro/wiki
-        - JIRO Core: https://github.com/eclipse-cbi/jiro
-        - JIRO Agents: https://github.com/eclipse-cbi/jiro-agents
-        - JIRO Controllers: https://github.com/eclipse-cbi/jiro-masters/
+    - Documentation:
+      - Home: jiro/Home.md
+      - CI Best Practices: jiro/CI-Best-Practices.md
+      - Common build errors: jiro/Common-build-errors.md
+      - Dedicated build agents: jiro/Dedicated-build-agents.md
+      - Default Jenkins plugins: jiro/Default-Jenkins-plugins.md
+      - FAQ: jiro/FAQ.md
+      - GitHub integration: jiro/GitHub-integration.md
+      - GitLab integration: jiro/GitLab-integration.md
+      - Resource packs and quotas: jiro/Resource-packs-and-quotas.md
+      - Tools-(JDK,-Maven,-Ant): jiro/Tools.md
+    - JIRO: jiro-core/index.html
+    - Agents: jiro-agent/index.html
+    - Controllers: jiro-controller/index.html
+    - Projects: 
+      - JIRO Wiki: https://github.com/eclipse-cbi/jiro/wiki
+      - JIRO Core: https://github.com/eclipse-cbi/jiro
+      - JIRO Agents: https://github.com/eclipse-cbi/jiro-agents
+      - JIRO Controllers: https://github.com/eclipse-cbi/jiro-masters/
   - Jenkins Pipeline Library: 
-      - Documentation: jenkins-pipeline-library/index.html
-      - Examples: jenkins-pipeline-library-sample/index.html
-      - Project: https://gitlab.eclipse.org/eclipsefdn/it/releng/jenkins-pipeline-service/jenkins-pipeline-library
+    - Documentation: jenkins-pipeline-library/index.html
+    - Examples: jenkins-pipeline-library-sample/index.html
+    - Project: https://gitlab.eclipse.org/eclipsefdn/it/releng/jenkins-pipeline-service/jenkins-pipeline-library
   - Container management: 
-      - DockerFile Documentation: cbi-dockerfile/index.html
-      - Project: https://github.com/eclipse-cbi/dockerfiles
+    - DockerFile Documentation: cbi-dockerfile/index.html
+    - Project: https://github.com/eclipse-cbi/dockerfiles
   - Gitlab Runner Service (GRAC!): 
-      - Documentation: gitlab-runner-service/readme/index.html
-      - Gitlab CI Template: gitlab-runner-template/index.html
-      - Grac!: gitlab-runner-as-code/index.html
-      - Projects: 
-        - Gitlab Runner as Code: https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code
-        - Gitlab Runner Instances: https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-instances
-        - Gitlab Runner Template: https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates
+    - Documentation: gitlab-runner-service/readme/index.html
+    - Gitlab CI Template: gitlab-runner-template/index.html
+    - Grac!: gitlab-runner-as-code/index.html
+    - Projects: 
+      - Gitlab Runner as Code: https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code
+      - Gitlab Runner Instances: https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-instances
+      - Gitlab Runner Template: https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates
   - Chat Service:
-      - Let's chat: https://chat.eclipse.org
-      - Documentation: https://chat.eclipse.org/docs/
-      # - Matrix at Eclipse: chat-service-documentation/content/_index/index.html
-      # - Getting Started: chat-service-documentation/content/getting-started/_index/index.html
-      # - FAQ: chat-service-documentation/content/faq/_index/index.html
-      - Rooms/Spaces: https://chat.eclipse.org/docs/rooms/
-      # - Rooms/Spaces: chat-service-documentation/content/rooms/_index/index.html
-      - Projects: 
-        - Provisionner: chat-service-provisionner/readme/index.html
-        - Synapse: chat-service-synapse/readme/index.html
-        - Elementweb: chat-service-elementweb/readme/index.html
-        - Sync Tools: chat-service-sync-tools/readme/index.html
+    - Let's chat: https://chat.eclipse.org
+    - Documentation: https://chat.eclipse.org/docs/
+    # - Matrix at Eclipse: chat-service-documentation/content/_index/index.html
+    # - Getting Started: chat-service-documentation/content/getting-started/_index/index.html
+    # - FAQ: chat-service-documentation/content/faq/_index/index.html
+    - Rooms/Spaces: https://chat.eclipse.org/docs/rooms/
+    # - Rooms/Spaces: chat-service-documentation/content/rooms/_index/index.html
+    - Projects: 
+      - Provisionner: chat-service-provisionner/readme/index.html
+      - Synapse: chat-service-synapse/readme/index.html
+      - Elementweb: chat-service-elementweb/readme/index.html
+      - Sync Tools: chat-service-sync-tools/readme/index.html
   - Develocity: 
-      - Documentation: develocity/readme/index.html
-      - Access Develocity-staging: https://develocity-staging.eclipse.org
+    - Documentation: develocity/readme/index.html
+    - Access Develocity-staging: https://develocity-staging.eclipse.org
   - Github Self-Service (Otterdog): 
-      - Documentation: https://otterdog.readthedocs.io/en/latest/
-      - Otterdog Dashboard: 'https://otterdog.eclipse.org'
-      - Projects: 
-        - Otterdog: https://github.com/eclipse-csi/otterdog
-        - Eclipse Foundation Otterdog Configurations: https://github.com/EclipseFdn/otterdog-configs
-        - Eclipse Foundation Otterdog Defaults: https://github.com/EclipseFdn/otterdog-defaults
+    - Documentation: https://otterdog.readthedocs.io/en/latest/
+    - Otterdog Dashboard: 'https://otterdog.eclipse.org'
+    - Projects: 
+      - Otterdog: https://github.com/eclipse-csi/otterdog
+      - Eclipse Foundation Otterdog Configurations: https://github.com/EclipseFdn/otterdog-configs
+      - Eclipse Foundation Otterdog Defaults: https://github.com/EclipseFdn/otterdog-defaults
   - Signing Service: 
-      - CBI Maven plugins: signing-services/index.html
-      - CLI: signing-services/cli-tools/signing/jar/index.html
-      - Maven plugins: signing-services/maven-plugins/index.html
-      - Macosx webservice: signing-services/webservice/signing/macosx/index.html
+    - CBI Maven plugins: signing-services/index.html
+    - CLI: signing-services/cli-tools/signing/jar/index.html
+    - Maven plugins: signing-services/maven-plugins/index.html
+    - Macosx webservice: signing-services/webservice/signing/macosx/index.html
   - MacOS Notarization Service: 
-      - Documentation: macos-notarization-service/index.html
-      - Project: https://github.com/eclipse-cbi/macos-notarization-service.git      
+    - Documentation: macos-notarization-service/index.html
+    - Project: https://github.com/eclipse-cbi/macos-notarization-service.git      
   - Best Practices: 
-      - Common Best Practices: best-practices/index.html
-      - Software Supply Chain: best-practices/software-supply-chain/osssc-best-practices/index.html
+    - Common Best Practices: best-practices/index.html
+    - Software Supply Chain: best-practices/software-supply-chain/osssc-best-practices/index.html
   - Project Website Boilerplate: 
-      - Documentation: project-website-boilerplate/index.html
-      - Project: https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate
+    - Documentation: project-website-boilerplate/index.html
+    - Project: https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate
   - Helpdesk: 
-      - Open an issue: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new
-      - SLO: helpdesk/SLO.md
+    - Open an issue: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new
+    - SLO: helpdesk/SLO.md
   - Sharing secrets: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/Sharing-secrets
   - Security Handbook: https://eclipse-csi.github.io/security-handbook/index.html
   - Blog 📝:
@@ -238,18 +244,18 @@ nav:
   - Status 🚦:
     - status/index.md
   - Service links: 
-      - ci.eclipse.org: 'https://ci.eclipse.org/'
-      - eclipse status: 'https://www.eclipsestatus.io/'
-      - develocity-staging: 'https://develocity-staging.eclipse.org'
-      - chat.eclipse.org: 'https://chat.eclipse.org'
-      - IT chat room: 'https://chat.eclipse.org/#/room/#eclipsefdn.it:matrix.eclipse.org'
-      - Helpdesk: 'https://gitlab.eclipse.org/eclipsefdn/helpdesk'
-      - otterdog Dashboard: 'https://otterdog.eclipse.org'
-      - repo.eclipse.org: 'https://repo.eclipse.org'
-      - cbi-dev mailing-list: https://accounts.eclipse.org/mailing-list/cbi-dev
-      - cross-project-issues mailing-list: https://accounts.eclipse.org/mailing-list/cross-project-issues-dev
-      - org-committers mailing-list: https://accounts.eclipse.org/mailing-list/eclipse.org-committers
-      - hugo template: 'https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate'
+    - ci.eclipse.org: 'https://ci.eclipse.org/'
+    - eclipse status: 'https://www.eclipsestatus.io/'
+    - develocity-staging: 'https://develocity-staging.eclipse.org'
+    - chat.eclipse.org: 'https://chat.eclipse.org'
+    - IT chat room: 'https://chat.eclipse.org/#/room/#eclipsefdn.it:matrix.eclipse.org'
+    - Helpdesk: 'https://gitlab.eclipse.org/eclipsefdn/helpdesk'
+    - otterdog Dashboard: 'https://otterdog.eclipse.org'
+    - repo.eclipse.org: 'https://repo.eclipse.org'
+    - cbi-dev mailing-list: https://accounts.eclipse.org/mailing-list/cbi-dev
+    - cross-project-issues mailing-list: https://accounts.eclipse.org/mailing-list/cross-project-issues-dev
+    - org-committers mailing-list: https://accounts.eclipse.org/mailing-list/eclipse.org-committers
+    - hugo template: 'https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate'
 
 
 # nav:
