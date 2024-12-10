@@ -225,6 +225,7 @@ nav:
     - blog/index.md
   - Service links: 
       - ci.eclipse.org: 'https://ci.eclipse.org/'
+      - eclipse status: 'https://www.eclipsestatus.io/'
       - develocity-staging: 'https://develocity-staging.eclipse.org'
       - chat.eclipse.org: 'https://chat.eclipse.org'
       - IT chat room: 'https://chat.eclipse.org/#/room/#eclipsefdn.it:matrix.eclipse.org'
