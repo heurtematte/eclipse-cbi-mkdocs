@@ -1,0 +1,3701 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eclipse-cbi-mkdocs/chat-service-synapse/readme/">
+      
+      
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+    
+    
+      
+        <title>Readme - Eclipse Common Build Infrastructure 🚀</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#eclipse-foundation-synapse-matrix-server-implementation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Eclipse Common Build Infrastructure 🚀" class="md-header__button md-logo" aria-label="Eclipse Common Build Infrastructure 🚀" data-md-component="logo">
+      
+  <img src="../../assets/CBI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Eclipse Common Build Infrastructure 🚀
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Readme
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Eclipse Common Build Infrastructure 🚀" class="md-nav__button md-logo" aria-label="Eclipse Common Build Infrastructure 🚀" data-md-component="logo">
+      
+  <img src="../../assets/CBI.png" alt="logo">
+
+    </a>
+    Eclipse Common Build Infrastructure 🚀
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CBI Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            CBI Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cbi/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cbi/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cbi/Nexus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nexus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cbi/Signing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/cbi/wiki" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wiki
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jenkins Service (JIRO)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Jenkins Service (JIRO)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro/CI-Best-Practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro/Common-build-errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common build errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro/Dedicated-build-agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dedicated build agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro/Default-Jenkins-plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default Jenkins plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro/GitHub-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro/GitLab-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitLab integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro/Resource-packs-and-quotas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resource packs and quotas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro/Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools-(JDK,-Maven,-Ant)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro-core/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro-agent/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jiro-controller/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controllers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro/wiki" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Wiki
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro-agents" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro-masters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Controllers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jenkins Pipeline Library
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Jenkins Pipeline Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jenkins-pipeline-library/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jenkins-pipeline-library-sample/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/jenkins-pipeline-service/jenkins-pipeline-library" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Container management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Container management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cbi-dockerfile/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DockerFile Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/dockerfiles" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Gitlab Runner Service (GRAC!)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Gitlab Runner Service (GRAC!)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gitlab-runner-service/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gitlab-runner-template/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab CI Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gitlab-runner-as-code/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grac!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab Runner as Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-instances" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab Runner Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab Runner Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chat Service
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Chat Service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Let's chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org/docs/rooms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rooms/Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-service-provisionner/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Provisionner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synapse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-service-elementweb/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elementweb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat-service-sync-tools/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sync Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Develocity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Develocity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../develocity/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://develocity-staging.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access Develocity-staging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Github Self-Service (Otterdog)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Github Self-Service (Otterdog)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://otterdog.readthedocs.io/en/latest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://otterdog.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Otterdog Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-csi/otterdog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Otterdog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EclipseFdn/otterdog-configs" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eclipse Foundation Otterdog Configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EclipseFdn/otterdog-defaults" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eclipse Foundation Otterdog Defaults
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Signing Service
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Signing Service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signing-services/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CBI Maven plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signing-services/cli-tools/signing/jar/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signing-services/maven-plugins/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maven plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../signing-services/webservice/signing/macosx/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macosx webservice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MacOS Notarization Service
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            MacOS Notarization Service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../macos-notarization-service/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/macos-notarization-service.git" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Best Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best-practices/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best-practices/software-supply-chain/osssc-best-practices/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Supply Chain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Website Boilerplate
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Project Website Boilerplate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-website-boilerplate/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Helpdesk
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Helpdesk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open an issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../helpdesk/SLO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SLO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../helpdesk/secrets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing secrets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://eclipse-csi.github.io/security-handbook/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Handbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog 📝
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Blog 📝
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_16_2" id="__nav_16_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_16_3" id="__nav_16_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/chat-service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../helpdesk/Infrastructure-changes-Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infrastructure changes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Service links
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Service links
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://ci.eclipse.org/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ci.eclipse.org
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.eclipsestatus.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eclipse status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://develocity-staging.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    develocity-staging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chat.eclipse.org
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org/#/room/#eclipsefdn.it:matrix.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IT chat room
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helpdesk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://otterdog.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    otterdog Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://repo.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    repo.eclipse.org
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://accounts.eclipse.org/mailing-list/cbi-dev" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cbi-dev mailing-list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://accounts.eclipse.org/mailing-list/cross-project-issues-dev" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cross-project-issues mailing-list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://accounts.eclipse.org/mailing-list/eclipse.org-committers" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    org-committers mailing-list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    hugo template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../status/eclipse-status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status 🚦 <iframe src="https://www.eclipsestatus.io/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no"></iframe>
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p><a href="/">Home</a> / <a href="/chat-service-synapse/">chat-service-synapse</a> / readme</p>
+<!--
+SPDX-FileCopyrightText: 2023 eclipse foundation
+SPDX-License-Identifier: EPL-2.0
+-->
+
+<h1 id="eclipse-foundation-synapse-matrix-server-implementation">Eclipse Foundation - Synapse Matrix Server Implementation</h1>
+<div class="toc">
+<ul>
+<li><a href="#eclipse-foundation-synapse-matrix-server-implementation">Eclipse Foundation - Synapse Matrix Server Implementation</a></li>
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#getting-started-locally">Getting started locally</a><ul>
+<li><a href="#prerequisite">prerequisite</a></li>
+<li><a href="#local-start">Local start</a></li>
+<li><a href="#local-federated-start">Local federated start</a></li>
+</ul>
+</li>
+<li><a href="#installation-and-configuration-in-kubernetes-cluster">Installation and Configuration in kubernetes cluster</a><ul>
+<li><a href="#kubernetes-architecture">Kubernetes architecture</a></li>
+<li><a href="#install-modules">Install modules</a></li>
+<li><a href="#new-environment">New Environment</a></li>
+<li><a href="#generate-secrets">Generate secrets</a><ul>
+<li><a href="#media-repo-signing-key-generation">media repo signing key generation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#manual-configuration">Manual configuration</a><ul>
+<li><a href="#policy-bot">Policy bot</a><ul>
+<li><a href="#configure-rate-limit">Configure rate limit</a></li>
+</ul>
+</li>
+<li><a href="#moderation-with-mjolnirpantalaimon">Moderation with Mjolnir/pantalaimon</a><ul>
+<li><a href="#mjolnir-default-acl">Mjolnir default ACL</a></li>
+<li><a href="#room-moderation-configuration">Room moderation configuration</a></li>
+<li><a href="#activate-protections">Activate protections</a></li>
+<li><a href="#localabusereports">LocalAbuseReports</a></li>
+</ul>
+</li>
+<li><a href="#slack-integration-appservice-slack">Slack integration (Appservice-Slack)</a><ul>
+<li><a href="#configure-slack-app">Configure slack App</a></li>
+<li><a href="#create-matrix-admin-room">Create matrix admin room</a></li>
+<li><a href="#invite-slack-bot-in-room">invite slack bot in room</a></li>
+<li><a href="#slack-bot-rate-limit">slack bot rate limit</a></li>
+<li><a href="#set-the-right-admin-room">Set the right admin room</a></li>
+</ul>
+</li>
+<li><a href="#link-a-chat-service-room-to-a-slack-channel">Link a chat service room to a slack channel</a></li>
+</ul>
+</li>
+<li><a href="#devops">Devops</a><ul>
+<li><a href="#generate-secrets_1">Generate secrets</a></li>
+<li><a href="#tanka">tanka</a></li>
+<li><a href="#applysh-script">Apply.sh script</a></li>
+<li><a href="#kubectl-status">kubectl status</a></li>
+</ul>
+</li>
+<li><a href="#upgrade">Upgrade</a><ul>
+<li><a href="#synapse">Synapse</a><ul>
+<li><a href="#check-changelog">Check changelog</a></li>
+<li><a href="#upgrade-version">Upgrade version</a></li>
+</ul>
+</li>
+<li><a href="#matrix-media-repo">Matrix-media-repo</a><ul>
+<li><a href="#check-changelog_1">Check changelog</a></li>
+<li><a href="#upgrade-version_1">Upgrade version</a></li>
+</ul>
+</li>
+<li><a href="#synapse-admin">Synapse-admin</a><ul>
+<li><a href="#check-changelog_2">Check changelog</a></li>
+<li><a href="#upgrade-version_2">Upgrade version</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#maintenance">Maintenance</a><ul>
+<li><a href="#compress-state">Compress state</a></li>
+</ul>
+</li>
+<li><a href="#admin">Admin</a><ul>
+<li><a href="#experimental-feature">Experimental feature</a></li>
+</ul>
+</li>
+<li><a href="#development">Development</a><ul>
+<li><a href="#register-new-user">register new user</a></li>
+<li><a href="#list-users">list users</a></li>
+<li><a href="#set-admin">set admin</a></li>
+<li><a href="#change-rate-limit">change rate limit</a></li>
+<li><a href="#reuse-lint">Reuse lint</a></li>
+<li><a href="#docker-compose-render">Docker-compose render</a></li>
+<li><a href="#k8s-render">k8s render</a></li>
+</ul>
+</li>
+<li><a href="#usefull-links">Usefull links</a></li>
+</ul>
+</div>
+<h1 id="architecture">Architecture</h1>
+<p>Architecture diagram is create with <a href="https://structurizr.com">structurizr</a>, dsl is available <a href="./docs/structurizr.dsl">here</a>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>graph LR
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  linkStyle default fill:#ffffff
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  subgraph diagram [Chat Service - Containers]
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    style diagram fill:#ffffff,stroke:#ffffff
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    1[&quot;&lt;div style=&#39;font-weight: bold&#39;&gt;Eclipse Account User&lt;/div&gt;&lt;div style=&#39;font-size: 70%; margin-top: 0px&#39;&gt;[Person]&lt;/div&gt;&lt;div style=&#39;font-size: 80%; margin-top:10px&#39;&gt;An Eclipse Foundation account&lt;br /&gt;user.&lt;/div&gt;&quot;]
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    style 1 fill:#08427b,stroke:#052e56,color:#ffffff
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    2[&quot;&lt;div style=&#39;font-weight: bold&#39;&gt;User Federated&lt;/div&gt;&lt;div style=&#39;font-size: 70%; margin-top: 0px&#39;&gt;[Person]&lt;/div&gt;&lt;div style=&#39;font-size: 80%; margin-top:10px&#39;&gt;An Matrix federated account&lt;br /&gt;user.&lt;/div&gt;&quot;]
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    style 2 fill:#08427b,stroke:#052e56,color:#ffffff
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    subgraph 4 [Chat Service]
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>      style 4 fill:#ffffff,stroke:#0b4884,color:#0b4884
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      10[&quot;&lt;div style=&#39;font-weight: bold&#39;&gt;Synapse Database&lt;/div&gt;&lt;div style=&#39;font-size: 70%; margin-top: 0px&#39;&gt;[Container]&lt;/div&gt;&quot;]
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>      style 10 fill:#dddddd,stroke:#9a9a9a,color:#000000
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      12[&quot;&lt;div style=&#39;font-weight: bold&#39;&gt;Elementweb&lt;/div&gt;&lt;div style=&#39;font-size: 70%; margin-top: 0px&#39;&gt;[Container]&lt;/div&gt;&lt;div style=&#39;font-size: 80%; margin-top:10px&#39;&gt;chat.eclipse.org&lt;/div&gt;&quot;]
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>      style 12 fill:#dddddd,stroke:#9a9a9a,color:#000000
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      14[&quot;&lt;div style=&#39;font-weight: bold&#39;&gt;Matrix-Media-Repo&lt;/div&gt;&lt;div style=&#39;font-size: 70%; margin-top: 0px&#39;&gt;[Container]&lt;/div&gt;&lt;div style=&#39;font-size: 80%; margin-top:10px&#39;&gt;matrix-media-repo.eclipsecontent.org&lt;/div&gt;&quot;]
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>      style 14 fill:#dddddd,stroke:#9a9a9a,color:#000000
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>      18[&quot;&lt;div style=&#39;font-weight: bold&#39;&gt;Matrix-Media-Repo Database&lt;/div&gt;&lt;div style=&#39;font-size: 70%; margin-top: 0px&#39;&gt;[Container]&lt;/div&gt;&quot;]
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>      style 18 fill:#dddddd,stroke:#9a9a9a,color:#000000
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>      20[&quot;&lt;div style=&#39;font-weight: bold&#39;&gt;appservice-policies&lt;/div&gt;&lt;div style=&#39;font-size: 70%; margin-top: 0px&#39;&gt;[Container]&lt;/div&gt;&lt;div style=&#39;font-size: 80%; margin-top:10px&#39;&gt;matrix-media-repo.eclipsecontent.org&lt;/div&gt;&quot;]
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>      style 20 fill:#dddddd,stroke:#9a9a9a,color:#000000
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>      23[&quot;&lt;div style=&#39;font-weight: bold&#39;&gt;bot-mjolnir&lt;/div&gt;&lt;div style=&#39;font-size: 70%; margin-top: 0px&#39;&gt;[Container]&lt;/div&gt;&lt;div style=&#39;font-size: 80%; margin-top:10px&#39;&gt;Moderation bot&lt;/div&gt;&quot;]
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>      style 23 fill:#dddddd,stroke:#9a9a9a,color:#000000
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>      25[&quot;&lt;div style=&#39;font-weight: bold&#39;&gt;pantalaimon&lt;/div&gt;&lt;div style=&#39;font-size: 70%; margin-top: 0px&#39;&gt;[Container]&lt;/div&gt;&lt;div style=&#39;font-size: 80%; margin-top:10px&#39;&gt;Proxy for encrypt rooms&lt;/div&gt;&quot;]
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>      style 25 fill:#dddddd,stroke:#9a9a9a,color:#000000
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>      5[&quot;&lt;div style=&#39;font-weight: bold&#39;&gt;Synapse&lt;/div&gt;&lt;div style=&#39;font-size: 70%; margin-top: 0px&#39;&gt;[Container]&lt;/div&gt;&lt;div style=&#39;font-size: 80%; margin-top:10px&#39;&gt;matrix.eclipse.org&lt;/div&gt;&quot;]
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>      style 5 fill:#dddddd,stroke:#9a9a9a,color:#000000
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    end
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    5-. &quot;&lt;div&gt;Reads from and writes to&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;10
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    1-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;12
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    5-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;14
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    1-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;14
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    2-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;14
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    14-. &quot;&lt;div&gt;Reads from and writes to&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;18
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    5-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;20
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    20-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;5
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    23-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;5
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    23-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;25
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    25-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;5
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    1-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;5
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    2-. &quot;&lt;div&gt;Uses&lt;/div&gt;&lt;div style=&#39;font-size: 70%&#39;&gt;&lt;/div&gt;&quot; .-&gt;5
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>  end
+</span></code></pre></div>
+<h1 id="getting-started-locally">Getting started locally</h1>
+<h2 id="prerequisite">prerequisite</h2>
+<p>Set local domain name in <code>/etc/hosts</code>:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="m">127</span>.0.0.1<span class="w">       </span>matrix-local.eclipse.org<span class="w"> </span>chat-local.eclipse.org<span class="w"> </span>matrix-media-repo-local.eclipse.org<span class="w"> </span>synapse-admin-local.eclipse.org<span class="w"> </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="m">127</span>.0.0.1<span class="w">       </span>matrix-federated.eclipse.org<span class="w"> </span>chat-federated.eclipse.org<span class="w"> </span>matrix-media-repo-federated.eclipse.org<span class="w"> </span>synapse-admin-federated.eclipse.org
+</span></code></pre></div>
+<h2 id="local-start">Local start</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker-compose<span class="w"> </span>build
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+</span></code></pre></div>
+<p>Do the same on <code>ef-element-web</code> project and start docker-compose up.</p>
+<p>Browser access: <code>https://chat-local.eclipse.org:8443</code></p>
+<p><img alt="matrix dev architecture" src="./docs/img/docker-compose.png" /></p>
+<h2 id="local-federated-start">Local federated start</h2>
+<p><div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose-federated.yaml<span class="w"> </span>build
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker-compose<span class="w"> </span>-f<span class="w"> </span>docker-compose-federated.yaml<span class="w"> </span>up<span class="w"> </span>-d
+</span></code></pre></div>
+Matrix access: <code>https://matrix-local.eclipse.org</code>
+Matrix access: <code>https://matrix-federated.eclipse.org</code></p>
+<p>Do the same on <code>ef-element-web</code> project and start docker-compose up.</p>
+<p>Browser access: <code>https://chat-local.eclipse.org:8443</code>
+Browser access: <code>https://chat-federated.eclipse.org:8443</code></p>
+<p><img alt="matrix dev federated architecture" src="./docs/img/docker-compose-federated.png" /></p>
+<h1 id="installation-and-configuration-in-kubernetes-cluster">Installation and Configuration in kubernetes cluster</h1>
+<h2 id="kubernetes-architecture">Kubernetes architecture</h2>
+<p><img alt="k8s matrix synapse architecture" src="./docs/img/k8s-architecture.png" /></p>
+<h2 id="install-modules">Install modules</h2>
+<p>Install <code>jsonnet-bundler</code>: https://github.com/jsonnet-bundler/jsonnet-bundler</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>jb<span class="w"> </span>install
+</span></code></pre></div>
+<h2 id="new-environment">New Environment</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>tk<span class="w"> </span>env<span class="w"> </span>add<span class="w"> </span>environments/chat-matrix/<span class="o">{</span>env<span class="o">}</span><span class="w"> </span>--namespace<span class="o">=</span>chat-matrix-<span class="o">{</span>env<span class="o">}</span>
+</span></code></pre></div>
+<p>Add this property in <code>spec.json</code>:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="err">...</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">&quot;apiServer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://my_cluster&quot;</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nt">&quot;injectLabels&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w"> </span><span class="err">...</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>main.jsonnet</code> template: </p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">(impor</span><span class="kc">t</span><span class="w"> </span><span class="err">&#39;cha</span><span class="kc">t</span><span class="mi">-</span><span class="err">ma</span><span class="kc">tr</span><span class="err">ix/mai</span><span class="kc">n</span><span class="err">.libso</span><span class="kc">nnet</span><span class="err">&#39;)</span><span class="w"> </span><span class="err">+</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="err">(impor</span><span class="kc">t</span><span class="w"> </span><span class="err">&#39;.secre</span><span class="kc">ts</span><span class="err">/secre</span><span class="kc">ts</span><span class="err">.jso</span><span class="kc">nnet</span><span class="err">&#39;)</span><span class="w"> </span><span class="err">+</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">{</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="err">_co</span><span class="kc">nf</span><span class="err">ig+</span><span class="p">::</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="err">local</span><span class="w"> </span><span class="err">co</span><span class="kc">nf</span><span class="err">ig</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">sel</span><span class="kc">f</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="err">e</span><span class="kc">n</span><span class="err">viro</span><span class="kc">n</span><span class="err">me</span><span class="kc">nt</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="p">{</span><span class="err">e</span><span class="kc">n</span><span class="err">v</span><span class="p">}</span><span class="err">&#39;</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="err">sy</span><span class="kc">na</span><span class="err">pse+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">      </span><span class="err">replicas</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">      </span><span class="err">logco</span><span class="kc">nf</span><span class="err">ig+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">        </span><span class="err">roo</span><span class="kc">t</span><span class="err">+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">          </span><span class="err">level</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;DEBUG&#39;</span><span class="p">,</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">        </span><span class="err">loggers+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">          </span><span class="err">sy</span><span class="kc">na</span><span class="err">pse</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">            </span><span class="err">level</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;INFO&#39;</span><span class="p">,</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">          </span><span class="p">},</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">      </span><span class="p">},</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">      </span><span class="err">homeserver+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">        </span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">      </span><span class="p">},</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="err">appservicePolicies+</span><span class="p">:{</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">      </span><span class="err">appservice+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">        </span><span class="err">logLevel</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">        </span><span class="err">skipMessage</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">      </span><span class="p">},</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">    </span><span class="err">ma</span><span class="kc">tr</span><span class="err">ixMediaRepo+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">      </span><span class="err">mediarepo+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">     </span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">        </span><span class="err">repo+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">          </span><span class="err">logLevel</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span><span class="w">  </span>
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="w">      </span><span class="p">},</span>
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="w">    </span><span class="err">clamav+</span><span class="p">:{</span>
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="w">    </span><span class="err">sy</span><span class="kc">na</span><span class="err">pseAdmi</span><span class="kc">n</span><span class="err">+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="w">    </span><span class="err">bo</span><span class="kc">t</span><span class="err">Mjol</span><span class="kc">n</span><span class="err">ir+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a><span class="w">      </span><span class="err">mjol</span><span class="kc">n</span><span class="err">ir+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a><span class="w">          </span><span class="err">logLevel</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span><span class="w">  </span>
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a><span class="w">      </span><span class="p">},</span>
+</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a><span class="w">    </span><span class="err">pa</span><span class="kc">ntala</span><span class="err">imo</span><span class="kc">n</span><span class="err">+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">      </span>
+</span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a><span class="w">      </span><span class="s2">&quot;pantalaimon.conf&quot;</span><span class="err">+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a><span class="w">        </span><span class="err">sec</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="err">+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a><span class="w">          </span><span class="err">De</span><span class="kc">fault</span><span class="err">+</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-48"><a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a><span class="w">              </span><span class="err">LogLevel</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Debug&quot;</span><span class="p">,</span>
+</span><span id="__span-7-49"><a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a><span class="w">          </span><span class="p">}</span>
+</span><span id="__span-7-50"><a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-7-51"><a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-7-52"><a id="__codelineno-7-52" name="__codelineno-7-52" href="#__codelineno-7-52"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-53"><a id="__codelineno-7-53" name="__codelineno-7-53" href="#__codelineno-7-53"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-7-54"><a id="__codelineno-7-54" name="__codelineno-7-54" href="#__codelineno-7-54"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="generate-secrets">Generate secrets</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker run -it  -e SYNAPSE_SERVER_NAME=matrix-dev.eclipse.org -e SYNAPSE_REPORT_STATS=no -v $PWD/config/gen:/data docker.io/eclipsecbi/synapse:latest generate
+</span></code></pre></div>
+<p>Get secrets: <code>registration_shared_secret</code>, <code>macaroon_secret_key</code>, <code>form_secret</code> from files <code>./config/gen/homeserver.yaml</code> 
+And store the signing keys from file: <code>./config/gen/matrix-dev.eclipse.org.signing.key</code></p>
+<p>For all other passwords, use your own password generator like <code>pwgen</code>.</p>
+<p>Store passwords in pass with this organization:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>IT/services/chat-service
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>├──<span class="w"> </span>appservice
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="o">{</span>env<span class="o">}</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>asToken
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>hsToken
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>├──<span class="w"> </span>bot-mjolnir
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="o">{</span>env<span class="o">}</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>password
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>├──<span class="w"> </span>matrix-appservice-slack
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>│<span class="w">   </span>└──<span class="w"> </span><span class="o">{</span>env<span class="o">}</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>database_password
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>asToken
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>hsToken
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>├──<span class="w"> </span>matrix-media-repo
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="o">{</span>env<span class="o">}</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>database_password
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>mmr.signing.key
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>synapse.mmr.signing.key
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>├──<span class="w"> </span>matrix-media-repo-keyserver
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>│<span class="w">   </span>├──<span class="w"> </span><span class="o">{</span>env<span class="o">}</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="p">|</span><span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>form_secret
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="p">|</span><span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>macaroon_secret_key
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="p">|</span><span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>merged.signing.key
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="p">|</span><span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>registration_shared_secret
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="p">|</span><span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>signing.key
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>└──<span class="w"> </span>synapse
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">    </span>├──<span class="w"> </span><span class="o">{</span>env<span class="o">}</span>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>database_password
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>form_secret
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>macaroon_secret_key
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>oidc_providers_oauth2_eclipse_secret
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>registration_shared_secret
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>signing.key
+</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>merged.signing.key
+</span></code></pre></div>
+<p>i.e: <code>pass add IT/services/chat-service/matrix-media-repo/staging-community/database_password</code></p>
+<p>Execute:  <code>./gen-secrets.sh</code></p>
+<p>It will store secrets under: <code>/environments/chat-matrix/&lt;env&gt;/.secrets</code></p>
+<h3 id="media-repo-signing-key-generation">media repo signing key generation</h3>
+<p>https://docs.t2bot.io/matrix-media-repo/v1.3.5/installation/signing-key/</p>
+<p>Download binaries here: 
+* https://github.com/t2bot/matrix-media-repo/releases/download/v1.3.7/generate_signing_key-linux-x64
+* https://github.com/t2bot/matrix-media-repo/releases/download/v1.3.7/combine_signing_keys-linux-x64</p>
+<p>For each env generate a new signing.key </p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>./signing.sh<span class="w"> </span>&lt;env&gt;
+</span></code></pre></div>
+<p>Check keys: <code>https://matrix-&lt;env&gt;.eclipse.org/_matrix/key/v2/server</code>
+Check keys: <code>https://matrix-media-repo-&lt;env&gt;.eclipse.org/_matrix/key/v2/server</code></p>
+<h1 id="manual-configuration">Manual configuration</h1>
+<h2 id="policy-bot">Policy bot</h2>
+<h3 id="configure-rate-limit">Configure rate limit</h3>
+<p>https://github.com/matrix-org/synapse/issues/6286</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">ratelimit_override</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;@EF_policy_bot:matrix.eclipse.org&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="moderation-with-mjolnirpantalaimon">Moderation with Mjolnir/pantalaimon</h2>
+<p>NOTE: must be admin!</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>UPDATE users SET name = admin=&#39;1&#39; where name=&#39;@usertest:matrix-local.eclipse.org&#39;;
+</span></code></pre></div>
+<p>Before starting: Clean mjolnir and pantalaimon local storage (not production) if exist: </p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-Rf<span class="w"> </span>./config/local/mjolnir/storage
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-Rf<span class="w"> </span>./config/local/pantalaimon/local-matrix
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-Rf<span class="w"> </span>./config/local/pantalaimon/pan.db
+</span></code></pre></div>
+<p>IMPORTANT:
+Activate temporary homeserver password config the time to configure bot for first login. </p>
+<p>file: <code>lib/chat-matrix/synapse/config-homeserver.libsonnet</code></p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="err">password_co</span><span class="kc">nf</span><span class="err">ig</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="err">e</span><span class="kc">na</span><span class="err">bled</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">},</span>
+</span></code></pre></div>
+<ol>
+<li>create moderator user: <code>@ef_moderator_bot:matrix-local.eclipse.org</code></li>
+</ol>
+<p>Get password from pass: /IT/services/chat-service/bot-mjolnir/{env}/password</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nv">MATRIX_URL</span><span class="o">=</span><span class="s2">&quot;https://matrix-local.eclipse.org&quot;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="s2">&quot;YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&quot;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;displayname&quot;: &quot;Eclipse Foundation Moderator Bot&quot;, &quot;password&quot;: &quot;XXXXXXXXXXXXXXXX&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MATRIX_URL</span><span class="si">}</span><span class="s2">/_synapse/admin/v2/users/@ef_moderator_bot:</span><span class="si">${</span><span class="nv">MATRIX_URL</span><span class="p">##*://</span><span class="si">}</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<p>return:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;@ef_moderator_bot:matrix-local.eclipse.org&quot;</span><span class="p">,</span><span class="nt">&quot;is_guest&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;admin&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nt">&quot;consent_version&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;consent_ts&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;consent_server_notice_sent&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;appservice_id&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;creation_ts&quot;</span><span class="p">:</span><span class="mi">1681830226</span><span class="p">,</span><span class="nt">&quot;user_type&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;deactivated&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nt">&quot;shadow_banned&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nt">&quot;displayname&quot;</span><span class="p">:</span><span class="s2">&quot;Eclipse Foundation moderator&quot;</span><span class="p">,</span><span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;threepids&quot;</span><span class="p">:[],</span><span class="nt">&quot;external_ids&quot;</span><span class="p">:[],</span><span class="nt">&quot;erased&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">}</span><span class="err">%</span><span class="w"> </span>
+</span></code></pre></div>
+<ol>
+<li>Accept consent policy: Need to connect to the web interface with user <code>ef_moderator_bot</code> or calculate consent url.</li>
+</ol>
+<p>Param openssl hmac is <code>form_secret</code>property in <code>homeserver.yaml</code>:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;ef_moderator_bot&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>openssl<span class="w"> </span>sha256<span class="w"> </span>-hmac<span class="w"> </span><span class="s1">&#39;15,CKuwubYD^2m2II.aQhRpf9gu37I9f.2kQv2-b^aHTz,UtMT&#39;</span>
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>https://matrix-local.eclipse.org/_matrix/consent?u=ef_moderator_bot&amp;h=92cf81f3db94ded5387a0cc4c7b8138409f13f9d4b0ae2ee130923209531d0b9
+</span></code></pre></div>
+<p>go and accept!</p>
+<ol>
+<li>Moderation room creation</li>
+</ol>
+<p>via UI:
+Room creation:
+  * Name: <code>Chat Service moderation</code>
+  * Alias: <code>#eclipsefdn.chat-moderation:matrix-local.eclipse.org</code> 
+  * <code>private</code> 
+  * <code>encrypt</code></p>
+<p>Add room to <code>#eclipsefdn:matrix.eclipse.org</code> space. (not mandatory for local tests)</p>
+<p>via script:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nv">MATRIX_URL</span><span class="o">=</span><span class="s2">&quot;https://matrix-local.eclipse.org&quot;</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="s2">&quot;YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&quot;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>--insecure<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">                </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">                </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">                </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;preset&quot;:&quot;trusted_private_chat&quot;, &quot;name&quot;: &quot;Chat Service moderation&quot;, &quot;room_alias_name&quot;: &quot;eclipsefdn.chat-moderation&quot;, &quot;topic&quot;:&quot;Room moderation with mjolnir for chat service&quot;, &quot;invite&quot;: [&quot;@ef_moderator_bot:matrix-local.eclipse.org&quot;]}&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">                </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MATRIX_URL</span><span class="si">}</span><span class="s2">/_matrix/client/r0/createRoom&quot;</span>
+</span></code></pre></div>
+<p>return: </p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">{</span><span class="nt">&quot;room_id&quot;</span><span class="p">:</span><span class="s2">&quot;!RkEPsVKweWTdfyMCUH:dev.matrix.eclipsecontent.org&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<p>Attach to <code>eclipsefdn</code> space:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nv">MATRIX_URL</span><span class="o">=</span><span class="s2">&quot;https://matrix-local.eclipse.org&quot;</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="s2">&quot;YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&quot;</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nv">SPACE_ALIAS</span><span class="o">=</span><span class="s2">&quot;%23eclipsefdn%3A</span><span class="si">${</span><span class="nv">MATRIX_URL</span><span class="p">##*://</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="nv">SPACE_ID</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-s<span class="w"> </span>--insecure<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$ACCESS_TOKEN</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MATRIX_URL</span><span class="si">}</span><span class="s2">/_matrix/client/v3/directory/room/</span><span class="si">${</span><span class="nv">SPACE_ALIAS</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">|</span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.room_id&#39;</span><span class="k">)</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="nv">ROOM_ALIAS</span><span class="o">=</span><span class="s2">&quot;%23eclipsefdn.chat-moderation%3A</span><span class="si">${</span><span class="nv">MATRIX_URL</span><span class="p">##*://</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="nv">ROOM_ID</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span>-s<span class="w"> </span>--insecure<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$ACCESS_TOKEN</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MATRIX_URL</span><span class="si">}</span><span class="s2">/_matrix/client/r0/directory/room/</span><span class="si">${</span><span class="nv">ROOM_ALIAS</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">|</span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.room_id&#39;</span><span class="k">)</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>--insecure<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">                </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">                </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">                </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;via&quot;:[&quot;matrix-local.eclipse.org&quot;],&quot;suggested&quot;:false}&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">                </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MATRIX_URL</span><span class="si">}</span><span class="s2">/_matrix/client/r0/rooms/</span><span class="si">${</span><span class="nv">SPACE_ID</span><span class="si">}</span><span class="s2">/state/m.space.child/</span><span class="si">${</span><span class="nv">ROOM_ID</span><span class="si">}</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<p>Return: </p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">{</span><span class="nt">&quot;event_id&quot;</span><span class="p">:</span><span class="s2">&quot;$5lBc6twDKWviKsn3tqKUiAEd-SAnbZiprGklIri1OF4&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<ol>
+<li>
+<p>Add user <code>ef_moderator_bot</code> as <code>admin</code> if not set.</p>
+</li>
+<li>
+<p>Set rate limit:</p>
+</li>
+</ol>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">ratelimit_override</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;@ef_moderator_bot:matrix-local.eclipse.org&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span></code></pre></div>
+<p>or via curl: </p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nv">MATRIX_URL</span><span class="o">=</span><span class="s2">&quot;https://matrix-local.eclipse.org&quot;</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="s2">&quot;YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&quot;</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>curl<span class="w"> </span>-k<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w">    </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;messages_per_second&quot;: 0, &quot;burst_count&quot;: 0}&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="w">    </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">MATRIX_URL</span><span class="si">}</span><span class="s2">/_synapse/admin/v1/users/@ef_moderator_bot:</span><span class="si">${</span><span class="nv">MATRIX_URL</span><span class="p">##*://</span><span class="si">}</span><span class="s2">/override_ratelimit&quot;</span>
+</span></code></pre></div>
+<h3 id="mjolnir-default-acl">Mjolnir default ACL</h3>
+<ol>
+<li>give temporary permission to moderator bot to create room with module <code>UserControlModule</code></li>
+</ol>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="err">modules</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">          </span><span class="p">{</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">            </span><span class="err">module</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;sy</span><span class="kc">na</span><span class="err">pse.modules.sy</span><span class="kc">na</span><span class="err">pse_user_co</span><span class="kc">ntr</span><span class="err">ol.UserCo</span><span class="kc">ntr</span><span class="err">olModule&#39;</span><span class="p">,</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">            </span><span class="err">co</span><span class="kc">nf</span><span class="err">ig</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">              </span><span class="err">crea</span><span class="kc">t</span><span class="err">ors</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">                </span><span class="err">...</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="w">                </span><span class="err">&#39;@e</span><span class="kc">f</span><span class="err">_modera</span><span class="kc">t</span><span class="err">or_bo</span><span class="kc">t</span><span class="p">:</span><span class="err">&#39;</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="err">mxDomai</span><span class="kc">n</span><span class="p">,</span><span class="w">                </span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="w">              </span><span class="p">],</span>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a><span class="w">          </span><span class="p">}</span>
+</span></code></pre></div>
+<ol>
+<li>Create first banlist: <code>!list create EF eclipsefdn.chat-moderation-bl</code></li>
+<li>Set banlist as default: <code>!default EF</code></li>
+<li>Add Community Moderation Effort: <ul>
+<li>First join these room with your account otherwise you'll get: <code>error: "Can't join remote room because no servers that are in the room have been provided."</code></li>
+<li>!watch #community-moderation-effort-bl:neko.dev (see: https://blog.neko.dev/posts/)matrix-year-in-review-2022.html</li>
+<li>!watch #matrix-org-hs-tos-bl:matrix.org</li>
+</ul>
+</li>
+<li>Sync banlist: <code>!sync</code></li>
+</ol>
+<p>Example of ACL for a specific matrix server: <code>!ban EF server matrix-local.eclipse.fr Known for spam</code> </p>
+<h3 id="room-moderation-configuration">Room moderation configuration</h3>
+<p>At room level:</p>
+<ol>
+<li>Invite bot moderation to all rooms with custom level like <code>60</code></li>
+<li>Change ACL with custom level like <code>60</code></li>
+<li>Verify with <code>!verify</code></li>
+</ol>
+<p>At space level: just add <code>moderator</code> power level to bot.</p>
+<p>NOTE: <code>!verify</code> show an error for space <code>eclipsefdn - Missing power level for server ACLs: 50 &lt; 100</code></p>
+<h3 id="activate-protections">Activate protections</h3>
+<p>Protections list: <code>!protections</code></p>
+<h3 id="localabusereports">LocalAbuseReports</h3>
+<p><code>!enabled LocalAbuseReports</code></p>
+<p>put nginx configuration:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>  location ~ ^/_matrix/client/(r0|v3)/rooms/([^/]*)/report/(.*)$ {
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    set $room_id $2;
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    set $event_id $3;
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    proxy_pass http://127.0.0.1:8082/api/1/report/$room_id/$event_id;
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>  }
+</span></code></pre></div>
+<h2 id="slack-integration-appservice-slack">Slack integration (Appservice-Slack)</h2>
+<h3 id="configure-slack-app">Configure slack App</h3>
+<p>see: https://matrix-appservice-slack.readthedocs.io/en/stable/link_channels/</p>
+<p>1- Create a Slack App (Classic): https://api.slack.com/apps?new_classic_app=1</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>App Name: `matrix-bridge`
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Development Slack Workspace: choose the right slack workspace for the Slack App.
+</span></code></pre></div>
+<p>Select the <code>matrix-bridge</code>. Under <code>Features</code> Menu -&gt; <code>App Home</code>-&gt; First, add a legacy bot user </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Display Name (Bot Name): `Eclipse Foundation Matrix Bridge Bot`
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>Default username: `ef_matrix_bridge_bot`
+</span></code></pre></div>
+<p>2- Create <code>OAuth &amp; Permissions</code></p>
+<p>Under <code>Features</code> Menu -&gt; <code>OAuth &amp; Permissions</code></p>
+<p>Click <code>Install to Workspace</code> button</p>
+<p>Get User OAuth Token and Bot User OAuth Token and store in pass.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>/IT/services/chat-service/slack-integration/&lt;app&gt;/bot-user-oauth-token
+</span></code></pre></div>
+<h3 id="create-matrix-admin-room">Create matrix admin room</h3>
+<p>Create a private room: <code>#eclipsefdn.chat-slack:matrix.eclipse.org</code> with Name: <code>Chat Service Slack Admin</code>.
+And attach to space: <code>#eclipsefdn:matrix.eclipse.org</code>.</p>
+<p>IMPORTANT: Must not be encrypt!</p>
+<p>Set the ID in the configuration: </p>
+<p>i.e:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>matrix_admin_room: !abcdefg12345hijk:matrix.eclipse.org
+</span></code></pre></div>
+<h3 id="invite-slack-bot-in-room">invite slack bot in room</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>/invite @ef_slack_bridge_bot:matrix.eclipse.org
+</span></code></pre></div>
+<p>Even if the bot is not recognized.</p>
+<h3 id="slack-bot-rate-limit">slack bot rate limit</h3>
+<p>https://github.com/matrix-org/synapse/issues/6286</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">ratelimit_override</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;@ef_slack_bridge_bot:matrix.eclipse.org&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Need a restart!</p>
+<h3 id="set-the-right-admin-room">Set the right admin room</h3>
+<p>It might possible that the bridge set another room that the one previously created.
+This can be force by updating database;</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">update</span><span class="w"> </span><span class="n">user_admin_rooms</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">roomid</span><span class="o">=</span><span class="s1">&#39;!becqmCHUKvDiueefgt:matrix-staging.eclipse.org&#39;</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">matrixuser</span><span class="o">=</span><span class="s1">&#39;-internal-&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+<h2 id="link-a-chat-service-room-to-a-slack-channel">Link a chat service room to a slack channel</h2>
+<p>1- On Chat service room </p>
+<ul>
+<li>Invite bot <code>ef_slack_bridge_bot</code> to room on chat service.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>/invite @ef_slack_bridge_bot:matrix.eclipse.org
+</span></code></pre></div>
+<ul>
+<li>Get room_id from settings -&gt; Advanced -&gt; Internal room ID
+ex: <code>!xxxxxxxxxxxxxx:matrix.eclipse.org</code></li>
+</ul>
+<p>2- On slack room</p>
+<ul>
+<li>Add app matrix-bridge on slack channel</li>
+</ul>
+<p>Right click on slack room channel -&gt; <code>View channel details</code>  -&gt; <code>Integration</code> -&gt; <code>Add apps</code> 
+Select <code>matrix-bridge</code></p>
+<ul>
+<li>Invite bot <code>ef_matrix_bridge_bot</code> to room on chat service.</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>/invite ef_matrix_bridge_bot
+</span></code></pre></div>
+<ul>
+<li>Get channel ID</li>
+</ul>
+<p>Right-click your channel name in Slack and select “Copy Link”. The channel id is the last argument in the url.</p>
+<p>Get the Id from the URL: <code>https://XXX.Slack.com/messages/&lt;channel id&gt;/</code></p>
+<p>3- Link rooms</p>
+<p>In the chat service admin room: <code>Chat Service Slack Admin</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>link --channel_id YYYYYYYY --room !xxxxxxxxxxxxxx:matrix.eclipse.org --slack_bot_token xoxb-xxxxxxxxxxxxxxxx
+</span></code></pre></div>
+<p><code>Eclipse Foundatino Slack Bridge Bot</code> should write:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>Room is now pending-name
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>Remember to invite the slack bot to the slack channel.
+</span></code></pre></div>
+<h1 id="devops">Devops</h1>
+<h2 id="generate-secrets_1">Generate secrets</h2>
+<p>Execute:  <code>./gen-secrets.sh</code></p>
+<p>It will store secrets under: <code>/environments/chat-matrix/{env}/.secrets</code></p>
+<h2 id="tanka">tanka</h2>
+<p>see doc installation tanka: <code>https://tanka.dev/install</code></p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>tk<span class="w"> </span>show<span class="w"> </span><span class="s2">&quot;environments/chat-matrix/dev&quot;</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>tk<span class="w"> </span>apply<span class="w"> </span><span class="s2">&quot;environments/chat-matrix/dev&quot;</span>
+</span></code></pre></div>
+<p>Exporting kubernetes files:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>tk<span class="w"> </span>show<span class="w"> </span>--dangerous-allow-redirect<span class="w"> </span><span class="s2">&quot;environments/chat-matrix/dev&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>./k8s/chat-matrix-dev.yaml
+</span></code></pre></div>
+<h2 id="applysh-script">Apply.sh script</h2>
+<p>Allow to run tanka and apply modification with kubectl for an environment.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>./apply.sh {env}
+</span></code></pre></div>
+<h2 id="kubectl-status">kubectl status</h2>
+<p>Installation</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>kubectl krew install status
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>kubectl status deployment -n chat-matrix-dev
+</span></code></pre></div>
+<h1 id="upgrade">Upgrade</h1>
+<h2 id="synapse">Synapse</h2>
+<h3 id="check-changelog">Check changelog</h3>
+<p>First check changelog, ex: <code>https://github.com/matrix-org/synapse/releases/tag/v1.82.0</code></p>
+<p>Look at :
+* Module signature deprecation: impact <code>modules/synapse_prevent_encrypt_room</code>, <code>modules/synapse_user_control</code>, <code>modules/synapse_user_restrictions</code>) 
+* OIDC changes: impact <code>/synapse/config/oidc.py</code>, <code>/synapse/handlers/oidc.py</code> 
+* Templates: impact <code>/synpase/res/templates</code>
+* Configuration files: Configuration changes should be apply in this configuration file: <code>/lib/chat-matrix/synapse/config-homeserver.libsonnet</code>.
+* New features!</p>
+<h3 id="upgrade-version">Upgrade version</h3>
+<p>Check version and look for dockerhub tags: <code>https://hub.docker.com/r/matrixdotorg/synapse/tags</code></p>
+<p>And apply change in docker image file: <code>/docker/Dockerfile.synapse</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>ARG SYNAPSE_VERSION=&quot;v1.82.0&quot;
+</span></code></pre></div>
+<p>Commit with message: <code>feat: upgrade synapse to v1.82.0</code>
+gitmoji: <code>⬆️  - Upgrade dependencies.</code></p>
+<p>Push/Wait for CI building synapse image and apply changes in kubernetes: <code>./apply.sh {env}</code></p>
+<h2 id="matrix-media-repo">Matrix-media-repo</h2>
+<h3 id="check-changelog_1">Check changelog</h3>
+<p>First check changelog, ex: <code>https://github.com/turt2live/matrix-media-repo/releases/tag/v1.2.13</code></p>
+<p>Look for compatibilities with synapse version.
+Look for changes in API, cors, everything that could impact nginx rewrite rules.</p>
+<h3 id="upgrade-version_1">Upgrade version</h3>
+<p>Note: Media repo version is currently a specific tag for two reasons:
+* tag 1.2.13 missing some features
+* last commit failed CI</p>
+<p>Apply change in docker image file: <code>/docker/Dockerfile.mediarepo</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>ARG CLONE_BRANCH=&quot;master&quot; 
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>ARG CO_SHA=&quot;219e4bc67ab8e354b263774aca0118332ea48c25&quot; 
+</span></code></pre></div>
+<p>Commit with message: <code>feat: upgrade mediarepo to branch XXXXXXX and commit XXXXXXXXXXXX</code>
+gitmoji: <code>⬆️  - Upgrade dependencies.</code></p>
+<p>Push/Wait for CI building synapse image and apply changes in kubernetes: <code>./apply.sh {env}</code></p>
+<h2 id="synapse-admin">Synapse-admin</h2>
+<h3 id="check-changelog_2">Check changelog</h3>
+<p>First check changelog, ex: <code>https://github.com/Awesome-Technologies/synapse-admin/releases/tag/0.8.7</code></p>
+<h3 id="upgrade-version_2">Upgrade version</h3>
+<p>Check version and look for github branch tags: <code>https://github.com/Awesome-Technologies/synapse-admin/tree/0.8.7</code></p>
+<p>Apply change in docker image file: <code>/docker/Dockerfile.admin</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>ARG SYNAPSE_ADMIN_BRANCH=&quot;0.9.1&quot;
+</span></code></pre></div>
+<p>Commit with message: <code>feat: upgrade synapse-admin to 0.8.7</code>
+gitmoji: <code>⬆️  - Upgrade dependencies.</code></p>
+<p>Push/Wait for CI building synapse image and apply changes in kubernetes: <code>./apply.sh {env}</code></p>
+<h1 id="maintenance">Maintenance</h1>
+<h2 id="compress-state">Compress state</h2>
+<p>Compress state cronjob is based on project: https://github.com/matrix-org/rust-synapse-compress-state and runs daily.</p>
+<p>Run manually a job: </p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="nv">JOB_NAME</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USERNAME</span><span class="si">}</span><span class="s2">-manual-compress-state-run-</span><span class="k">$(</span>date<span class="w"> </span>+<span class="s2">&quot;%s&quot;</span><span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-46-2"><a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>kubectl<span class="w"> </span>create<span class="w"> </span>job<span class="w"> </span>-n<span class="w"> </span>chat-matrix-prod<span class="w"> </span>--from<span class="o">=</span>cronjob/synapse-compress-state<span class="w"> </span><span class="si">${</span><span class="nv">JOB_NAME</span><span class="si">}</span>
+</span></code></pre></div>
+<h1 id="admin">Admin</h1>
+<h2 id="experimental-feature">Experimental feature</h2>
+<p>NOTE: Need admin API access.</p>
+<p>e.g: activate msc3575 experimental feature for a specific user.</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>curl<span class="w"> </span>-k<span class="w"> </span>--header<span class="w"> </span><span class="s2">&quot;Authorization: Bearer syt_XXXXXXXXXXXX&quot;</span><span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span>https://matrix.eclipse.org/_synapse/admin/v1/experimental_features/@sebastien.heurtematte:matrix.eclipse.org
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>
+</span><span id="__span-47-4"><a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>curl<span class="w"> </span>-k<span class="w"> </span>--header<span class="w"> </span><span class="s2">&quot;Authorization: Bearer syt_XXXXXXXXXXXX&quot;</span><span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>https://matrix.eclipse.org/_synapse/admin/v1/experimental_features/@sebastien.heurtematte:matrix.eclipse.org<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-47-5"><a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>-d<span class="w"> </span><span class="s1">&#39;{&quot;features&quot;:{&quot;msc3881&quot;:false,&quot;msc3575&quot;:true,&quot;msc4222&quot;:false}}&#39;</span>
+</span></code></pre></div>
+<h1 id="development">Development</h1>
+<h2 id="register-new-user">register new user</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span><span class="k">$(</span>sudo<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-aqf<span class="w"> </span><span class="s2">&quot;name=synapse&quot;</span><span class="p">|</span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="k">)</span><span class="w"> </span>register_new_matrix_user<span class="w"> </span>-u<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-p<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-a<span class="w"> </span>-c<span class="w"> </span>/synapse/config/homeserver.yaml<span class="w"> </span>http://localhost:8008
+</span></code></pre></div>
+<h2 id="list-users">list users</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span><span class="k">$(</span>sudo<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-aqf<span class="w"> </span><span class="s2">&quot;name=postgres&quot;</span><span class="p">|</span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="k">)</span><span class="w"> </span>psql<span class="w"> </span>-U<span class="w"> </span>synapse<span class="w"> </span>-d<span class="w"> </span>synapse<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;SELECT * FROM users;&quot;</span>
+</span></code></pre></div>
+<h2 id="set-admin">set admin</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span><span class="k">$(</span>sudo<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-aqf<span class="w"> </span><span class="s2">&quot;name=postgres&quot;</span><span class="p">|</span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="k">)</span><span class="w"> </span>psql<span class="w"> </span>-U<span class="w"> </span>synapse<span class="w"> </span>-d<span class="w"> </span>synapse<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;UPDATE users SET admin = 1 WHERE name = &#39;@test:matrix-local.eclipse.org&#39;;&quot;</span>
+</span></code></pre></div>
+<h2 id="change-rate-limit">change rate limit</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span><span class="k">$(</span>sudo<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-aqf<span class="w"> </span><span class="s2">&quot;name=postgres&quot;</span><span class="p">|</span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="k">)</span><span class="w"> </span>psql<span class="w"> </span>-U<span class="w"> </span>synapse<span class="w"> </span>-d<span class="w"> </span>synapse<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;insert into ratelimit_override values (&#39;@test:matrix-local.eclipse.org&#39;, 0, 0);&quot;</span>
+</span></code></pre></div>
+<p>Need a restart!</p>
+<h2 id="reuse-lint">Reuse lint</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span><span class="nv">$PWD</span>:/data<span class="w"> </span>fsfe/reuse:latest<span class="w"> </span>lint
+</span></code></pre></div>
+<h2 id="docker-compose-render">Docker-compose render</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>--name<span class="w"> </span>dcv<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/input<span class="w"> </span>pmsipilot/docker-compose-viz<span class="w"> </span>render<span class="w"> </span>-m<span class="w"> </span>image<span class="w"> </span>docker-compose.yaml
+</span></code></pre></div>
+<h2 id="k8s-render">k8s render</h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>./k8sviz.sh<span class="w"> </span>-n<span class="w"> </span>chat-matrix-prod<span class="w"> </span>-t<span class="w"> </span>png<span class="w"> </span>-o<span class="w"> </span>k8s-architecture.png
+</span></code></pre></div>
+<h1 id="usefull-links">Usefull links</h1>
+<p>Matrix version and features: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>https://matrix.eclipse.org/_matrix/client/versions
+</span><span id="__span-55-2"><a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>https://matrix.eclipse.org/_matrix/federation/v1/version
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © Eclipse Foundation, Inc. All Rights Reserved.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/eclipse-cbi" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.indexes", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

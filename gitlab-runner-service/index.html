@@ -1,0 +1,4239 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eclipse-cbi-mkdocs/gitlab-runner-service/">
+      
+      
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+    
+    
+      
+        <title>Index - Eclipse Common Build Infrastructure 🚀</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gitlab-runner-service" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Eclipse Common Build Infrastructure 🚀" class="md-header__button md-logo" aria-label="Eclipse Common Build Infrastructure 🚀" data-md-component="logo">
+      
+  <img src="../assets/CBI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Eclipse Common Build Infrastructure 🚀
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Eclipse Common Build Infrastructure 🚀" class="md-nav__button md-logo" aria-label="Eclipse Common Build Infrastructure 🚀" data-md-component="logo">
+      
+  <img src="../assets/CBI.png" alt="logo">
+
+    </a>
+    Eclipse Common Build Infrastructure 🚀
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CBI Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            CBI Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cbi/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cbi/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cbi/Nexus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nexus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cbi/Signing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/cbi/wiki" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wiki
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jenkins Service (JIRO)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Jenkins Service (JIRO)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro/CI-Best-Practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro/Common-build-errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common build errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro/Dedicated-build-agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dedicated build agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro/Default-Jenkins-plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default Jenkins plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro/GitHub-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro/GitLab-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitLab integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro/Resource-packs-and-quotas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resource packs and quotas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro/Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools-(JDK,-Maven,-Ant)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro-core/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro-agent/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jiro-controller/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controllers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro/wiki" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Wiki
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro-agents" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro-masters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Controllers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jenkins Pipeline Library
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Jenkins Pipeline Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins-pipeline-library/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins-pipeline-library-sample/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/jenkins-pipeline-service/jenkins-pipeline-library" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Container management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Container management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cbi-dockerfile/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DockerFile Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/dockerfiles" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Gitlab Runner Service (GRAC!)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Gitlab Runner Service (GRAC!)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitlab-runner-template/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab CI Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitlab-runner-as-code/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grac!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab Runner as Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-instances" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab Runner Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab Runner Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chat Service
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Chat Service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Let's chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org/docs/rooms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rooms/Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-service-provisionner/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Provisionner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-service-synapse/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synapse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-service-elementweb/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elementweb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-service-sync-tools/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sync Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Develocity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Develocity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../develocity/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://develocity-staging.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access Develocity-staging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Github Self-Service (Otterdog)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Github Self-Service (Otterdog)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://otterdog.readthedocs.io/en/latest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://otterdog.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Otterdog Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-csi/otterdog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Otterdog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EclipseFdn/otterdog-configs" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eclipse Foundation Otterdog Configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EclipseFdn/otterdog-defaults" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eclipse Foundation Otterdog Defaults
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Signing Service
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Signing Service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signing-services/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CBI Maven plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signing-services/cli-tools/signing/jar/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signing-services/maven-plugins/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maven plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../signing-services/webservice/signing/macosx/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macosx webservice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MacOS Notarization Service
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            MacOS Notarization Service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macos-notarization-service/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/macos-notarization-service.git" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Best Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-practices/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best-practices/software-supply-chain/osssc-best-practices/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Supply Chain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Website Boilerplate
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Project Website Boilerplate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-website-boilerplate/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Helpdesk
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Helpdesk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open an issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helpdesk/SLO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SLO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helpdesk/secrets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing secrets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://eclipse-csi.github.io/security-handbook/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Handbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog 📝
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Blog 📝
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_16_2" id="__nav_16_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_16_3" id="__nav_16_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/category/chat-service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helpdesk/Infrastructure-changes-Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infrastructure changes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Service links
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Service links
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://ci.eclipse.org/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ci.eclipse.org
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.eclipsestatus.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eclipse status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://develocity-staging.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    develocity-staging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chat.eclipse.org
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org/#/room/#eclipsefdn.it:matrix.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IT chat room
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helpdesk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://otterdog.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    otterdog Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://repo.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    repo.eclipse.org
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://accounts.eclipse.org/mailing-list/cbi-dev" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cbi-dev mailing-list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://accounts.eclipse.org/mailing-list/cross-project-issues-dev" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cross-project-issues mailing-list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://accounts.eclipse.org/mailing-list/eclipse.org-committers" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    org-committers mailing-list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    hugo template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/eclipse-status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status 🚦 <iframe src="https://www.eclipsestatus.io/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no"></iframe>
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-gitlab-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a GitLab runner?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leverage-gitlab-runner-configuration-and-maintenance-with-grac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leverage GitLab runner configuration and maintenance with Grac!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start!
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick start!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-a-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request a runner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      First integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provided-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provided Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provided Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-template-basic-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline template: Basic features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-template-auto-devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline template: Auto Devops
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-template-full-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline template: Full feature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerhub-publication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerhub publication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nexus-repoeclipseorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nexus: repo.eclipse.org
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nexus: repo.eclipse.org">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repository-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-with-maven" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying with maven
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signing-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signing tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supply-chain-security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supply Chain Security Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secret-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secret management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-container-image-buildkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build container image (BuildKit)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-to-projects-storage-downloadeclipseorg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publish to projects-storage (download.eclipse.org)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#request-and-allocation-process-for-runners-resource-pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request and Allocation Process for Runners (Resource pack)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Request and Allocation Process for Runners (Resource pack)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allocating-resource-packs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allocating Resource Packs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-pack-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource pack configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-the-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push the limits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dedicated-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dedicated Agent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-packs-included-in-membership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Packs Included in Membership
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assigning-resource-packs-to-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assigning Resource Packs to a Project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-the-impact-of-resource-pack-on-the-ef-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understand the impact of Resource Pack on the EF infrastructure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-level-objectives-slo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Level Objectives (SLO)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-a-specific-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target a specific runner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpuram-specific-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU/RAM specific configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Runner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-commands-in-your-cicd-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker commands in your CI/CD jobs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitlab-ci-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitLab CI Services
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Known issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Known issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-secrets-provider-can-not-be-found-check-your-cicd-variables-and-try-again" class="md-nav__link">
+    <span class="md-ellipsis">
+      The secrets provider can not be found. Check your CI/CD variables and try again.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-validating-token-invalid-issuer-iss-claim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error validating token: invalid issuer (iss) claim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-consideration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security consideration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security consideration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mask-ci-password-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mask CI password variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p><a href="/">Home</a> / gitlab-runner-service</p>
+<h1 id="gitlab-runner-service">GitLab Runner Service</h1>
+<p>As a part of the Common Build Infrastructure (CBI), the GitLab Runner Service aims to assist Eclipse projects in enabling GitLab CI within their projects.</p>
+<p>It allows the execution of GitLab CI pipelines through runners deployed in the secure and scalable Eclipse Foundation's Kubernetes infrastructure by allocating the necessary resources.</p>
+<p>Projects hosted on <code>gitlab.eclipse.org</code> can now take advantage of this new service.</p>
+<p>This service is powered by <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code">GRAC! (GitLab Runner As Code)</a>, a tool developed by the foundation that enables rapid deployment of this service, simplifying configuration and maintenance.</p>
+<p>IMPORTANT: The use of this service is currently not extendable to other GitLab instances like <code>gitlab.com</code>, which, beyond the installation and the use of runners, would require additional work from the Eclipse Foundation for managing Eclipse projects on gitlab.com, similar to what exists with GitHub.</p>
+<div class="toc">
+<ul>
+<li><a href="#gitlab-runner-service">GitLab Runner Service</a><ul>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#what-is-a-gitlab-runner">What is a GitLab runner?</a></li>
+<li><a href="#leverage-gitlab-runner-configuration-and-maintenance-with-grac">Leverage GitLab runner configuration and maintenance with Grac!</a></li>
+</ul>
+</li>
+<li><a href="#quick-start">Quick start!</a><ul>
+<li><a href="#request-a-runner">Request a runner</a></li>
+<li><a href="#first-integration">First integration</a></li>
+</ul>
+</li>
+<li><a href="#provided-services">Provided Services</a><ul>
+<li><a href="#pipeline-template-basic-features">Pipeline template: Basic features</a></li>
+<li><a href="#pipeline-template-auto-devops">Pipeline template: Auto Devops</a></li>
+<li><a href="#pipeline-template-full-feature">Pipeline template: Full feature</a></li>
+<li><a href="#dockerhub-publication">Dockerhub publication</a></li>
+<li><a href="#nexus-repoeclipseorg">Nexus: repo.eclipse.org</a><ul>
+<li><a href="#repository-creation">Repository creation</a></li>
+<li><a href="#deploying-with-maven">Deploying with maven</a></li>
+</ul>
+</li>
+<li><a href="#signing-tool">Signing tool</a></li>
+<li><a href="#supply-chain-security-best-practices">Supply Chain Security Best Practices</a></li>
+<li><a href="#secret-management">Secret management</a></li>
+<li><a href="#build-container-image-buildkit">Build container image (BuildKit)</a></li>
+<li><a href="#publish-to-projects-storage-downloadeclipseorg">Publish to projects-storage (download.eclipse.org)</a></li>
+</ul>
+</li>
+<li><a href="#request-and-allocation-process-for-runners-resource-pack">Request and Allocation Process for Runners (Resource pack)</a><ul>
+<li><a href="#allocating-resource-packs">Allocating Resource Packs</a></li>
+<li><a href="#resource-pack-configuration">Resource pack configuration</a></li>
+<li><a href="#push-the-limits">Push the limits</a></li>
+<li><a href="#dedicated-agent">Dedicated Agent</a></li>
+<li><a href="#resource-packs-included-in-membership">Resource Packs Included in Membership</a></li>
+<li><a href="#assigning-resource-packs-to-a-project">Assigning Resource Packs to a Project</a></li>
+<li><a href="#understand-the-impact-of-resource-pack-on-the-ef-infrastructure">Understand the impact of Resource Pack on the EF infrastructure</a></li>
+</ul>
+</li>
+<li><a href="#service-level-objectives-slo">Service Level Objectives (SLO)</a></li>
+<li><a href="#support">Support</a></li>
+<li><a href="#faq">FAQ</a><ul>
+<li><a href="#target-a-specific-runner">Target a specific runner</a></li>
+<li><a href="#cpuram-specific-configuration">CPU/RAM specific configuration</a></li>
+<li><a href="#shared-runner">Shared Runner</a></li>
+<li><a href="#docker-commands-in-your-cicd-jobs">Docker commands in your CI/CD jobs</a></li>
+<li><a href="#gitlab-ci-services">GitLab CI Services</a></li>
+</ul>
+</li>
+<li><a href="#known-issues">Known issues</a><ul>
+<li><a href="#the-secrets-provider-can-not-be-found-check-your-cicd-variables-and-try-again">The secrets provider can not be found. Check your CI/CD variables and try again.</a></li>
+<li><a href="#error-validating-token-invalid-issuer-iss-claim">Error validating token: invalid issuer (iss) claim</a></li>
+</ul>
+</li>
+<li><a href="#security-consideration">Security consideration</a><ul>
+<li><a href="#mask-ci-password-variables">Mask CI password variables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="introduction">Introduction</h2>
+<h3 id="what-is-a-gitlab-runner">What is a GitLab runner?</h3>
+<p>A GitLab Runner is an agent that works with GitLab CI pipeline. It executes tasks (jobs) defined in your project <code>.gitlab-ci.yml</code> file, by automating various stages such as building, testing, and even deploying code. </p>
+<p>For more information, start with: https://docs.gitlab.com/ee/topics/build_your_application.html </p>
+<h3 id="leverage-gitlab-runner-configuration-and-maintenance-with-grac">Leverage GitLab runner configuration and maintenance with Grac!</h3>
+<p>The goal of GRAC! is to make the administration of GitLab runner instances on a Kubernetes based infrastructure bearable. It uses automation, templates and a configuration-as-code approach. GRAC! consist of a set of custom shell scripts and a jsonnet generation.</p>
+<p>Following the implementation of Jenkins instance as code at Eclipse Foundation with JIRO, and over +250 instances in production, there is a demand from projects to extend this support to GitLab CI.</p>
+<p>So as a natural extension, GRAC! is born. Under the woods: same approach and technologies.</p>
+<p>Grac! helps reduce administration overhead for recurring tasks like setting up a new GitLab runner for groups/projects, configuration, allowing resources, handling specific requests, maintaining runners version, etc.</p>
+<h2 id="quick-start">Quick start!</h2>
+<h3 id="request-a-runner">Request a runner</h3>
+<p>A runner can be requested by filling a ticket on the <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new">helpdesk</a>. 
+Please ensure your project lead has approved with a +1 the request. </p>
+<h3 id="first-integration">First integration</h3>
+<p>Create your first <code>.gitlab-ci.yml</code> file in your project.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">default</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">origin:eclipse</span><span class="w"> </span><span class="c1"># allow to target eclipse runner</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">stages</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span><span class="w">  </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">my_build_job</span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;example job 1&quot;</span>
+</span></code></pre></div>
+<p>You can find many templates <a href="https://docs.gitlab.com/ee/ci/examples/#cicd-templates">here</a></p>
+<h2 id="provided-services">Provided Services</h2>
+<h3 id="pipeline-template-basic-features">Pipeline template: Basic features</h3>
+<p>The Eclipse Foundation provides a set of functionality to address needs related to control, construction, and publication. All of these functionalities are available within the <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates/">gitlab-ci-templates</a>, project, and can be imported into project pipelines.</p>
+<p>Here is an overview of the features : 
+* <code>Compliance</code>: use of libraries <a href="https://reuse.software/">REUSE</a>, <a href="https://github.com/christophebedard/dco-check">DCO check tool</a>, and an ECA script validation <a href="https://www.eclipse.org/legal/ECA.php">Eclipse Contributor Agreement</a>
+* <code>Container image build</code>: build Container image based on the BuildKit Eclipse Foundation infrastructure and publish to a registry like <code>Docker Hub</code>
+* <code>Quality</code>: control dockerfile writing with <a href="https://github.com/hadolint/hadolint">hadolint</a> tool</p>
+<p>NOTE about <a href="https://docs.gitlab.com/ee/topics/autodevops/">GitLab Auto DevOps</a></p>
+<h3 id="pipeline-template-auto-devops">Pipeline template: Auto Devops</h3>
+<p>GitLab provides what's called <code>Auto DevOps</code> which is a comprehensive set of predefined CI/CD pipelines and settings, that aim to streamline and automate the software development lifecycle, from code creation to deployment and monitoring. Auto DevOps is designed to simplify the process by providing a preconfigured CI/CD setup.</p>
+<p>This feature provides a time-saving advantage in terms of configuration and CI pipeline deployment. However, this mode is not entirely suited to the operational constraints of the Eclipse Foundation's infrastructure. That's why the foundation offers some of these functionalities with an equivalent ready-to-use pipeline for our infrastructure.</p>
+<p>Available features: 
+* <a href="https://gitlab.com/gitlab-org/gitlab/blob/master/lib/gitlab/ci/templates/Jobs/Container-Scanning.gitlab-ci.yml">Container Scanning</a>
+* <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/SAST-IaC.gitlab-ci.yml">Sast Analysis</a>
+* <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/SAST-IaC.gitlab-ci.yml">Sast IaC Analysis</a>
+* <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Secret-Detection.gitlab-ci.yml">Secret Detection</a>
+* <a href="https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Dependency-Scanning.gitlab-ci.yml">Dependency Scanning</a></p>
+<p>All <code>Autodevops</code> features available in a specific pipeline <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates/-/blob/main/pipeline-autodevops.gitlab-ci.yml">pipeline-autodevops.gitlab-ci.yml</a></p>
+<p>For more information, please read the documentation [here] (https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates/-/blob/main/README.md)</p>
+<p>IMPORTANT: Known limitations
+When using OpenShift to run a GitLab Runner Fleet, we do not support some GitLab features given OpenShift’s security model. Features requiring Docker-in-Docker might not work.</p>
+<p>For Auto DevOps, the following features are not supported yet:
+* Auto Code Quality
+* Auto License Compliance (License scanning of CycloneDX files is supported on OpenShift)
+* Auto Browser Performance Testing
+* Auto Build
+* Operational Container Scanning (Note: Pipeline Container Scanning is supported)</p>
+<h3 id="pipeline-template-full-feature">Pipeline template: Full feature</h3>
+<p>We recommend using the full pipeline <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates/-/blob/main/pipeline.gitlab-ci.yml">pipeline.gitlab-ci.yml</a>.
+Including all features from: 
+* Compliance
+* Container management
+* Auto Devops </p>
+<h3 id="dockerhub-publication">Dockerhub publication</h3>
+<p>The Eclipse Foundation owns the Eclipse organization and a couple of other project-specific organizations at https://hub.docker.com. You can ask to get a repository created on one of these organizations. We will set permissions so that committers have write access to this repo (you will need to share your Docker Hub ID with us).</p>
+<p>You can also ask us to create a project-specific organization. The organization name needs to follow the pattern <code>eclipse-&lt;projectname&gt;</code>.</p>
+<h3 id="nexus-repoeclipseorg">Nexus: repo.eclipse.org</h3>
+<p>The Eclipse Nexus instance is hosted at: <code>https://repo.eclipse.org/</code></p>
+<p>This repository allows Eclipse projects to publish their build artifacts into a centralized repository.</p>
+<p>Notes:
+* Snapshots older than <code>7 days</code> are automatically removed weekly, with a minimum of 1 snapshot being retained.
+* All snapshots for a given GAV are automatically removed 14 days after release.
+* All snapshots not being not requested in the last 360 days will be automatically removed.</p>
+<h4 id="repository-creation">Repository creation</h4>
+<p>File a ticket and specify what project you'd like a Nexus repo for.</p>
+<p>3 repositories are typically created:
+* <code>group</code>: <code>https://repo.eclipse.org/content/repositories/&lt;projectname&gt;</code>, which groups both releases and snapshots repositories.
+* <code>releases</code>: <code>https://repo.eclipse.org/content/repositories/&lt;projectname&gt;-releases/</code>, for publishing releases. Re-deploy is disabled.
+* <code>snapshots</code>: <code>https://repo.eclipse.org/content/repositories/&lt;projectname&gt;-snapshots/</code>, for publishing snapshots. Re-deploy is enabled.</p>
+<h4 id="deploying-with-maven">Deploying with maven</h4>
+<p>Configure <code>distributionManagement</code> in the <code>pom.xml</code>.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span>...<span class="w">  </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&lt;distributionManagement&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&lt;repository&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&lt;id&gt;</span>repo.eclipse.org<span class="nt">&lt;/id&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&lt;name&gt;</span>Project<span class="w"> </span>Repository<span class="w"> </span>-<span class="w"> </span>Releases<span class="nt">&lt;/name&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">&lt;url&gt;</span>https://repo.eclipse.org/content/repositories/project-releases/<span class="nt">&lt;/url&gt;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">&lt;/repository&gt;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">&lt;snapshotRepository&gt;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">&lt;id&gt;</span>repo.eclipse.org<span class="nt">&lt;/id&gt;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nt">&lt;name&gt;</span>Project<span class="w"> </span>Repository<span class="w"> </span>-<span class="w"> </span>Snapshots<span class="nt">&lt;/name&gt;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nt">&lt;url&gt;</span>https://repo.eclipse.org/content/repositories/project-snapshots/<span class="nt">&lt;/url&gt;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="nt">&lt;/snapshotRepository&gt;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nt">&lt;/distributionManagement&gt;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span>....
+</span></code></pre></div>
+<p>Create <code>settings.xml</code> file in your project with this configuration.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">&lt;settings&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&lt;interactiveMode&gt;</span>false<span class="nt">&lt;/interactiveMode&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">&lt;servers&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&lt;server&gt;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">&lt;id&gt;</span>repo.eclipse.org<span class="nt">&lt;/id&gt;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">&lt;username&gt;</span>${env.REPO_USERNAME}<span class="nt">&lt;/username&gt;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="nt">&lt;password&gt;</span>${env.REPO_PASSWORD}<span class="nt">&lt;/password&gt;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">&lt;/server&gt;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nt">&lt;/servers&gt;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="nt">&lt;mirrors&gt;</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="nt">&lt;mirror&gt;</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">      </span><span class="nt">&lt;id&gt;</span>eclipse.maven.central.mirror<span class="nt">&lt;/id&gt;</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="nt">&lt;name&gt;</span>Eclipse<span class="w"> </span>Central<span class="w"> </span>Proxy<span class="nt">&lt;/name&gt;</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">      </span><span class="nt">&lt;url&gt;</span>https://repo.eclipse.org/content/repositories/maven_central/<span class="nt">&lt;/url&gt;</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">      </span><span class="nt">&lt;mirrorOf&gt;</span>central<span class="nt">&lt;/mirrorOf&gt;</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="nt">&lt;/mirror&gt;</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">  </span><span class="nt">&lt;/mirrors&gt;</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="nt">&lt;/settings&gt;</span>
+</span></code></pre></div>
+<p>Job example to deploy to <code>repo.eclipse.org</code>: </p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">repo.eclipse.org</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maven:3.9.6-eclipse-temurin-21</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">secrets</span><span class="p">:</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">REPO_USERNAME</span><span class="p">:</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">      </span><span class="nt">vault</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;project_id&gt;/repo.eclipse.org/username@cbi</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nt">REPO_PASSWORD</span><span class="p">:</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="nt">vault</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;project_id&gt;/repo.eclipse.org/password@cbi</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="nt">variables</span><span class="p">:</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="nt">MAVEN_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-Dhttps.protocols=TLSv1.2</span><span class="nv"> </span><span class="s">-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository</span><span class="nv"> </span><span class="s">-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN</span><span class="nv"> </span><span class="s">-Dorg.slf4j.simpleLogger.showDateTime=true</span><span class="nv"> </span><span class="s">-Djava.awt.headless=true&quot;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="nt">MAVEN_CLI_OPTS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--batch-mode</span><span class="nv"> </span><span class="s">--errors</span><span class="nv"> </span><span class="s">--fail-at-end</span><span class="nv"> </span><span class="s">--show-version</span><span class="nv"> </span><span class="s">-DinstallAtEnd=true</span><span class="nv"> </span><span class="s">-DdeployAtEnd=true&quot;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mvn $MAVEN_CLI_OPTS deploy -s settings.xml</span>
+</span></code></pre></div>
+<h3 id="signing-tool">Signing tool</h3>
+<p>see: <a href="https://github.com/eclipse-cbi/cbi/wiki#signing-tool">CBI Signing tool</a></p>
+<h3 id="supply-chain-security-best-practices">Supply Chain Security Best Practices</h3>
+<p>The Eclipse Foundation has authored an Open Source Software Supply Chain Best Practices document. We highly recommend Eclipse OSS projects read, understand and adopt these best practices as part of their role in the Supply Chain.</p>
+<p>https://github.com/eclipse-cbi/best-practices/blob/main/software-supply-chain/osssc-best-practices.md </p>
+<h3 id="secret-management">Secret management</h3>
+<p>Permissions management in GitLab allows all project leads to add the credentials they need from the UI via <code>project-&gt;settings-&gt;CI/CD</code>, <code>Variables</code> entry.</p>
+<p>In terms of best practices, it is recommended not to forget to mask declared variables.
+(GitLab CI/CD Variables Masking Documentation)[https://docs.gitlab.com/ee/ci/variables/#mask-a-cicd-variable]</p>
+<p>Regarding secrets managed by the Eclipse Foundation, GitLab CI relies on an internal vault. All new requests must go through a helpdesk ticket, where the paths for pipeline configuration will be specified.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">sonar</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quality</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">secrets</span><span class="p">:</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">SONATYPE_USERNAME</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="nt">vault</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modeling.tmf.xtext/oss.sonatype.org/username@cbi</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">SONATYPE_PASSWORD</span><span class="p">:</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="nt">vault</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modeling.tmf.xtext/oss.sonatype.org/password@cbi</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">export USERNAME=$(cat $SONATYPE_USERNAME)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">export PASSWORD=$(cat $SONATYPE_PASSWORD)</span>
+</span></code></pre></div>
+<p>or with property <code>file: false</code>, secret values are put directly in the variable.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">sonar</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quality</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">secrets</span><span class="p">:</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">SONATYPE_USERNAME</span><span class="p">:</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span><span class="nt">vault</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modeling.tmf.xtext/oss.sonatype.org/username@cbi</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">      </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nt">SONATYPE_PASSWORD</span><span class="p">:</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span><span class="nt">vault</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modeling.tmf.xtext/oss.sonatype.org/password@cbi</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">      </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</span></code></pre></div>
+<p>NOTE: Variables coming from secrets are automatically masked.</p>
+<h3 id="build-container-image-buildkit">Build container image (BuildKit)</h3>
+<p>The Eclipse Foundation hosts a buildkit infrastructure to build safely container images from GitLab CI.</p>
+<p>You can use the buildkit job template from the <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates">gitlab-ci-templates</a> project.</p>
+<p>e.g: 
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">include</span><span class="p">:</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">project</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates&#39;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/jobs/buildkit.gitlab-ci.yml&#39;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nt">variables</span><span class="p">:</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nt">CI_REGISTRY_IMAGE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker.io/eclipsecbi/grac</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="nt">buildkit</span><span class="p">:</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="nt">secrets</span><span class="p">:</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="nt">CI_REGISTRY_USER</span><span class="p">:</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">      </span><span class="nt">vault</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">technology.cbi/docker.com/username@cbi</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">      </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="nt">CI_REGISTRY_PASSWORD</span><span class="p">:</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">      </span><span class="nt">vault</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">technology.cbi/docker.com/api-token@cbi</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">      </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span></code></pre></div></p>
+<p>Or use your own implementation inspired by the template file <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates/-/blob/main/jobs/buildkit.gitlab-ci.yml">buildkit.gitlab-ci.yml</a>.</p>
+<h3 id="publish-to-projects-storage-downloadeclipseorg">Publish to projects-storage (download.eclipse.org)</h3>
+<p>Replace the script section based on what needs to be copied to the Project Storage server.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">include</span><span class="p">:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">project</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates&#39;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/jobs/projects-storage.gitlab-ci.yml&#39;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nt">projects-storage</span><span class="p">:</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nt">extends</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.projects-storage</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span><span class="nt">secrets</span><span class="p">:</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">SSH_PRIVATE_KEY</span><span class="p">:</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">      </span><span class="nt">vault</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">technology.cbi/projects-storage.eclipse.org/id_rsa@cbi</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="nt">SSH_PRIVATE_KEY_PASSPHRASE</span><span class="p">:</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">      </span><span class="nt">vault</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">technology.cbi/projects-storage.eclipse.org/id_rsa.passphrase@cbi</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nt">script</span><span class="p">:</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Copy your artifacts with ssh.&quot;</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh &quot;genie.$EF_SHORT_NAME@$SSH_HOSTNAME&quot; ls -l &quot;$DOWNLOADS_PATH&quot;</span>
+</span></code></pre></div>
+<h2 id="request-and-allocation-process-for-runners-resource-pack">Request and Allocation Process for Runners (Resource pack)</h2>
+<h3 id="allocating-resource-packs">Allocating Resource Packs</h3>
+<p>Each Eclipse Project has access to one Resources Pack for building by default. </p>
+<p>For some projects, that may not be enough. Projects sponsored by Eclipse Membership (via Project Lead) have additional Packs, based on membership level. These Packs can be allocated to projects. </p>
+<ul>
+<li>Some resources are only available to Enterprise and Strategic members.</li>
+<li>Enterprise and Strategic members can engage with the Foundation to acquire additional Packs.</li>
+</ul>
+<h3 id="resource-pack-configuration">Resource pack configuration</h3>
+<p>Considering the microservice aspect in the execution of GitLab CI pipelines, where the aim is to have dedicated jobs for different kinds of tasks and thus to have a large number of jobs running in parallel to execute a pipeline.</p>
+<p>As a consequence, three types of build containers are proposed with the following specifications: </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Small</th>
+<th>Medium</th>
+<th>Large</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cpu req</td>
+<td>250m</td>
+<td>1000m</td>
+<td>2000m</td>
+</tr>
+<tr>
+<td>cpu limit</td>
+<td>500m</td>
+<td>2000m</td>
+<td>4000m</td>
+</tr>
+<tr>
+<td>mem</td>
+<td>1024Mi</td>
+<td>4096Mi</td>
+<td>8192Mi</td>
+</tr>
+</tbody>
+</table>
+<p>The distribution of concurrency is based on the resource pack specifications as follows:</p>
+<table>
+<thead>
+<tr>
+<th># Resource packs</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concurrent Small</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>9</td>
+<td>11</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Concurrent Medium</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Concurrent Large</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>max concurrency</td>
+<td>4</td>
+<td>7</td>
+<td>11</td>
+<td>14</td>
+<td>18</td>
+<td>36</td>
+</tr>
+</tbody>
+</table>
+<p>NOTE:
+* 2 basics per resource pack starting from 3
+* 1 advance per resource pack
+* 1 expert every 2 resources pack</p>
+<h3 id="push-the-limits">Push the limits</h3>
+<p>The resource pack definition draws a global framework within which one or more project pipelines can run. In cases where a job requires more resources for a pipeline, projects are not limited to the <code>small</code>/<code>medium</code>/<code>large</code> runner templates but can benefit from additional resources within the boundaries of the resource pack.</p>
+<p>Through the definition of jobs in GitLab Runner, projects have direct control over these customizations with the definition of variables such as <code>KUBERNETES_MEMORY_LIMIT_OVERWRITE_MAX_ALLOWED</code>, <code>KUBERNETES_MEMORY_REQUEST_OVERWRITE_MAX_ALLOWED</code>, ...</p>
+<p>For more information: <a href="https://docs.gitlab.com/runner/executors/kubernetes/#overwrite-container-resources">Overwrite container resources</a></p>
+<table>
+<thead>
+<tr>
+<th># Max Overwrite Allowed/Resource packs</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KUBERNETES_CPU_REQUEST_OVERWRITE_MAX_ALLOWED</td>
+<td>1750m</td>
+<td>3250m</td>
+<td>6750m</td>
+</tr>
+<tr>
+<td>KUBERNETES_CPU_LIMIT_OVERWRITE_MAX_ALLOWED</td>
+<td>3500m</td>
+<td>6500m</td>
+<td>13500m</td>
+</tr>
+<tr>
+<td>KUBERNETES_MEMORY_REQUEST_OVERWRITE_MAX_ALLOWED</td>
+<td>7168Mi</td>
+<td>13312Mi</td>
+<td>27648Mi</td>
+</tr>
+<tr>
+<td>KUBERNETES_MEMORY_LIMIT_OVERWRITE_MAX_ALLOWED</td>
+<td>7168Mi</td>
+<td>13312Mi</td>
+<td>27648Mi</td>
+</tr>
+</tbody>
+</table>
+<p>Calculation example: </p>
+<blockquote>
+<p>Memory request calculation with one resource pack
+3 small + 1 medium = 3 * 1024 + 1 * 4096 = 7168Mi   </p>
+</blockquote>
+<p>NOTE: Resources are not only constrained by the resource pack definition but also by the resources available in the node cluster. If the definition is set too high, a job may struggle to find an available node for execution.</p>
+<p>IMPORTANT: We encourage projects to take advantage of concurrent build jobs. Therefore, as a best practice, it's recommended to reduce code size by breaking it down into smaller modules and pieces, allowing for parallel execution rather than relying on a monolithic codebase.</p>
+<h3 id="dedicated-agent">Dedicated Agent</h3>
+<table>
+<thead>
+<tr>
+<th>Agent type</th>
+<th>Linux/Windows/macOS (VMs)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vCPU</td>
+<td>4</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>8GiB</td>
+</tr>
+<tr>
+<td>Disk</td>
+<td>100GB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resource-packs-included-in-membership">Resource Packs Included in Membership</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Associate / Contributing <br/> [€0, €15k]</th>
+<th>Associate / Contributing <br/> [€15k, €20k]</th>
+<th>Associate / Contributing <br/> [€25k, €50k]</th>
+<th>Strategic <br/>   [€50k, €100k] </th>
+<th>Strategic <br/> [€100k, €500k]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resource packs</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Dedicated Agents</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assigning-resource-packs-to-a-project">Assigning Resource Packs to a Project</h3>
+<p>Resource Packs are assigned by Member organizations of the Eclipse Foundation to Eclipse Projects they sponsor. Packs are assigned as a whole to a single project (i.e., can’t split Packs across multiple projects). A member can assign several packs to a single project.</p>
+<p>Important: When asking for packs for your project, please ensure that project leads and your organization representatives are copied to the GitLab ticket. We require approval from project leads but assume immediate approval from organization representatives. We strongly advise you to seek authorization internally from your organization before opening such a request though. Should conflictual requests arise, the organization representatives will be asked to actively arbitrate.</p>
+<p>To assign a pack to a project, please file a <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk">ticket</a></p>
+<p>By default, resource packs are assigned build agents. In some cases, it may be required to scale up the Jenkins master. In such a case, we can allocate resource packs to the master instance.
+Sponsored Projects</p>
+<p>A public <a href="https://api.eclipse.org/cbi/sponsorships">API of sponsored projects</a> is accessible. Organizations can check how many Resource Packs they have left for project sponsoring on the <a href="https://membership.eclipse.org/portal/login">membership portal</a>. </p>
+<h3 id="understand-the-impact-of-resource-pack-on-the-ef-infrastructure">Understand the impact of Resource Pack on the EF infrastructure</h3>
+<p>Pods and containers definition: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>@startuml kubernetes
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>footer Kubernetes Plant-UML
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>scale max 1024 width
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>skinparam nodesep 10
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>skinparam ranksep 10
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>&#39; Kubernetes
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>!define KubernetesPuml https://raw.githubusercontent.com/dcasati/kubernetes-PlantUML/master/dist
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>!includeurl KubernetesPuml/kubernetes_Common.puml
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>!includeurl KubernetesPuml/kubernetes_Context.puml
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>!includeurl KubernetesPuml/kubernetes_Simplified.puml
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>!includeurl KubernetesPuml/OSS/KubernetesSvc.puml
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>!includeurl KubernetesPuml/OSS/KubernetesIng.puml
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>!includeurl KubernetesPuml/OSS/KubernetesPod.puml
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>!includeurl KubernetesPuml/OSS/KubernetesRs.puml
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>!includeurl KubernetesPuml/OSS/KubernetesDeploy.puml
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>!includeurl KubernetesPuml/OSS/KubernetesHpa.puml
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>!includeurl KubernetesPuml/OSS/KubernetesQuota.puml
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>!includeurl KubernetesPuml/OSS/KubernetesLimits.puml
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>!includeurl KubernetesPuml/OSS/KubernetesNode.puml
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>!includeurl KubernetesPuml/kubernetes_Container.puml
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>&#39; Kubernetes Components
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>Namespace_Boundary(podns, &quot;Pod/Container Definitions&quot;) {
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>    Container_Boundary(runnerContainerBoundaries, &quot;Pod Runner&quot;) {
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>        Container(runnerContainer, &quot;Runner Container&quot;, &quot;&quot;, &quot;cpu: 100/200,\n mem: 128/256mi&quot;)
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>    }
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>    Container_Boundary(smallContainerBoundaries, &quot;Small Pod Runner&quot;) {
+</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>        Container(smallBuildContainer, &quot;Build Container&quot;, &quot;&quot;, &quot;cpu: 250/500,\n mem: 1Gi&quot;)
+</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>        Container(smallHelperContainer, &quot;Helper Container&quot;, &quot;&quot;, &quot;cpu: 100/150,\n mem: 1Gi&quot;)
+</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a>        Container(smallInitContainer, &quot;Init Container&quot;, &quot;temporary&quot;, &quot;cpu: 100/150,\n mem: 128mi&quot;)
+</span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a>    }
+</span><span id="__span-8-42"><a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a>
+</span><span id="__span-8-43"><a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a>    Container_Boundary(mediumContainerBoundaries, &quot;Medium Pod Runner&quot;) {
+</span><span id="__span-8-44"><a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>        Container(mediumBuildContainer, &quot;Build Container&quot;, &quot;&quot;, &quot;cpu: 1000/2000,\n mem: 4Gi&quot;)
+</span><span id="__span-8-45"><a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a>        Container(mediumHelperContainer, &quot;Helper Container&quot;, &quot;&quot;, &quot;cpu: 100/150,\n mem: 1Gi&quot;)
+</span><span id="__span-8-46"><a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a>        Container(mediumInitContainer, &quot;Init Container&quot;, &quot;temporary&quot;, &quot;cpu: 100/150,\n mem: 128m&quot;)
+</span><span id="__span-8-47"><a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a>    }
+</span><span id="__span-8-48"><a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a>
+</span><span id="__span-8-49"><a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a>    Container_Boundary(largeContainerBoundaries, &quot;Large Pod Runner&quot;) {
+</span><span id="__span-8-50"><a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a>        Container(largeBuildContainer, &quot;Build Container&quot;, &quot;&quot;, &quot;cpu: 2000/4000,\n mem: 8Gi&quot;)
+</span><span id="__span-8-51"><a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a>        Container(largeHelperContainer, &quot;Helper Container&quot;, &quot;&quot;, &quot;cpu: 100/150,\n mem: 1Gi&quot;)
+</span><span id="__span-8-52"><a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a>        Container(largeInitContainer, &quot;Init Container&quot;, &quot;temporary&quot;, &quot;cpu: 100/150,\n mem: 128mi&quot;)
+</span><span id="__span-8-53"><a id="__codelineno-8-53" name="__codelineno-8-53" href="#__codelineno-8-53"></a>    }
+</span><span id="__span-8-54"><a id="__codelineno-8-54" name="__codelineno-8-54" href="#__codelineno-8-54"></a>
+</span><span id="__span-8-55"><a id="__codelineno-8-55" name="__codelineno-8-55" href="#__codelineno-8-55"></a>    Container_Boundary(serviceContainerBoundaries, &quot;Service Pod Runner&quot;) {
+</span><span id="__span-8-56"><a id="__codelineno-8-56" name="__codelineno-8-56" href="#__codelineno-8-56"></a>        Container(serviceContainer, &quot;Service Container&quot;, &quot;&quot;, &quot;cpu: 500/1000,\n mem: 1/2Gi&quot;)
+</span><span id="__span-8-57"><a id="__codelineno-8-57" name="__codelineno-8-57" href="#__codelineno-8-57"></a>    }
+</span><span id="__span-8-58"><a id="__codelineno-8-58" name="__codelineno-8-58" href="#__codelineno-8-58"></a>}
+</span><span id="__span-8-59"><a id="__codelineno-8-59" name="__codelineno-8-59" href="#__codelineno-8-59"></a>
+</span><span id="__span-8-60"><a id="__codelineno-8-60" name="__codelineno-8-60" href="#__codelineno-8-60"></a>
+</span><span id="__span-8-61"><a id="__codelineno-8-61" name="__codelineno-8-61" href="#__codelineno-8-61"></a>@enduml
+</span></code></pre></div>
+<p>A concrete example of competing project pipelines running in the EF infrastructure: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>@startuml kubernetes
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>footer Kubernetes Plant-UML
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>scale max 1024 width
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>skinparam nodesep 10
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>skinparam ranksep 10
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>&#39; Kubernetes
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>!define KubernetesPuml https://raw.githubusercontent.com/dcasati/kubernetes-PlantUML/master/dist
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>!includeurl KubernetesPuml/kubernetes_Common.puml
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>!includeurl KubernetesPuml/kubernetes_Context.puml
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>!includeurl KubernetesPuml/kubernetes_Simplified.puml
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>!includeurl KubernetesPuml/OSS/KubernetesSvc.puml
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>!includeurl KubernetesPuml/OSS/KubernetesIng.puml
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>!includeurl KubernetesPuml/OSS/KubernetesPod.puml
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>!includeurl KubernetesPuml/OSS/KubernetesRs.puml
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>!includeurl KubernetesPuml/OSS/KubernetesDeploy.puml
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>!includeurl KubernetesPuml/OSS/KubernetesHpa.puml
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>!includeurl KubernetesPuml/OSS/KubernetesQuota.puml
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>!includeurl KubernetesPuml/OSS/KubernetesLimits.puml
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>!includeurl KubernetesPuml/OSS/KubernetesNode.puml
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>!includeurl KubernetesPuml/kubernetes_Container.puml
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>&#39; Kubernetes Components
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>Cluster_Boundary(cluster, &quot;Eclipse Foundation Kubernetes Cluster&quot;) {
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>    Namespace_Boundary(nodens, &quot;Nodes infrastructure&quot;) {
+</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>        KubernetesNode(node1, &quot;Node 1&quot;, &quot;&quot;)
+</span><span id="__span-9-35"><a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>        KubernetesNode(node2, &quot;Node 2&quot;, &quot;&quot;)
+</span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>        KubernetesNode(node3, &quot;Node ...&quot;, &quot;&quot;)
+</span><span id="__span-9-37"><a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>    }
+</span><span id="__span-9-38"><a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>
+</span><span id="__span-9-39"><a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>    Namespace_Boundary(ns, &quot;Project Runner Namespace&quot;) {
+</span><span id="__span-9-40"><a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a>
+</span><span id="__span-9-41"><a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a>        Container_Boundary(RunnerBoundaries, &quot;Runner context&quot;) {
+</span><span id="__span-9-42"><a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a>            KubernetesPod(runner, &quot;Gitlab Runner&quot;, &quot;&quot;)
+</span><span id="__span-9-43"><a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a>
+</span><span id="__span-9-44"><a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a>            Container_Boundary(concurrentBoundaries, &quot;Concurrent Jobs&quot;) {
+</span><span id="__span-9-45"><a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a>                KubernetesPod(JobMedium, &quot;Job1 Medium Runner \nBuild:\n cpu: 1000/2000,\n mem: 4Gi&quot; , &quot;&quot;)
+</span><span id="__span-9-46"><a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a>                KubernetesPod(JobSmall1, &quot;Job2 Small Runner \nBuild:\n cpu: 250/500,\n mem: 1Gi&quot;, &quot;&quot;)
+</span><span id="__span-9-47"><a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a>                KubernetesPod(JobSmall2, &quot;Job3 Small Runner \nBuild:\n cpu: 250/500,\n mem: 1Gi&quot;, &quot;&quot;)
+</span><span id="__span-9-48"><a id="__codelineno-9-48" name="__codelineno-9-48" href="#__codelineno-9-48"></a>                KubernetesPod(JobSmall3, &quot;Job4 Small Runner \nBuild:\n cpu: 250/500,\n mem: 1Gi&quot;, &quot;&quot;)
+</span><span id="__span-9-49"><a id="__codelineno-9-49" name="__codelineno-9-49" href="#__codelineno-9-49"></a>            }
+</span><span id="__span-9-50"><a id="__codelineno-9-50" name="__codelineno-9-50" href="#__codelineno-9-50"></a>            KubernetesPod(JobMediumPodService1, &quot;Job1 Service\n cpu: 500/1000,\n mem: 1Gi/2Gi&quot;, &quot;&quot;)
+</span><span id="__span-9-51"><a id="__codelineno-9-51" name="__codelineno-9-51" href="#__codelineno-9-51"></a>        }
+</span><span id="__span-9-52"><a id="__codelineno-9-52" name="__codelineno-9-52" href="#__codelineno-9-52"></a>        KubernetesLimits(limit,&quot;Resource Pack 1&quot;, &quot; &quot;)
+</span><span id="__span-9-53"><a id="__codelineno-9-53" name="__codelineno-9-53" href="#__codelineno-9-53"></a>
+</span><span id="__span-9-54"><a id="__codelineno-9-54" name="__codelineno-9-54" href="#__codelineno-9-54"></a>        Container_Boundary(ResourceBoundaries, &quot;Resource limits&quot;) {
+</span><span id="__span-9-55"><a id="__codelineno-9-55" name="__codelineno-9-55" href="#__codelineno-9-55"></a>
+</span><span id="__span-9-56"><a id="__codelineno-9-56" name="__codelineno-9-56" href="#__codelineno-9-56"></a>            KubernetesQuota(quota,&quot;Resource Quotas \ncpu:2750/5100, \nmem: 12032/12288, \npods: 8&quot;, &quot; &quot;)
+</span><span id="__span-9-57"><a id="__codelineno-9-57" name="__codelineno-9-57" href="#__codelineno-9-57"></a>        }
+</span><span id="__span-9-58"><a id="__codelineno-9-58" name="__codelineno-9-58" href="#__codelineno-9-58"></a>    }
+</span><span id="__span-9-59"><a id="__codelineno-9-59" name="__codelineno-9-59" href="#__codelineno-9-59"></a>
+</span><span id="__span-9-60"><a id="__codelineno-9-60" name="__codelineno-9-60" href="#__codelineno-9-60"></a>    Namespace_Boundary(nsOther, &quot;Other Project Runner Namespace&quot;) {
+</span><span id="__span-9-61"><a id="__codelineno-9-61" name="__codelineno-9-61" href="#__codelineno-9-61"></a>
+</span><span id="__span-9-62"><a id="__codelineno-9-62" name="__codelineno-9-62" href="#__codelineno-9-62"></a>        Container_Boundary(RunnerBoundariesOther, &quot;Runner context&quot;) {
+</span><span id="__span-9-63"><a id="__codelineno-9-63" name="__codelineno-9-63" href="#__codelineno-9-63"></a>            KubernetesPod(runnerOther, &quot;Gitlab Runner&quot;, &quot;&quot;)
+</span><span id="__span-9-64"><a id="__codelineno-9-64" name="__codelineno-9-64" href="#__codelineno-9-64"></a>            KubernetesPod(JobSmall1Other, &quot;Job1 Small Runner \nBuild: cpu: 250/500,\n mem: 1Gi&quot;, &quot;&quot;)
+</span><span id="__span-9-65"><a id="__codelineno-9-65" name="__codelineno-9-65" href="#__codelineno-9-65"></a>        }
+</span><span id="__span-9-66"><a id="__codelineno-9-66" name="__codelineno-9-66" href="#__codelineno-9-66"></a>        KubernetesLimits(limitOther,&quot;Resource Pack...&quot;, &quot; &quot;)
+</span><span id="__span-9-67"><a id="__codelineno-9-67" name="__codelineno-9-67" href="#__codelineno-9-67"></a>        Container_Boundary(ResourceBoundariesOther, &quot;Resource limits&quot;) {
+</span><span id="__span-9-68"><a id="__codelineno-9-68" name="__codelineno-9-68" href="#__codelineno-9-68"></a>            KubernetesQuota(quotaOther,&quot;Resource Quotas...&quot;, &quot; &quot;)
+</span><span id="__span-9-69"><a id="__codelineno-9-69" name="__codelineno-9-69" href="#__codelineno-9-69"></a>        }
+</span><span id="__span-9-70"><a id="__codelineno-9-70" name="__codelineno-9-70" href="#__codelineno-9-70"></a>    }
+</span><span id="__span-9-71"><a id="__codelineno-9-71" name="__codelineno-9-71" href="#__codelineno-9-71"></a>}
+</span><span id="__span-9-72"><a id="__codelineno-9-72" name="__codelineno-9-72" href="#__codelineno-9-72"></a>
+</span><span id="__span-9-73"><a id="__codelineno-9-73" name="__codelineno-9-73" href="#__codelineno-9-73"></a>Rel(runner, JobMedium, &quot; &quot;)
+</span><span id="__span-9-74"><a id="__codelineno-9-74" name="__codelineno-9-74" href="#__codelineno-9-74"></a>Rel(runner, JobSmall1, &quot; &quot;)
+</span><span id="__span-9-75"><a id="__codelineno-9-75" name="__codelineno-9-75" href="#__codelineno-9-75"></a>Rel(runner, JobSmall2, &quot; &quot;)
+</span><span id="__span-9-76"><a id="__codelineno-9-76" name="__codelineno-9-76" href="#__codelineno-9-76"></a>Rel(runner, JobSmall3, &quot; &quot;)
+</span><span id="__span-9-77"><a id="__codelineno-9-77" name="__codelineno-9-77" href="#__codelineno-9-77"></a>
+</span><span id="__span-9-78"><a id="__codelineno-9-78" name="__codelineno-9-78" href="#__codelineno-9-78"></a>Rel_Left(JobMedium, JobMediumPodService1, &quot; &quot;)
+</span><span id="__span-9-79"><a id="__codelineno-9-79" name="__codelineno-9-79" href="#__codelineno-9-79"></a>
+</span><span id="__span-9-80"><a id="__codelineno-9-80" name="__codelineno-9-80" href="#__codelineno-9-80"></a>Rel(JobMedium, node1, &quot; &quot;)
+</span><span id="__span-9-81"><a id="__codelineno-9-81" name="__codelineno-9-81" href="#__codelineno-9-81"></a>Rel(JobSmall1, node2, &quot; &quot;)
+</span><span id="__span-9-82"><a id="__codelineno-9-82" name="__codelineno-9-82" href="#__codelineno-9-82"></a>Rel(JobSmall2, node2, &quot; &quot;)
+</span><span id="__span-9-83"><a id="__codelineno-9-83" name="__codelineno-9-83" href="#__codelineno-9-83"></a>Rel(JobSmall3, node3, &quot; &quot;)
+</span><span id="__span-9-84"><a id="__codelineno-9-84" name="__codelineno-9-84" href="#__codelineno-9-84"></a>
+</span><span id="__span-9-85"><a id="__codelineno-9-85" name="__codelineno-9-85" href="#__codelineno-9-85"></a>Rel(runnerOther, JobSmall1Other, &quot; &quot;)
+</span><span id="__span-9-86"><a id="__codelineno-9-86" name="__codelineno-9-86" href="#__codelineno-9-86"></a>Rel(JobSmall1Other, node1, &quot; &quot;)
+</span><span id="__span-9-87"><a id="__codelineno-9-87" name="__codelineno-9-87" href="#__codelineno-9-87"></a>
+</span><span id="__span-9-88"><a id="__codelineno-9-88" name="__codelineno-9-88" href="#__codelineno-9-88"></a>Rel_Down(limit, ResourceBoundaries, &quot;Define Namespace Quotas&quot;)
+</span><span id="__span-9-89"><a id="__codelineno-9-89" name="__codelineno-9-89" href="#__codelineno-9-89"></a>Rel_Right(limit, RunnerBoundaries, &quot;Define Runner Quotas&quot;)
+</span><span id="__span-9-90"><a id="__codelineno-9-90" name="__codelineno-9-90" href="#__codelineno-9-90"></a>
+</span><span id="__span-9-91"><a id="__codelineno-9-91" name="__codelineno-9-91" href="#__codelineno-9-91"></a>Rel_Down(limitOther, ResourceBoundariesOther, &quot;Define Namespace Quotas&quot;)
+</span><span id="__span-9-92"><a id="__codelineno-9-92" name="__codelineno-9-92" href="#__codelineno-9-92"></a>Rel_Right(limitOther, RunnerBoundariesOther, &quot;Define Runner Quotas&quot;)
+</span><span id="__span-9-93"><a id="__codelineno-9-93" name="__codelineno-9-93" href="#__codelineno-9-93"></a>
+</span><span id="__span-9-94"><a id="__codelineno-9-94" name="__codelineno-9-94" href="#__codelineno-9-94"></a>@enduml
+</span></code></pre></div>
+<h2 id="service-level-objectives-slo">Service Level Objectives (SLO)</h2>
+<p>Most CBI services are Tier 2 - Best Effort, which means they are expected to be available at all times, and rapid restoration can be expected in the event of an outage. Eclipse Strategic Members can contact the Webmaster in certain cases of off-hours support.</p>
+<p>Please see <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/IT-Service-Level-Objectives">IT Service Level Objectives</a> for more information on the Eclipse Foundation IT Services SLO.</p>
+<h2 id="support">Support</h2>
+<ul>
+<li><a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new">HelpDesk</a></li>
+<li><a href="https://chat.eclipse.org/#/room/#eclipsefdn.it:matrix.eclipse.org">IT chat service room: #eclipsefdn.it:matrix.eclipse.org</a></li>
+<li><a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates">GitLab CI templates</a></li>
+<li><a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code">Grac!</a></li>
+</ul>
+<h2 id="faq">FAQ</h2>
+<h3 id="target-a-specific-runner">Target a specific runner</h3>
+<p>Q: <strong>How can I target a specific runner for my GitLab CI/CD job?</strong>
+A: To target a specific runner for your job, you can use runner tags. Runner tags are labels assigned to runners that help you select the right runner for specific jobs.
+Each Eclipse foundation GitLab runner comes with a set of default labels. 
+I.e: 
+* <code>prefix:ef-grac</code> 
+* <code>cluster:okd-c1</code> 
+* <code>type:groups</code> 
+* <code>instance:technologie.cbi.grac</code>
+* <code>ctx:releng-group</code> 
+* <code>executor:kubernetes</code> 
+* <code>kubenamespace:ef-grac-technologie-cbi-grac</code>
+* <code>concurrent:8</code> 
+* <code>outputLimit:100000</code> 
+* <code>image:ubuntu:20.04</code> 
+* <code>cpuLimit:8000</code> 
+* <code>cpuRequest:1000</code> 
+* <code>memoryLimit:16384</code> 
+* <code>memoryRequest:2048</code> 
+* <code>serviceCpuLimit:8000</code> 
+* <code>origin:eclipse</code></p>
+<p>Q: <strong>How do I assign extra tags to runners?</strong></p>
+<p>A: Tags can be assigned to runners during runner registration, e.g: my-tag, java, docker, etc., based on the capabilities or characteristics of the runner.
+This can be requested at any time, at runner creation or later by simply filling out a request in the helpdesk support.</p>
+<p>NOTE: by default, runners are set up to run untagged jobs.</p>
+<p>Q: <strong>How do I use runner tags in my CI/CD job configuration?</strong></p>
+<p>A: In your <code>.gitlab-ci.yml</code> file, you can use the <code>tags</code> keyword at the top-level description for pipeline definition or in the job configuration to specify the runner tags that the pipeline or the job should target.</p>
+<p>At pipeline level:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">default</span><span class="p">:</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">origin:eclipse</span>
+</span></code></pre></div>
+<p>At job level: </p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">my_job</span><span class="p">:</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">origin:eclipse</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Running on a Eclipse foundation runner&quot;</span>
+</span></code></pre></div>
+<p>Q: <strong>What if no runner matches the specified tags?</strong></p>
+<p>A: If no runner matches the specified tags, the job won't run. Make sure that your runner tags correspond to the capabilities of your runners and the requirements of your jobs.</p>
+<p>Q: <strong>Is there a default runner if no tags are specified?</strong></p>
+<p>A: GitLab CI will automatically select a runner that doesn't have any tags assigned if you don't specify tags for a job. However, for more control and specificity, it's recommended to use runner tags, especially the <code>origin:eclipse</code> tag.</p>
+<h3 id="cpuram-specific-configuration">CPU/RAM specific configuration</h3>
+<p>Q: <strong>Is it possible to create a pod with more CPU/RAM allocation?</strong></p>
+<p>A: Specific runners can be configured for projects with more CPU/RAM allocation. 
+WARNING: It's important to keep in mind that this kind of runner will be executed in a context constrained by the resource pack allocated to the project. This means that if the CPU or the RAM used by all executors at the same time exceeds the limit set by resource quotas can cause a build failure.</p>
+<p>see: <a href="https://docs.gitlab.com/runner/executors/kubernetes/#overwrite-container-resources">Overwrite container resources</a></p>
+<p>e.g: </p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">build</span><span class="p">:</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nt">variables</span><span class="p">:</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nt">KUBERNETES_CPU_REQUEST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="nt">KUBERNETES_CPU_LIMIT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5&quot;</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nt">KUBERNETES_MEMORY_REQUEST</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;6Gi&quot;</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="nt">KUBERNETES_MEMORY_LIMIT</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;6Gi&quot;</span>
+</span></code></pre></div>
+<h3 id="shared-runner">Shared Runner</h3>
+<p>Q: <strong>Can I use shared runners for my project?</strong></p>
+<p>A: No, it is not possible to use shared runners in the Eclipse Foundation's infrastructure. This is because shared runners do not align with the resource pack per project approach and the sponsorship model that the Eclipse Foundation follows. Each project at the Eclipse Foundation has its resource pack and associated resources, making shared runners incompatible with this model. </p>
+<h3 id="docker-commands-in-your-cicd-jobs">Docker commands in your CI/CD jobs</h3>
+<p>Q: <strong>Is the Docker's command enabled in the infrastructure?</strong></p>
+<p>A: No, Docker's privilege mode is <code>not enabled</code> in the infrastructure, therefore, <code>docker</code> client can't be directly called in a build, even <code>docker compose</code>, ...</p>
+<p>This decision aligns with the best practices recommended with our OKD infrastructure. The Eclipse Foundation's infrastructure prioritizes security and follows industry-standard guidelines to ensure a safe and controlled environment. </p>
+<h3 id="gitlab-ci-services">GitLab CI Services</h3>
+<p>Q: <strong>Can I use GitLab CI services in my pipeline?</strong></p>
+<p>A: GitLab CI services are not recommended for the moment. This is not factored into the resource pack calculation and their usage can potentially lead to build failure. </p>
+<h2 id="known-issues">Known issues</h2>
+<h3 id="the-secrets-provider-can-not-be-found-check-your-cicd-variables-and-try-again">The secrets provider can not be found. Check your CI/CD variables and try again.</h3>
+<p>For a Gitlab runner to interact with the secret manager, several CI variables must be configured. By default, these variables are set at the GitLab group level during GitLab runner initialization with <code>Grac!</code>'s scripts: <code>VAULT_SERVER_URL</code>, <code>VAULT_AUTH_ROLE</code>, <code>VAULT_AUTH_PATH</code>.</p>
+<p>If they are missing, please create an issue. <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new">helpdesk</a> </p>
+<h3 id="error-validating-token-invalid-issuer-iss-claim">Error validating token: invalid issuer (iss) claim</h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ERROR:<span class="w"> </span>Job<span class="w"> </span>failed<span class="w"> </span><span class="o">(</span>system<span class="w"> </span>failure<span class="o">)</span>:<span class="w"> </span>resolving<span class="w"> </span>secrets:<span class="w"> </span>initializing<span class="w"> </span>Vault<span class="w"> </span>service:<span class="w"> </span>preparing<span class="w"> </span>authenticated<span class="w"> </span>client:<span class="w"> </span>authenticating<span class="w"> </span>Vault<span class="w"> </span>client:<span class="w"> </span>writing<span class="w"> </span>to<span class="w"> </span>Vault:<span class="w"> </span>api<span class="w"> </span>error:<span class="w"> </span>status<span class="w"> </span>code<span class="w"> </span><span class="m">400</span>:<span class="w"> </span>error<span class="w"> </span>validating<span class="w"> </span>token:<span class="w"> </span>invalid<span class="w"> </span>issuer<span class="w"> </span><span class="o">(</span>iss<span class="o">)</span><span class="w"> </span>claim
+</span></code></pre></div>
+<p>This error message means that the secret audience is not configured. </p>
+<p>Two ways of fixing this. </p>
+<ol>
+<li>Import <code>secrets.gitlab-ci.yml</code></li>
+</ol>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">include</span><span class="p">:</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">project</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates&quot;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;jobs/secrets.gitlab-ci.yml&quot;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nt">build</span><span class="p">:</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">  </span><span class="nt">extends</span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.secrets</span>
+</span></code></pre></div>
+<ol>
+<li>Configure <code>id_tokens</code>: </li>
+</ol>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">build</span><span class="p">:</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nt">id_tokens</span><span class="p">:</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">      </span><span class="nt">VAULT_ID_TOKEN</span><span class="p">:</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">        </span><span class="nt">aud</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://gitlab.eclipse.org</span>
+</span></code></pre></div>
+<h2 id="security-consideration">Security consideration</h2>
+<h3 id="mask-ci-password-variables">Mask CI password variables</h3>
+<p>To ensure the protection of sensitive data like credentials, it's imperative to never forget to mask passwords managed by the project itself. </p>
+<p>https://docs.gitlab.com/ee/ci/variables/#mask-a-cicd-variable</p>
+<p>WARN: Common errors with mask password:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>This value cannot be masked because it contains the following characters: &amp;
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © Eclipse Foundation, Inc. All Rights Reserved.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/eclipse-cbi" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.indexes", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

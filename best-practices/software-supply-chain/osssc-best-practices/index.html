@@ -1,0 +1,3399 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eclipse-cbi-mkdocs/best-practices/software-supply-chain/osssc-best-practices/">
+      
+      
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+    
+    
+      
+        <title>Osssc best practices - Eclipse Common Build Infrastructure 🚀</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#open-source-software-supply-chain-best-practices-at-the-eclipse-foundation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Eclipse Common Build Infrastructure 🚀" class="md-header__button md-logo" aria-label="Eclipse Common Build Infrastructure 🚀" data-md-component="logo">
+      
+  <img src="../../../assets/CBI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Eclipse Common Build Infrastructure 🚀
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Osssc best practices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Eclipse Common Build Infrastructure 🚀" class="md-nav__button md-logo" aria-label="Eclipse Common Build Infrastructure 🚀" data-md-component="logo">
+      
+  <img src="../../../assets/CBI.png" alt="logo">
+
+    </a>
+    Eclipse Common Build Infrastructure 🚀
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CBI Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            CBI Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cbi/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cbi/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cbi/Nexus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nexus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cbi/Signing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Signing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/cbi/wiki" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wiki
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jenkins Service (JIRO)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Jenkins Service (JIRO)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro/Home/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro/CI-Best-Practices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro/Common-build-errors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common build errors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro/Dedicated-build-agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dedicated build agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro/Default-Jenkins-plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default Jenkins plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro/FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro/GitHub-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro/GitLab-integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitLab integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro/Resource-packs-and-quotas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resource packs and quotas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro/Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools-(JDK,-Maven,-Ant)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro-core/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro-agent/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jiro-controller/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controllers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro/wiki" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Wiki
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro-agents" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/jiro-masters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JIRO Controllers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jenkins Pipeline Library
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Jenkins Pipeline Library
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jenkins-pipeline-library/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../jenkins-pipeline-library-sample/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/jenkins-pipeline-service/jenkins-pipeline-library" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Container management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Container management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cbi-dockerfile/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DockerFile Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/dockerfiles" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Gitlab Runner Service (GRAC!)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Gitlab Runner Service (GRAC!)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gitlab-runner-service/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gitlab-runner-template/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab CI Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gitlab-runner-as-code/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grac!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab Runner as Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-instances" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab Runner Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-ci-templates" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gitlab Runner Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chat Service
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Chat Service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Let's chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org/docs/rooms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rooms/Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-service-provisionner/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Provisionner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-service-synapse/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Synapse
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-service-elementweb/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elementweb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chat-service-sync-tools/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sync Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Develocity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Develocity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../develocity/readme/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://develocity-staging.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access Develocity-staging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Github Self-Service (Otterdog)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Github Self-Service (Otterdog)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://otterdog.readthedocs.io/en/latest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://otterdog.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Otterdog Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-csi/otterdog" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Otterdog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EclipseFdn/otterdog-configs" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eclipse Foundation Otterdog Configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EclipseFdn/otterdog-defaults" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eclipse Foundation Otterdog Defaults
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Signing Service
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Signing Service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../signing-services/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CBI Maven plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../signing-services/cli-tools/signing/jar/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CLI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../signing-services/maven-plugins/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maven plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../signing-services/webservice/signing/macosx/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macosx webservice
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MacOS Notarization Service
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            MacOS Notarization Service
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../macos-notarization-service/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/eclipse-cbi/macos-notarization-service.git" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Best Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Best Practices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Supply Chain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Project Website Boilerplate
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Project Website Boilerplate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../project-website-boilerplate/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Helpdesk
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Helpdesk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open an issue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helpdesk/SLO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SLO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helpdesk/secrets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing secrets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://eclipse-csi.github.io/security-handbook/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security Handbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog 📝
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Blog 📝
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_16_2" id="__nav_16_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_16_3" id="__nav_16_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/chat-service/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../helpdesk/Infrastructure-changes-Guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infrastructure changes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Service links
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Service links
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://ci.eclipse.org/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ci.eclipse.org
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.eclipsestatus.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eclipse status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://develocity-staging.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    develocity-staging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chat.eclipse.org
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://chat.eclipse.org/#/room/#eclipsefdn.it:matrix.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IT chat room
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/helpdesk" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helpdesk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://otterdog.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    otterdog Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://repo.eclipse.org" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    repo.eclipse.org
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://accounts.eclipse.org/mailing-list/cbi-dev" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cbi-dev mailing-list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://accounts.eclipse.org/mailing-list/cross-project-issues-dev" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cross-project-issues mailing-list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://accounts.eclipse.org/mailing-list/eclipse.org-committers" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    org-committers mailing-list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    hugo template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../status/eclipse-status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status 🚦 <iframe src="https://www.eclipsestatus.io/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no"></iframe>
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#protect-the-code-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protect the code repositories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protect the code repositories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strengthen-the-git-authentication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strengthen the git authentication methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#require-signed-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Require signed commits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-force-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable force-push
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#require-reviews-before-merging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Require reviews before merging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-external-services-having-access-to-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review external services having access to repositories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#securing-third-party-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Securing third-party artifacts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Securing third-party artifacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-only-https-to-retrieve-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use only https to retrieve dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-trusted-primary-registries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use trusted, primary registries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-your-dependencies-and-pay-attention-to-typo-squatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review your dependencies and pay attention to typo-squatting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-checksums-and-signatures-of-all-downloaded-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify checksums and signatures of all downloaded dependencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#securing-build-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Securing Build Pipelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Securing Build Pipelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-immutable-build-pipelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use immutable build pipelines
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-a-vault-to-store-and-access-secrets-during-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use a vault to store and access secrets during build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-not-start-build-automatically-from-untrusted-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do not start build automatically from untrusted sources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protect-build-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protect build outputs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protect build outputs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sign-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sign everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-platforms-code-signing-windows-macos-jar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use platform's code signing (Windows, macOS, JAR, ...)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-publish-and-sign-sbom-on-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate, publish (and sign) SBOM on release
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-your-build-reproducibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make your build reproducibles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protect-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protect deployments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protect deployments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-update-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software update systems
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addendum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Addendum
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p><a href="/">Home</a> / <a href="/best-practices/">best-practices</a> / <a href="/best-practices/software-supply-chain/">software-supply-chain</a> / osssc-best-practices</p>
+<h1 id="open-source-software-supply-chain-best-practices-at-the-eclipse-foundation">Open Source Software Supply Chain Best Practices at the Eclipse Foundation</h1>
+<p>With the <a href="https://github.com/cncf/tag-security/tree/main/supply-chain-security/compromises">increasing number of software supply chain attacks</a>, we've defined a (non-exhaustive) list of best practices that we encourage Eclipse Foundation committers and projects to follow. Note that we also listed some best practices that may require the Eclipse Foundation to step in in order to make them achievable or easier to implement.</p>
+<p>Building open source software is increasingly complex and distributed. It is a process comprised of many packages which are retrieved, digested and stored and where any flaw can be a vector of a supply chain attack as depicted on the picture below from the <a href="https://slsa.dev/levels#threats">SLSA security framework</a>.</p>
+<p><img alt="Supply Chain Threats" src="images/supply-chain-threats.svg?raw=true" /></p>
+<p>Proper threat modeling of each step is required in order to mitigate any such flaw. However, there is no one size fits all in terms of threat modeling, so we just enumerate some common best practices defending against the most common attacks.</p>
+<p>This work takes inspiration in various publications from entities like the <a href="https://github.com/cncf/tag-security">CNCF</a> and the <a href="https://www.linuxfoundation.org/resources/publications/open-source-software-supply-chain-security/">Linux Foundation</a>.</p>
+<h2 id="protect-the-code-repositories">Protect the code repositories</h2>
+<p>The first artifact that needs to be protected in the software supply chain is the actual source code. The best practices below aim at preventing that unintentional commits get into the source code repository.</p>
+<h3 id="strengthen-the-git-authentication-methods">Strengthen the git authentication methods</h3>
+<p>Committers shall use <a href="https://pages.nist.gov/800-63-3/sp800-63b.html#appA">long, strong passwords</a> for their Eclipse Foundation account. Rule number 1 is that length trumps complexity, so a long passphrase is always more secure. If the password is randomly generated, then a shorter password could be used (12 characters minimum).</p>
+<p>Committers should also enable two-factors authentication (2FA) or multi-factors authentication (MFA) wherever possible. It is currently possible on <a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication">GitHub</a>, and on <a href="https://gitlab.eclipse.org/help/user/profile/account/two_factor_authentication.md">Eclipse Foundation's GitLab</a>.</p>
+<p>Note that Eclipse Foundation's accounts do not yet support MFA. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=576311">issue 576311</a>.</p>
+<p>If you generated your SSH key a long time ago, it is advised to rotate it. Meanwhile, you should make it long (at least 4096 bits for RSA) or use newer, stronger algorithms (e.g., <code>Ed25519</code>).</p>
+<h3 id="require-signed-commits">Require signed commits</h3>
+<p>For additional security, projects can require all commits to be signed with GPG or S/MIME signature. On <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-signed-commits">GitHub</a> and <a href="https://docs.gitlab.com/ee/user/project/repository/gpg_signed_commits/">Eclipse Foundation's GitLab</a>, this can be enabled as a branch protection rule, meaning that commits that are not signed get rejected. In both cases, you should open a ticket with webmaster to get it activated.</p>
+<p>It's not possible on Gerrit to protect commits before push, but projects can still define policies in order to verify, e.g., before doing a release, that all commits since the previous release are properly signed with known keys.</p>
+<h3 id="disable-force-push">Disable force-push</h3>
+<p>In addition to <a href="https://www.git-tower.com/blog/force-push-in-git/">not being courteous to other committers</a>, force push can be used to create commits seemingly legit but introducing malicious changes (e.g., in case of impersonification of a committer after a credentials leak). At least the <code>main</code> branch should be forbidding force-push. By default this should be properly configured on all Eclipse Foundation projects repositories. In case of doubt, open a request to webmasters.</p>
+<h3 id="require-reviews-before-merging">Require reviews before merging</h3>
+<p>Protecting the <code>main</code> branch from direct push by requiring pull requests / reviews is a way to lower the chances for a malicious change to be included silently into the repository.</p>
+<p>In addition to the expected code quality improvment and knowledge dissemination it provides, systematic code review mostly protects against committers identity theft and rogue behaviors in the context of an Eclipse Foundation project where write permissions are only granted to elected committers.</p>
+<h3 id="review-external-services-having-access-to-repositories">Review external services having access to repositories</h3>
+<p>It's a common practice nowadays to rely on external services (e.g. GitHub apps) for static code analysis, secrets detection, auto-triage of issues, etc. Those services requires various permission levels. Permissions must be granted on the principle of least privilege. If an app requires more permissions than needed, it must not be installed.</p>
+<p>Connected apps shall be reviewed frequently and the ones that are not used anymore must be removed. There have been a couple of issues with such apps in the last years (e.g., <a href="https://arstechnica.com/information-technology/2021/09/travis-ci-flaw-exposed-secrets-for-thousands-of-open-source-projects/">Travis CI</a>, <a href="https://about.codecov.io/security-update/">CodeCov</a>), and it becomes a major concern.</p>
+<h2 id="securing-third-party-artifacts">Securing third-party artifacts</h2>
+<p>Source code is only one part of the equation when building software. Many dependencies are retrieved and included as part of the build pipeline. It is important to ensure that retrieved dependencies are the expected ones, and that they have not been tempered with.</p>
+<p>Parts of securing third-parties dependencies are already covered by the <a href="https://www.eclipse.org/projects/handbook/#ip">Eclipse Foundation intellectual property due diligence process</a> which aims at ensuring license compatibility. By doing so, it requires projects to have a good understanding of their dependencies. Some best practices below will highlight <em>some</em> ways to have an even better understanding.</p>
+<h3 id="use-only-https-to-retrieve-dependencies">Use only <code>https</code> to retrieve dependencies</h3>
+<p>Retrieving dependencies over the web must be done over secured connection, aka <code>HTTPS</code>. This will be prevent man-in-the-middle (MITM) attack that could temper with the dependency. Some tooling, like Maven can be configured to block access to all <code>HTTP</code> repositories. Since Maven 3.8.1, <a href="https://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291">it is the default</a>.</p>
+<h3 id="use-trusted-primary-registries">Use <em>trusted</em>, primary registries</h3>
+<p>Getting dependencies from not well-known registries shall be avoided. Only the most trustworthy sources, like central registries (e.g., Maven Central, npmjs.com, or crates.io), must be used.</p>
+<h3 id="review-your-dependencies-and-pay-attention-to-typo-squatting">Review your dependencies and pay attention to typo-squatting</h3>
+<p>Dependencies names must be scrutinized for typos to avoid dependending on malicious code. This must be done during code reviews and may be done in regular dependencies audit (e.g., at release time). Extra care should be taken to identify similar Unicode characters (<a href="https://en.wikipedia.org/wiki/Homoglyph">homoglyph</a>), and even ASCII ones like <code>1</code> and <code>l</code> or <code>0</code> and <code>O</code>.</p>
+<h3 id="verify-checksums-and-signatures-of-all-downloaded-dependencies">Verify checksums and signatures of all downloaded dependencies</h3>
+<p>Checksums must always be verified, even when downloading dependencies over <code>HTTPS</code>. Checksums are usually served from different servers or different storage backends and it may not be easy for an attacker to silently change both the artifact and its checksum file. Some build tools can be told to enforce checksum verification, e.g., Maven has a <code>-C</code> or <code>--strict-checksums</code> argument.</p>
+<p>When available, digital signatures should be checked that they have been issued by its expected creators.</p>
+<h2 id="securing-build-pipelines">Securing Build Pipelines</h2>
+<p>The build pipeline by nature has a high level of permissions over the source code repository but also on the deployment environment. If compromised, it can be used to introduce undetectable malicious changes to the source code or its dependencies and make the project deliver what it thinks is a perfectly clean output. This is what happened to <a href="https://github.com/cncf/tag-security/blob/main/supply-chain-security/compromises/2020/solarwinds.md">SolarWind</a> in 2020.</p>
+<h3 id="use-immutable-build-pipelines">Use immutable build pipelines</h3>
+<p>Build scripts shall be checked in the code repositories and should only be modified in there. Having build pipelines versioned along with the code ensures that only committers with write permissions on the code can modify the build pipeline. Also, it makes it easier to review and verify the pipeline for later audits, e.g., in case of an incident.</p>
+<p>Committers can use Eclipse Foundation's CI service based <a href="https://wiki.eclipse.org/Jenkins">Jenkins</a>, with <a href="https://www.jenkins.io/doc/book/pipeline/">Jenkins pipeline</a>, independently from where the code is hosted. It is especially important for projects using Jenkins Freestyle jobs to <a href="https://docs.cloudbees.com/docs/admin-resources/latest/pipelines/declarative-pipeline-migration-assistant">convert their jobs to Jenkins pipeline</a>.</p>
+<p>When hosted on GitHub, projects can use GitHub actions with similar benefits.</p>
+<h3 id="use-a-vault-to-store-and-access-secrets-during-build">Use a vault to store and access secrets during build</h3>
+<p>Secrets required during a a build pipeline (ssh keys, registry credentials...) must not be stored in the git repository and must not be stored in the pipeline configuration. Tools should be used to detect or prevent committing secrets to the repositories: Git hooks that run on your computer, e.g. <a href="https://github.com/awslabs/git-secrets">git-secrets</a> from AWS Labs, <a href="https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning">GitHub secret scanning</a>, or <a href="https://docs.gitlab.com/ee/user/application_security/secret_detection/">GitLab secret scanning</a>.</p>
+<p>Some secrets storage mechanism or vault must be used in order to get those secrets: GitHub actions use <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">encrypted secrets</a> and Jenkins has a number of plugins providing <a href="https://www.jenkins.io/doc/book/using/using-credentials/">credentials bindings</a>.</p>
+<p>Most of those solutions export the credentials as environment variables. Those variables should never be printed to standard output (even if obfuscation is handled by the CI system).</p>
+<p>Finally, when using shell scripts, always favor passing secrets via <code>stdin</code> rather than as command line arguments. Command parameters can be viewed by any user logged on the system (e.g, with <code>ps aux</code>).</p>
+<h3 id="do-not-start-build-automatically-from-untrusted-sources">Do not start build automatically from untrusted sources</h3>
+<p>It is a great added value to be able to build new contributions from non-committers when they submit a new piece of code for review. However, great care must be taken at the CI level to avoid granting too many permissions to such builds.</p>
+<p>On GitHub actions, <a href="https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks">workflows from public forks require approval</a> for first-time contributors by default. This shall be changed to <code>Require approval for all outside collaborators</code>. In all cases, committers should be especially alert to any proposed changes in the <code>.github/workflows/</code> directory that affect workflow files.</p>
+<p>On <a href="https://wiki.eclipse.org/Jenkins">Jenkins</a>, depending on which git hosting is used, the situation differs. Jenkins and Gerrit integrations are not safe to use, be it via the <a href="https://plugins.jenkins.io/gerrit-code-review/">Gerrit Code Review plugin</a> or the <a href="https://plugins.jenkins.io/gerrit-trigger/">Gerrit Trigger Plugin</a>. While the former is made to be used in a pipeline job, none checks for user permissions before starting a build. Any external contribution triggers a build, which means that any malicious code can be executed as a result.</p>
+<p>The Gerrit Trigger Plugin has one advantage as it has a configuration that prevents a build from being triggered if the review contains changes to some files. Note that it does not discriminate committers and non-committers, preventing build to be triggered for both categories.</p>
+<p><img alt="Add Forbiddent File Path" src="images/gerrit-jenkins-forbidden-files.png?raw=true" /></p>
+<p>This shall be used to exclude all changes modifying a build pipeline related files (e.g., <code>Makefile</code>, <code>pom.xml</code>, shell scripts that gets executed...) from automatically triggering a build.</p>
+<p>When using <a href="https://wiki.eclipse.org/Jenkins">Jenkins</a> pipelines with GitHub or GitLab hosted repositories, the configuration of the branch source configuration must be done carefully. More specifically, in order to protect against a malicious pull request itself modifying the <code>Jenkinsfile</code> to remove the protections, the trust policy for pull requests from forks shall be set to <code>From users with Admin or Write permission</code>.</p>
+<p><img alt="Jenkins GitHub Pull Request Trust Policy" src="images/github-trust-pr.png" /></p>
+<p>It will only protect the <code>Jenkinsfile</code> file by default. Any other pipeline related file (e.g., <code>Makefile</code>, <code>pom.xml</code>, shell scripts that gets executed...) that can execute some code should be protected as well. The <a href="https://www.jenkins.io/doc/pipeline/steps/workflow-multibranch/#readtrusted-read-trusted-file-from-scm"><code>readTrusted</code></a> step must be used to do so.</p>
+<h2 id="protect-build-outputs">Protect build outputs</h2>
+<p>Once the binaries are produced, downstream consumers should have a way to verifiy that what they get is what the project published, i.e., that it has not been tempered with during transfer or by a compromised build pipeline.</p>
+<h3 id="sign-everything">Sign everything</h3>
+<p>All produced artifacts should be digitally signed with a project specific key. The Eclipse Foundation manages a GPG-based web of trust, mostly for letting project <a href="https://wiki.eclipse.org/Jenkins#How_can_artifacts_be_deployed_to_OSSRH_.2F_Maven_Central.3F">publish artifacts to Maven Central</a>. This infrastructure can be reused for GPG signing build artifacts and thus fullfilling this best practice.</p>
+<h3 id="use-platforms-code-signing-windows-macos-jar">Use platform's code signing (Windows, macOS, JAR, ...)</h3>
+<p>When applicable, sign your code with code signing certificates. Compared to regular digital signature, this has the advantage to be checked by the deployment platform rather than relying on the user (or the provisionning software) to verify signatures manually. It also prevents security warnings during download and install. Finally, some platforms add more requirements than just code signatures (e.g. on macOS, applications shall be notarized) which increases protection against malware.</p>
+<p>The Eclipse CBI project provides <a href="https://wiki.eclipse.org/IT_Infrastructure_Doc#Sign_my_Jar.2Fplugins.2FWindows_exe.2FmacOS_App_files.3F">services</a> that let you sign your code with certificates owned by the Eclipse Foundation.</p>
+<h3 id="generate-publish-and-sign-sbom-on-release">Generate, publish (and sign) SBOM on release</h3>
+<p>A Software Bill Of Materials (SBOM) is a list of components in a piece of software. It is valuable both for consumers of the project and to the project itself to perform out of band vulnerability or license analysis. Those analysis are easier when using a well established format for such a SBOM. The most two commons are <a href="https://cyclonedx.org/">CycloneDX</a> and <a href="https://spdx.dev">SPDX</a>.</p>
+<p>License analysis can be done via the <a href="https://github.com/eclipse/dash-licenses">Eclipse Dash License Tool</a>. Note however that it does not yet read a SBOM format listed above, but rather a plain list of <a href="https://docs.clearlydefined.io/using-data#clearlydefined-coordinates">ClearlyDefined coordinates</a>.</p>
+<h3 id="make-your-build-reproducibles">Make your build reproducibles</h3>
+<p>A <a href="https://reproducible-builds.org">reproducible build</a> allows verification by a third party that no vulnerabilities or backdoors have been introduced during build pipeline. It lets them build the binaries on their own and let them verify that what they get is binary identical to the released artifacts.</p>
+<p>The <a href="https://reproducible-builds.org/docs/">reproducible-builds.org documentation</a> is full of best practices and tips how to achieve that in various languages. There are pages specifically for artifacts targetting the <a href="https://reproducible-builds.org/docs/jvm/">JVM</a>. Also, both <a href="https://maven.apache.org/guides/mini/guide-reproducible-builds.html">Maven</a> and <a href="https://docs.gradle.org/current/userguide/working_with_files.html#sec:reproducible_archives">Gradle</a> have plugins and instructions to help projects achieve reproducibility.</p>
+<h2 id="protect-deployments">Protect deployments</h2>
+<h3 id="software-update-systems">Software update systems</h3>
+<p>Software update systems are hard to design and hard to secure. They are an easy target as they eventually deploy binaries on clients' machines. To be considered secure, a software update system must ensure that:</p>
+<ul>
+<li>it knows about the latest available updates in a timely manner</li>
+<li>any files it downloads are the correct files, and,</li>
+<li>no harm results from checking or downloading files.</li>
+</ul>
+<p>These are the foundations of <a href="https://theupdateframework.io/overview/">The Update Framework, TUF</a>. It has been designed with strategies against a <a href="https://theupdateframework.io/security/">well defined threat model</a>. A secure software update system must define mitigation against those attacks.</p>
+<h2 id="addendum">Addendum</h2>
+<p>There are several assement tools and evaluation framework out there that projects should use in order to review the security of their software supply chain. The two most well known / up to date are:</p>
+<ul>
+<li>OSSF Security Scorecards: https://github.com/ossf/scorecard</li>
+<li>Secure Supply Chain Assessment from the CNCF Security Technical Advisory Group: https://github.com/cncf/tag-security/blob/master/supply-chain-security/supply-chain-security-paper/secure-supply-chain-assessment.md</li>
+<li>SLSA ("salsa") - Supply-chain Levels for Software Artifacts: https://slsa.dev</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © Eclipse Foundation, Inc. All Rights Reserved.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/eclipse-cbi" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.indexes", "navigation.footer", "navigation.tracking", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
