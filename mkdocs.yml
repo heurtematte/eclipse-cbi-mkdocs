@@ -45,6 +45,7 @@ extra:
 copyright: Copyright © Eclipse Foundation, Inc. All Rights Reserved.
 
 plugins:
+  - external-markdown
 
   - mkdocs-breadcrumbs-plugin:
       delimiter: " / "  # separator between sections
@@ -117,9 +118,9 @@ plugins:
           import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/gitlab-runner-service/gitlab-runner-as-code?branch=main&edit_uri=main'
           imports: ['README.md']
 
-        - name: Chat Service Documentation
-          import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&edit_uri=main'
-          imports: ['*.md']
+        # - name: Chat Service Documentation
+        #   import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-website.git?branch=main&edit_uri=main'
+        #   imports: ['*.md']
         - name: Chat Service  Provisionner
           import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/releng/chat-service/chat-service-provisioner.git?branch=main&edit_uri=main'
           imports: ['*.md']
@@ -151,16 +152,27 @@ plugins:
 
         - name: Project Website Boilerplate 
           import_url: 'https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate.git?branch=main&edit_uri=main'
-          imports: ['README.md']          
+          imports: ['README.md']
 
 nav:
   - CBI Documentation: https://github.com/eclipse-cbi/cbi/wiki
   - Jenkins Service (JIRO):
-      - Wiki: https://github.com/eclipse-cbi/jiro/wiki
+      - Documentation:
+        - Home: jiro/Home.md
+        - CI Best Practices: jiro/CI-Best-Practices.md
+        - Common build errors: jiro/Common-build-errors.md
+        - Dedicated build agents: jiro/Dedicated-build-agents.md
+        - Default Jenkins plugins: jiro/Default-Jenkins-plugins.md
+        - FAQ: jiro/FAQ.md
+        - GitHub integration: jiro/GitHub-integration.md
+        - GitLab integration: jiro/GitLab-integration.md
+        - Resource packs and quotas: jiro/Resource-packs-and-quotas.md
+        - Tools-(JDK,-Maven,-Ant): jiro/Tools.md
       - JIRO: jiro-core/index.html
       - Agents: jiro-agent/index.html
       - Controllers: jiro-controller/index.html
       - Projects: 
+        - JIRO Wiki: https://github.com/eclipse-cbi/jiro/wiki
         - JIRO Core: https://github.com/eclipse-cbi/jiro
         - JIRO Agents: https://github.com/eclipse-cbi/jiro-agents
         - JIRO Controllers: https://github.com/eclipse-cbi/jiro-masters/
@@ -182,9 +194,9 @@ nav:
   - Chat Service:
       - Let's chat: https://chat.eclipse.org
       - Documentation: https://chat.eclipse.org/docs/
-      - Matrix at Eclipse: chat-service-documentation/content/_index/index.html
-      - Getting Started: chat-service-documentation/content/getting-started/_index/index.html
-      - FAQ: chat-service-documentation/content/faq/_index/index.html
+      # - Matrix at Eclipse: chat-service-documentation/content/_index/index.html
+      # - Getting Started: chat-service-documentation/content/getting-started/_index/index.html
+      # - FAQ: chat-service-documentation/content/faq/_index/index.html
       - Rooms/Spaces: https://chat.eclipse.org/docs/rooms/
       # - Rooms/Spaces: chat-service-documentation/content/rooms/_index/index.html
       - Projects: 
@@ -218,7 +230,7 @@ nav:
       - Project: https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate
   - Helpdesk: 
       - Open an issue: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new
-      - SLO: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/IT-Service-Level-Objectives
+      - SLO: helpdesk/SLO.md
   - Sharing secrets: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/Sharing-secrets
   - Security Handbook: https://eclipse-csi.github.io/security-handbook/index.html
   - Blog 📝:
