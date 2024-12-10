@@ -223,6 +223,8 @@ nav:
   - Security Handbook: https://eclipse-csi.github.io/security-handbook/index.html
   - Blog 📝:
     - blog/index.md
+  - Status 🚦:
+    - status/index.md
   - Service links: 
       - ci.eclipse.org: 'https://ci.eclipse.org/'
       - eclipse status: 'https://www.eclipsestatus.io/'
