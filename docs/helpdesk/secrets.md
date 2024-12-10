@@ -1,0 +1,1 @@
+{{ external_markdown('https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/Sharing-secrets.md', '') }}

@@ -237,12 +237,11 @@ nav:
   - Helpdesk: 
     - Open an issue: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/new
     - SLO: helpdesk/SLO.md
-  - Sharing secrets: https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/wikis/Sharing-secrets
+  - Sharing secrets: helpdesk/secrets.md
   - Security Handbook: https://eclipse-csi.github.io/security-handbook/index.html
   - Blog 📝:
     - blog/index.md
-  - Status 🚦:
-    - status/index.md
+  - Infrastructure changes: helpdesk/Infrastructure-changes-Guide.md
   - Service links: 
     - ci.eclipse.org: 'https://ci.eclipse.org/'
     - eclipse status: 'https://www.eclipsestatus.io/'
@@ -256,6 +255,7 @@ nav:
     - cross-project-issues mailing-list: https://accounts.eclipse.org/mailing-list/cross-project-issues-dev
     - org-committers mailing-list: https://accounts.eclipse.org/mailing-list/eclipse.org-committers
     - hugo template: 'https://gitlab.eclipse.org/eclipsefdn/it/webdev/hugo-eclipsefdn-website-boilerplate'
+  - Status 🚦 <iframe src="https://www.eclipsestatus.io/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no"></iframe>: status/eclipse-status.md
 
 
 # nav:
