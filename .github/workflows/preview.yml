@@ -38,7 +38,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: build mkdocs
         env:
-          pr: https://heurtematte.github.io/eclipse-cbi-mkdocs/pr-previews/pr-${{ github.event.number }}
+          SITE_URL: https://heurtematte.github.io/eclipse-cbi-mkdocs/pr-previews/pr-${{ github.event.number }}
         run: mkdocs build -f mkdocs-preview.yml
       - name: Upload artifact
         uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 #v4
