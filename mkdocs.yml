@@ -1,5 +1,6 @@
 site_name:  Eclipse Common Build Infrastructure 🚀
-site_url: https://eclipse-cbi-mkdocs/
+# site_url: https://eclipse-cbi-mkdocs/
+site_url: https://heurtematte.github.io/eclipse-cbi-mkdocs/pr-previews/pr-1
 theme:
   name: material
   logo: assets/CBI.png
