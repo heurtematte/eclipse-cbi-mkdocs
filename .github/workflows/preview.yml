@@ -38,7 +38,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: build mkdocs
         env:
-          SITE_URL: https://heurtematte.github.io/eclipse-cbi-mkdocs/pr-previews/pr-${{ github.event.number }}
+          SITE_URL: https://heurtematte.github.io/eclipse-cbi-mkdocs/pr-preview/pr-${{ github.event.number }}
         run: mkdocs build -f mkdocs-preview.yml
       - name: Upload artifact
         uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 #v4
@@ -68,8 +68,8 @@ jobs:
         id: deployment
         with:
           source-dir: ./public
-          preview-branch: previews
-          umbrella-dir: pr-previews
+          preview-branch: gh-pages-preview
+          umbrella-dir: pr-preview
           deploy-repository: heurtematte/eclipse-cbi-mkdocs
           token: ${{ secrets.DEPLOY_PREVIEW_TOKEN }}
           action: auto
@@ -88,8 +88,8 @@ jobs:
       - uses: rossjrw/pr-preview-action@f31d5aa7b364955ea86228b9dcd346dc3f29c408 #v1
         id: deployment
         with:
-          preview-branch: previews
-          umbrella-dir: pr-previews
+          preview-branch: gh-pages-preview
+          umbrella-dir: pr-preview
           deploy-repository: heurtematte/eclipse-cbi-mkdocs
           token: ${{ secrets.DEPLOY_PREVIEW_TOKEN }}
           action: auto
