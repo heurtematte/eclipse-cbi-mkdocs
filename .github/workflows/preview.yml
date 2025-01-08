@@ -1,0 +1,95 @@
+name: Deploy PR previews
+
+on:
+  pull_request: # this is just for testing
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - closed
+
+concurrency: preview-${{ github.head_ref }}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build-preview:
+    # if: github.event_name == 'pull_request_target' && github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install -r requirements.txt
+      - name: build mkdocs
+        env:
+          SITE_URL: https://eclipse-cbi-mkdocs-preview/pr-preview/pr-${{ github.event.number }}
+        run: mkdocs build -f mkdocs-preview.yml
+      - name: Upload artifact
+        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 #v4
+        with:
+          name: "site"
+          path: ./site
+
+  deploy-preview:
+    needs: build-preview
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    environment:
+      name: pull-request-preview
+      url: ${{ steps.deployment.outputs.deployment-url }}
+    steps:
+      # checkout required for pr-preview-action to succeed,
+      # while the content will not be used
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4
+      - name: Download the preview page
+        uses: actions/download-artifact@c850b930e6ba138125429b7e5c93fc707a7f8427 #v4
+        with:
+          name: "site"
+          path: ./public
+      - uses: rossjrw/pr-preview-action@f31d5aa7b364955ea86228b9dcd346dc3f29c408 #v1
+        id: deployment
+        with:
+          source-dir: ./public
+          preview-branch: gh-pages-preview
+          umbrella-dir: pr-preview
+          deploy-repository: heurtematte/eclipse-cbi-mkdocs-preview
+          token: ${{ secrets.DEPLOY_PREVIEW_TOKEN }}
+          action: auto
+
+  # remove the preview page when the PR got closed
+  remove-preview:
+    if: github.event_name == 'pull_request_target' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      # checkout required for pr-preview-action to succeed,
+      # while the content will not be used
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 #v4
+      - uses: rossjrw/pr-preview-action@f31d5aa7b364955ea86228b9dcd346dc3f29c408 #v1
+        id: deployment
+        with:
+          preview-branch: gh-pages-preview
+          umbrella-dir: pr-preview
+          deploy-repository: heurtematte/eclipse-cbi-mkdocs-preview
+          token: ${{ secrets.DEPLOY_PREVIEW_TOKEN }}
+          action: auto
